@@ -6,7 +6,7 @@
   <link href="https://lyy1119.github.io/atom.xml" rel="self"/>
   
   <link href="https://lyy1119.github.io/"/>
-  <updated>2024-05-14T11:34:19.405Z</updated>
+  <updated>2024-05-14T11:37:48.982Z</updated>
   <id>https://lyy1119.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>20240514-1</title>
+    <title>CAD中块的创建与使用</title>
     <link href="https://lyy1119.github.io/2024/05/14/20240514-1/"/>
     <id>https://lyy1119.github.io/2024/05/14/20240514-1/</id>
     <published>2024-05-14T11:34:19.000Z</published>
-    <updated>2024-05-14T11:34:19.405Z</updated>
+    <updated>2024-05-14T11:37:48.982Z</updated>
     
     <content type="html"><![CDATA[<p>在机械制图中我们会用到表面粗糙度的标注。下面将介绍如何在CAD中创建块以完成表面粗糙度的标注。  </p><h2 id="表面粗糙度符号画法"><a href="#表面粗糙度符号画法" class="headerlink" title="表面粗糙度符号画法"></a>表面粗糙度符号画法</h2><p>以去除材料方法的Ra为例。<br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514190540.png" alt="表面粗糙度符号画法图示"></p><p>其中h为字高。</p><h2 id="块的创建"><a href="#块的创建" class="headerlink" title="块的创建"></a>块的创建</h2><h3 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h3><p>先按照标准画法绘制如下图形（以字高为1绘制，方便在不同尺寸的图中通过调整比例使用该块）： </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514191034.png" alt="step1">  </p><h3 id="插入属性。"><a href="#插入属性。" class="headerlink" title="插入属性。"></a>插入属性。</h3><p><code>块-&gt;定义属性</code><br>其中，标记和默认项填Ra。如下图</p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514191758.png" alt="属性定义选项卡">  </p><p>创建好后放在表面粗糙度“注写表面结构的单一要求”位置。如下图：  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514192725.png" alt="插入属性后..."></p><div class="notification is-success"><p>定义属性的目的是给后面创建的块赋予一个可更改的文字变量。这样当我们需要不同的表面粗糙度标记时，我们可以直接更改其内部的值。</p></div>  <h3 id="创建块"><a href="#创建块" class="headerlink" title="创建块"></a>创建块</h3><p><code>块-&gt;创建</code><br>需要定义这个块的名字、选择基点和选择对象。  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514192405.png" alt="创建块选项卡图示">  </p><p>名字在这个例子中即：表面粗糙度；基点我们可以选择表面粗糙度符号的下边那个60°角；  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514192857.png" alt="创建块-选择基点"></p><p>选择对象即框选我们创建的整个图形。<br>创建块完成后图形变成下图所示：  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514193051.png" alt="创建好块后">  </p><h2 id="使用块"><a href="#使用块" class="headerlink" title="使用块"></a>使用块</h2><p>创建好块后我们就可以直接在块选项里点击<code>插入</code>以插入我们创建好的块。插入块时可以看CAD窗口下边的命令行提示更改比例。  </p>]]></content>
     
@@ -36,8 +36,6 @@
     
     
     <category term="CAD" scheme="https://lyy1119.github.io/tags/CAD/"/>
-    
-    <category term="学习" scheme="https://lyy1119.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -137,7 +135,7 @@
     <link href="https://lyy1119.github.io/2024/04/27/20240427-1/"/>
     <id>https://lyy1119.github.io/2024/04/27/20240427-1/</id>
     <published>2024-04-26T23:44:08.000Z</published>
-    <updated>2024-05-10T12:41:49.976Z</updated>
+    <updated>2024-05-14T11:38:14.257Z</updated>
     
     <content type="html"><![CDATA[<h2 id="使用hexo写博客的步骤"><a href="#使用hexo写博客的步骤" class="headerlink" title="使用hexo写博客的步骤"></a>使用hexo写博客的步骤</h2><p><em>假定你已经安装好了hexo</em></p><ol><li>创建新的博客页<br>使用<code>hexo new [layout] title</code>来创建一个新的page。其中layout默认有如下几个<table><thead><tr><th>layout</th><th>说明</th></tr></thead><tbody><tr><td>post</td><td></td></tr><tr><td>page</td><td>一个完整的、正式的博客页</td></tr><tr><td>draft</td><td>草稿，即使deploy，也不会在网站上显示，除非publish这个草稿</td></tr></tbody></table></li><li>编辑生成的md文件<br>当你在使用<code>hexo new draft new_page</code>时,会在<code>./source/_drafts</code>下生成一个<code>new_page.md</code>,只需要编辑这个markdown文件就能完成博客的写作.</li><li>publish你的draft<br><code>hexo publish [layout] title</code></li><li>deploy到远程(如gitpage)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo c  <span class="comment">#short for hexo clean</span></span><br><span class="line">hexo d  <span class="comment">#short for hexo deploy</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
@@ -154,8 +152,6 @@
     
     
     <category term="hexo" scheme="https://lyy1119.github.io/tags/hexo/"/>
-    
-    <category term="教程" scheme="https://lyy1119.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
