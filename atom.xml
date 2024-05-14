@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>lyy1119&#39;s Blog</title>
+  
+  
+  <link href="https://lyy1119.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://lyy1119.github.io/"/>
+  <updated>2024-05-14T11:34:19.405Z</updated>
+  <id>https://lyy1119.github.io/</id>
+  
+  <author>
+    <name>lyy1119</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20240514-1</title>
+    <link href="https://lyy1119.github.io/2024/05/14/20240514-1/"/>
+    <id>https://lyy1119.github.io/2024/05/14/20240514-1/</id>
+    <published>2024-05-14T11:34:19.000Z</published>
+    <updated>2024-05-14T11:34:19.405Z</updated>
+    
+    <content type="html"><![CDATA[<p>在机械制图中我们会用到表面粗糙度的标注。下面将介绍如何在CAD中创建块以完成表面粗糙度的标注。  </p><h2 id="表面粗糙度符号画法"><a href="#表面粗糙度符号画法" class="headerlink" title="表面粗糙度符号画法"></a>表面粗糙度符号画法</h2><p>以去除材料方法的Ra为例。<br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514190540.png" alt="表面粗糙度符号画法图示"></p><p>其中h为字高。</p><h2 id="块的创建"><a href="#块的创建" class="headerlink" title="块的创建"></a>块的创建</h2><h3 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h3><p>先按照标准画法绘制如下图形（以字高为1绘制，方便在不同尺寸的图中通过调整比例使用该块）： </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514191034.png" alt="step1">  </p><h3 id="插入属性。"><a href="#插入属性。" class="headerlink" title="插入属性。"></a>插入属性。</h3><p><code>块-&gt;定义属性</code><br>其中，标记和默认项填Ra。如下图</p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514191758.png" alt="属性定义选项卡">  </p><p>创建好后放在表面粗糙度“注写表面结构的单一要求”位置。如下图：  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514192725.png" alt="插入属性后..."></p><div class="notification is-success"><p>定义属性的目的是给后面创建的块赋予一个可更改的文字变量。这样当我们需要不同的表面粗糙度标记时，我们可以直接更改其内部的值。</p></div>  <h3 id="创建块"><a href="#创建块" class="headerlink" title="创建块"></a>创建块</h3><p><code>块-&gt;创建</code><br>需要定义这个块的名字、选择基点和选择对象。  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514192405.png" alt="创建块选项卡图示">  </p><p>名字在这个例子中即：表面粗糙度；基点我们可以选择表面粗糙度符号的下边那个60°角；  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514192857.png" alt="创建块-选择基点"></p><p>选择对象即框选我们创建的整个图形。<br>创建块完成后图形变成下图所示：  </p><p><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240514193051.png" alt="创建好块后">  </p><h2 id="使用块"><a href="#使用块" class="headerlink" title="使用块"></a>使用块</h2><p>创建好块后我们就可以直接在块选项里点击<code>插入</code>以插入我们创建好的块。插入块时可以看CAD窗口下边的命令行提示更改比例。  </p>]]></content>
+    
+    
+    <summary type="html">本文主要介绍了CAD的块的创建，以表面粗糙度为例。</summary>
+    
+    
+    
+    <category term="学习" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CAD" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/CAD/"/>
+    
+    
+    <category term="CAD" scheme="https://lyy1119.github.io/tags/CAD/"/>
+    
+    <category term="学习" scheme="https://lyy1119.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>abaqus学习笔记1-abaqus基本流程</title>
+    <link href="https://lyy1119.github.io/2024/05/10/20240510-2/"/>
+    <id>https://lyy1119.github.io/2024/05/10/20240510-2/</id>
+    <published>2024-05-10T13:22:50.000Z</published>
+    <updated>2024-05-10T13:22:50.360Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="abaqus学习笔记1-abaqus基本流程"><a href="#abaqus学习笔记1-abaqus基本流程" class="headerlink" title="abaqus学习笔记1-abaqus基本流程"></a>abaqus学习笔记1-abaqus基本流程</h1><p>学习参照视频：<a href="https://www.bilibili.com/video/BV11E411p7zN/?share_source=copy_web&vd_source=491de6e534fd41e7710953a476bfd784">Abaqus CAE分析基础篇 第一讲-分析流程及实例</a></p><h2 id="在使用abaqus前"><a href="#在使用abaqus前" class="headerlink" title="在使用abaqus前"></a>在使用abaqus前</h2><p>在使用abaqus前需要设置好工作目录，在<code>菜单栏-&gt;文件-&gt;设置工作目录</code>中设置。</p><h2 id="abaqus的基本流程"><a href="#abaqus的基本流程" class="headerlink" title="abaqus的基本流程"></a>abaqus的基本流程</h2><ol><li>几何建模Part</li><li>特性设置——设置材料的属性Property</li><li>建立装配体Assembly</li><li>定义分析步Step</li><li>相互作用——定义两个零件之间的相互作用Interaction</li><li>载荷边界Load</li><li>划分网格Mesh</li><li>提交运算Job</li><li>后处理Visualization</li></ol><h3 id="几何建模"><a href="#几何建模" class="headerlink" title="几何建模"></a>几何建模</h3><p>建立要分析的物体的几何模型</p><h3 id="特性设置"><a href="#特性设置" class="headerlink" title="特性设置"></a>特性设置</h3><p>设置材料的属性，如抗拉强度等。</p><h3 id="建立装配体"><a href="#建立装配体" class="headerlink" title="建立装配体"></a>建立装配体</h3><p>将所建立或导入的模型建立成一个装配体。没有建立成装配体的模型在提交运算时不会被分析。</p><h3 id="定义分析步"><a href="#定义分析步" class="headerlink" title="定义分析步"></a>定义分析步</h3><p>即选择分析模型的方法（分析程序类型）</p><h3 id="设置相互作用"><a href="#设置相互作用" class="headerlink" title="设置相互作用"></a>设置相互作用</h3><p>设置一个装配体中不同零件之间的接触</p><h3 id="载荷边界"><a href="#载荷边界" class="headerlink" title="载荷边界"></a>载荷边界</h3><p>给装配体加载力以及设置约束（如铰接、固定等）。  </p><p>在给面加约束时，通常将一整个面建立一个集合Set，然后将约束分配到集合上。在网格划分好后，需要重新建立结点集合，将整个面的结点建立一个集合，然后将约束分配在这个结点集合上。  </p><p>对于施加的载荷，若是在面上，通常给面建立一个Surface，然后将载荷分配在Surface上。</p><h3 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h3><p>划分网格时需要确定网格放在哪个对象上，部件Part还是装配Assembly。需要在对应的对象上划分网格。</p><h3 id="提交运算"><a href="#提交运算" class="headerlink" title="提交运算"></a>提交运算</h3><p>新建完作业后。可以先写入输入文件，即<code>.inp</code>文件。输出文件的位置就是一开始设置的工作空间。输出inp文件后，一次点击<code>数据检查</code>、<code>提交</code>、<code>继续</code>。点击<code>继续</code>之后即开始分析。分析完成后点击<code>结果</code>即可显示分析结果。  </p><p>当我们退出分析或者重新打开文件时，若要再次查看上次的分析结果，点击<code>结果</code>即可。  </p><div class="notification is-warning"><p>在abaqus GUI中直接分析固然方便，但是当我们分析大模型时，abaqus难免会出现卡死等问题。事实上，abaqus的模型分析和gui是两个分离的程序，我们可以直接在命令行下使用命令去分析模型。<br>命令如下：  </p><pre><code class="bash">$ abaqus job=JOBNAME cpus=2 int # JOBNAME是输出的inp文件的文件名，cpus是分析使用的cpu数 int是interactive命令的缩写</code></pre><p>以上是一个简单的提交计算命令，注意：直接调用abauqs需要将abaqus命令（实际上是个bat文件）的路径添加到环境变量path。除了上述参数外，abaqus还能指定使用gpu、内存等，可以使用<code>$ abaqus help</code>命令查看。</p></div>]]></content>
+    
+    
+    <summary type="html">abaqus基本流程的学习</summary>
+    
+    
+    
+    <category term="学习" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="abaqus" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/abaqus/"/>
+    
+    
+    <category term="abaqus" scheme="https://lyy1119.github.io/tags/abaqus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高等数学求解微分方程简述</title>
+    <link href="https://lyy1119.github.io/2024/05/10/20240510-1/"/>
+    <id>https://lyy1119.github.io/2024/05/10/20240510-1/</id>
+    <published>2024-05-10T10:36:52.000Z</published>
+    <updated>2024-05-10T12:41:49.976Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="微分方程的求解"><a href="#微分方程的求解" class="headerlink" title="微分方程的求解"></a>微分方程的求解</h1><h2 id="可分离变量的微分方程"><a href="#可分离变量的微分方程" class="headerlink" title="可分离变量的微分方程"></a>可分离变量的微分方程</h2><p>将微分方程化简为$\int g(y)dy &#x3D; \int f(x)dx$求解即可  </p><hr><h2 id="齐次方程——-frac-dy-dx-varphi-frac-y-x"><a href="#齐次方程——-frac-dy-dx-varphi-frac-y-x" class="headerlink" title="齐次方程——$\frac{dy}{dx} &#x3D; \varphi(\frac{y}{x})$"></a>齐次方程——$\frac{dy}{dx} &#x3D; \varphi(\frac{y}{x})$</h2><p>令$u &#x3D; \frac{y}{x}$<br>所以$$\frac{dy}{dx} &#x3D; u + x\frac{du}{dx}$$<br>所以原微分方程可化为$$u + x\frac{du}{dx} &#x3D; \varphi(u)$$<br>$$\frac{xdu}{dx} &#x3D; \varphi(u) - u$$<br>$$\frac{du}{\varphi(u) - u} &#x3D; \frac{dx}{x}$$<br>原方程变为分离变量的微分方程，求解后将$u &#x3D; \frac{y}{x}$代回即可。</p><hr><h2 id="一阶线性微分方程——-frac-dy-dx-P-x-y-Q-x"><a href="#一阶线性微分方程——-frac-dy-dx-P-x-y-Q-x" class="headerlink" title="一阶线性微分方程——$\frac{dy}{dx} + P(x)y &#x3D; Q(x)$"></a>一阶线性微分方程——$\frac{dy}{dx} + P(x)y &#x3D; Q(x)$</h2><p>一阶线性微分方程分为齐次和非齐次方程<br>$$\begin{cases}<br>齐次：\frac{dy}{dx} + P(x)y &#x3D; 0\<br>非齐次:\frac{dy}{dx} + P(x)y &#x3D; Q(x)\<br>\end{cases}$$</p><h4 id="齐次："><a href="#齐次：" class="headerlink" title="齐次："></a>齐次：</h4><p>分离变量为$\frac{dy}{y} &#x3D; -P(x)dx$求解<br>解得<br>$$y &#x3D; Ce^{-\int P(x)dx}$$</p><h4 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次:"></a>非齐次:</h4><p>$$y &#x3D; Ce^{-\int P(x)dx} + e^{-\int P(x)dx} \int Q(x)e^{\int P(x)dx}dx$$<br>$$y &#x3D; e^{-\int P(x)dx}(\int Q(x)e^{\int P(x)dx}dx + C)$$</p><hr><h2 id="可降阶的高阶线性微分方程"><a href="#可降阶的高阶线性微分方程" class="headerlink" title="可降阶的高阶线性微分方程"></a>可降阶的高阶线性微分方程</h2><h4 id="1-y-n-f-x"><a href="#1-y-n-f-x" class="headerlink" title="1.$y^{(n)} &#x3D; f(x)$"></a>1.$y^{(n)} &#x3D; f(x)$</h4><blockquote><p>直接多次积分</p></blockquote><h4 id="2-y’’-f-x-y’"><a href="#2-y’’-f-x-y’" class="headerlink" title="2.$y’’ &#x3D; f(x , y’)$"></a>2.$y’’ &#x3D; f(x , y’)$</h4><blockquote><p>记$y’’ &#x3D; p’ &#x3D; \frac{dp}{dx}$<br>则，$y’’ &#x3D; f(x , y’)$可化为<br>$$p’ &#x3D; f(x , p)$$<br>可用上文方法求解$p$，再带入$p &#x3D; \frac{dy}{dx}$再求解</p></blockquote><h4 id="3-y’’-f-y-y’"><a href="#3-y’’-f-y-y’" class="headerlink" title="3.$y’’ &#x3D; f(y , y’)$"></a>3.$y’’ &#x3D; f(y , y’)$</h4><blockquote><p>令$y’’ &#x3D; \frac{dp}{dx} &#x3D; \frac{dp}{dy} \frac{dy}{dx} &#x3D; p\frac{dp}{dy}$，<br>则原方程可化为:<br>$$p\frac{dp}{dy} &#x3D; f(y , p)$$<br>可用上文方法求解$p$，再带入$p &#x3D; \frac{dy}{dx}$再求解</p></blockquote><hr><h2 id="高阶线性微分方程"><a href="#高阶线性微分方程" class="headerlink" title="高阶线性微分方程"></a>高阶线性微分方程</h2><p><strong>$n$阶线性微分方程解的结构:</strong><br>$n$阶线性齐次微分方程的通解为n个线性不相关的解的线性组合。<br>$n$阶线性非齐次微分方程的解由对应的齐次方程的通解再加上一个非齐次方程的特解</p><h3 id="二阶常系数齐次线性微分方程"><a href="#二阶常系数齐次线性微分方程" class="headerlink" title="二阶常系数齐次线性微分方程"></a>二阶常系数齐次线性微分方程</h3><p>$$y’’ + py’ + qy &#x3D; 0$$<br>先求解特征方程：$r^2 + pr + q &#x3D; 0$<br><strong>1.当$p^2 - 4q &gt; 0$，$r_1 \neq r_2$ ，</strong><br>$$通解y &#x3D; C_1 e^{r_1 x} + C_2 e^{r_2 x}$$<br><strong>2.当$p^2 - 4q &#x3D; 0$，$r_1 &#x3D; r_2$，</strong><br>$$通解y &#x3D; e^{r_1 x}(C_1 + C_2 x)$$<br><strong>3.当$p^2 - 4q &lt; 0$，$r_1 &#x3D; \alpha + \beta i ,r_2 &#x3D; \alpha - \beta i$，</strong><br>$$通解y &#x3D; e^{\alpha x}(C_1 cos \beta x + C_2 sin \beta x)$$</p><h3 id="二阶常系数非齐次线性微分方程"><a href="#二阶常系数非齐次线性微分方程" class="headerlink" title="二阶常系数非齐次线性微分方程"></a>二阶常系数非齐次线性微分方程</h3><p>解由对应齐次方程的通解再加上一个特解</p><p><strong>求特解:</strong><br><strong>1.$f(x) &#x3D; e^{\lambda x} P_m (x)$</strong><br>$$y^* &#x3D; x^kR_m(x) e^{\lambda x} \space, (R_m(x)是与P_m(x)同次的多项式)$$<br>其中，$k$由$\lambda$是否是特征方程的根决定,当$\lambda$不是特征方程的根时，$k&#x3D;0$；$\lambda$是特征方程的一重根时，$k&#x3D;1$;$\lambda$是特征方程的二重根时,$k&#x3D;2$。</p><p>解出特解$y^*$的形式后需要将特解代回微分方程以确定多项式$R_m(x)$的系数</p><p><strong>2.$f(x) &#x3D; e^{\lambda x}[P_l (x)cos \omega x + Q_n(x)sin \omega x]$</strong><br>$$y^* &#x3D; x^k e^{\lambda x}[R_m^{(1)}(x) cos \omega x + R_m^{(2)}(x) sin \omega  x]$$<br>其中，$R_m^{(1)}(x)、R_m^{(2)}(x)$是两个不同的、$m$次的多项式，$m &#x3D; max{l,n}$。$k$按$\lambda + \omega i（或 \lambda - \omega i）$不是特征方程的根、或是特征方程的一重根（单根）依次取0或1。</p><p>确定特解$y^*$的形式后代入微分方程确定系数。</p><hr><h2 id="二阶齐次线性微分方程举例——无阻尼自由振动的微分方程"><a href="#二阶齐次线性微分方程举例——无阻尼自由振动的微分方程" class="headerlink" title="二阶齐次线性微分方程举例——无阻尼自由振动的微分方程"></a>二阶齐次线性微分方程举例——无阻尼自由振动的微分方程</h2><p>$$\frac{d^2 x}{d t^2} + k^2 x &#x3D; 0$$<br>$$\longrightarrow x &#x3D; x_0coskt + \frac{v_0}{k}sinkt$$<br>$${^{x_0 &#x3D; Asin \varphi}_{\frac{v_0}{k} &#x3D; Acos \varphi}}\longrightarrow x &#x3D; Asin(kt + \varphi)$$</p><p>$$A &#x3D; \sqrt{X_0^2 + \frac{v^2_0}{k^2}} \space ,\space tan \varphi &#x3D; \frac{kx_0}{v_0}$$</p>]]></content>
+    
+    
+    <summary type="html">本文简要介绍了高等数学中常见的微分方程的求解方法</summary>
+    
+    
+    
+    <category term="学习" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="高等数学" scheme="https://lyy1119.github.io/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在cad中设置国标字体、标注样式等</title>
+    <link href="https://lyy1119.github.io/2024/05/09/20240509-1/"/>
+    <id>https://lyy1119.github.io/2024/05/09/20240509-1/</id>
+    <published>2024-05-09T12:55:16.000Z</published>
+    <updated>2024-05-10T13:23:26.095Z</updated>
+    
+    <content type="html"><![CDATA[<p>CAD在创建新文件时会让我们选择模板，虽然有内置模板<code>acadiso.dwt</code>，但是其默认配置和中国国标还相差许多。  </p><p>下面将介绍国标中的<strong>字体</strong>、<strong>尺寸标注</strong>和<strong>多重引线</strong>的详细配置以便查阅。不过在此之前先简略说明一下图层的相关设置。注意，新建文件时要使用模板<code>acadiso.dwt</code>。</p><span id="more"></span><h2 id="图层和线型"><a href="#图层和线型" class="headerlink" title="图层和线型"></a>图层和线型</h2><p>在使用cad绘制工图时，我们通常需要使用到不同的线型。相对于直接修改线条的线型，更好的解决方法是设置多个图层，并给各个图层分配相应的线型。在绘制好图形后，我们只需要把线条设置到相应的图层即可。  </p><p>常用的图层、线型、线宽如下：  </p><table><thead><tr><th>图层（建议名）</th><th>线型</th><th>线宽</th></tr></thead><tbody><tr><td>粗实线</td><td>Continuous</td><td>0.5</td></tr><tr><td>细实线</td><td>Continuous</td><td>0.25</td></tr><tr><td>虚线</td><td>DASHED或DASHED2（小图幅）</td><td>0.25</td></tr><tr><td>中心线</td><td>CENTER或CENTER2（小图幅）</td><td>0.25</td></tr><tr><td>剖面线</td><td>Continuous</td><td>0.25</td></tr><tr><td>文字</td><td>Continuous</td><td>0.25</td></tr><tr><td>尺寸标注</td><td>Continuous</td><td>0.25</td></tr></tbody></table><p>不同的图层可用不同颜色以增加视觉的区分。</p><h2 id="字体设置"><a href="#字体设置" class="headerlink" title="字体设置"></a>字体设置</h2><p>国标使用的字体是斜体，汉字使用长仿宋体。<br>步骤如下：  </p><ol><li>显示菜单栏</li><li>菜单栏-&gt;格式-&gt;文字样式</li><li>新建字体样式，并命名，如：<code>工程字</code></li><li>字体名设置为：gbeitc，勾选使用大字体，大字体为：gbcbig，其余设置默认</li></ol><p>设置的结果如下：<br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509194013.png" alt="CAD文字样式截图"></p><h2 id="标注样式"><a href="#标注样式" class="headerlink" title="标注样式"></a>标注样式</h2><p>步骤如下：</p><ol><li>菜单栏-&gt;格式-&gt;标注样式<br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509194402.png" alt="CAD标注样式截图"></li><li>新建样式。基础样式选择ISO-25<br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509194323.png" alt="CAD创建样式截图"></li><li>点击继续，调整样式<ul><li><strong>线</strong>：基线间距改为7；超出尺寸线改为2；起点偏移量改为0；<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509194752.png" alt="新建标注样式-线截图"></li><li><strong>符号和箭头</strong>：箭头大小改为3.5（和字体大小相同，若大图幅改为5）；<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509195000.png" alt="新建标注样式-符号和箭头截图"></li><li><strong>文字</strong>：文字样式：工程字（即之前我们设置的国标字体）；文字高度设置为3.5（大图幅使用5）<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509195241.png" alt="新建标注样式-文字截图"></li><li><strong>调整</strong>：（无需更改。建议项：优化下，勾选手动放置文字）<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509195445.png" alt="新建标注样式-调整截图"></li><li><strong>主单位</strong>：精度的选择看该图中的具体小数值，一般来说0.0就行；小数分隔选择句点；<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509195641.png" alt="新建标注样式-主单位截图"></li><li>其余根据实际需求设置</li></ul></li><li>除了新建gb样式外，我们还需要对角度的尺寸标注进行单独设置（因为国标规定工图中角度尺寸必须水平），具体如下：<ul><li>选中我们新建的样式“gb”</li><li>新建。选择用于角度标注<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509200032.png" alt="新建-用于角度标注-截图"></li><li>选择文字选项卡，文字对齐选择水平。其余不需要修改。点击确定保存即可<br> <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509200144.png" alt="新建-用于角度标注-文字-截图"></li></ul></li></ol><h2 id="多重引线样式"><a href="#多重引线样式" class="headerlink" title="多重引线样式"></a>多重引线样式</h2><ol><li>菜单栏-&gt;格式-&gt;多重引线样式，修改或新建都行。</li><li>详细格式如下：<ul><li><strong>引线格式</strong>：具体格式按需求修改即可</li><li><strong>引线结构</strong>：基线距离改为4或其他合适的值<br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509204754.png" alt="多重引线样式-引线结构-截图"></li><li><strong>内容</strong>：字体样式改为之前设置的<code>工程字</code>；引线连接的连接位置全改为<code>最后一行加下划线</code><br><img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20240509205003.png" alt="多重引线样式-内容-截图"></li></ul></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;CAD在创建新文件时会让我们选择模板，虽然有内置模板&lt;code&gt;acadiso.dwt&lt;/code&gt;，但是其默认配置和中国国标还相差许多。  &lt;/p&gt;
+&lt;p&gt;下面将介绍国标中的&lt;strong&gt;字体&lt;/strong&gt;、&lt;strong&gt;尺寸标注&lt;/strong&gt;和&lt;strong&gt;多重引线&lt;/strong&gt;的详细配置以便查阅。不过在此之前先简略说明一下图层的相关设置。注意，新建文件时要使用模板&lt;code&gt;acadiso.dwt&lt;/code&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CAD" scheme="https://lyy1119.github.io/categories/%E5%AD%A6%E4%B9%A0/CAD/"/>
+    
+    
+    <category term="CAD" scheme="https://lyy1119.github.io/tags/CAD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lfs中遇到的一些问题</title>
+    <link href="https://lyy1119.github.io/2024/04/27/20240427-2/"/>
+    <id>https://lyy1119.github.io/2024/04/27/20240427-2/</id>
+    <published>2024-04-27T07:22:57.000Z</published>
+    <updated>2024-05-10T12:41:49.976Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>git是一个很受还原的代码版本控制软件，git是为文本文档的版本控制设计的，我们在diff时能明显体会到这点，但是这不代表git做二进制文件的版本控制。  </p><p>git在大概一几年开发了一个名为Git Large Storage的项目，给git做了一个lfs的拓展，其目的就是让git也能对二进制文件做版本控制。  </p><p><em>git-lfs的更多内容参见：<a href="https://git-lfs.com/">https://git-lfs.com/</a></em>  </p><p>二进制文件的版本控制相对来说比较难，不像文本文件的内容修改清晰明了。  </p><p>在git lfs的使用过程中遇到了一些问题，其解决方法我将在下面给出。</p><h2 id="proxyconnect-tcp-dial-tcp-lookup-‘http-no-such-host"><a href="#proxyconnect-tcp-dial-tcp-lookup-‘http-no-such-host" class="headerlink" title="proxyconnect tcp: dial tcp: lookup ‘http: no such host"></a>proxyconnect tcp: dial tcp: lookup ‘http: no such host</h2><p>在拉取一个lfs项目时，我们可能会遇到如标题所示的错误提示，或者类似于</p><pre><code> Smudge error git lfs Error downloading object:...</code></pre><p>很明显,这些提示告诉我们文件从lfs下载时出现了问题，显然，我们需要检查我们的网络连接和加速器是否工作正常。若网络方面没有问题，我们得考虑其他方面了，比如上传项目的时候lfs文件是否真的上传上去了，以及另一个容易忽略的问题，就是git的代理设置。  </p><p>如果你有使用代理科学上网，那么上述问题的一个可能原因就是重复设置了代理。具体来说就是你在windows系统中开启代理的同时又设置了git的代理。所以我们可以通过取消git的代理设置来解决这个问题。  </p><p>如若使用命令行，则命令如下：</p><pre><code class="bash">git config --global --unset http.proxygit config --global --unset https.proxy</code></pre><p><strong>但是</strong>，我使用如上命令并没有解决问题。git的全局配置存储在个人用户文件夹下的<code>.gitconfig</code>文件里，我们只需要打开这个文件，将其中的代理设置部分删除即可。</p>]]></content>
+    
+    
+    <summary type="html">本文记录了博主在使用git-lfs时遇到的问题：无法下载lfs存储的文件。这个问题的来源是git的代理设置。</summary>
+    
+    
+    
+    <category term="git" scheme="https://lyy1119.github.io/categories/git/"/>
+    
+    <category term="问题" scheme="https://lyy1119.github.io/categories/git/%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="git" scheme="https://lyy1119.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用hexo写博客</title>
+    <link href="https://lyy1119.github.io/2024/04/27/20240427-1/"/>
+    <id>https://lyy1119.github.io/2024/04/27/20240427-1/</id>
+    <published>2024-04-26T23:44:08.000Z</published>
+    <updated>2024-05-10T12:41:49.976Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="使用hexo写博客的步骤"><a href="#使用hexo写博客的步骤" class="headerlink" title="使用hexo写博客的步骤"></a>使用hexo写博客的步骤</h2><p><em>假定你已经安装好了hexo</em></p><ol><li>创建新的博客页<br>使用<code>hexo new [layout] title</code>来创建一个新的page。其中layout默认有如下几个<table><thead><tr><th>layout</th><th>说明</th></tr></thead><tbody><tr><td>post</td><td></td></tr><tr><td>page</td><td>一个完整的、正式的博客页</td></tr><tr><td>draft</td><td>草稿，即使deploy，也不会在网站上显示，除非publish这个草稿</td></tr></tbody></table></li><li>编辑生成的md文件<br>当你在使用<code>hexo new draft new_page</code>时,会在<code>./source/_drafts</code>下生成一个<code>new_page.md</code>,只需要编辑这个markdown文件就能完成博客的写作.</li><li>publish你的draft<br><code>hexo publish [layout] title</code></li><li>deploy到远程(如gitpage)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo c  <span class="comment">#short for hexo clean</span></span><br><span class="line">hexo d  <span class="comment">#short for hexo deploy</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;使用hexo写博客的步骤&quot;&gt;&lt;a href=&quot;#使用hexo写博客的步骤&quot; class=&quot;headerlink&quot; title=&quot;使用hexo写博客的步骤&quot;&gt;&lt;/a&gt;使用hexo写博客的步骤&lt;/h2&gt;&lt;p&gt;&lt;em&gt;假定你已经安装好了hexo&lt;/em&gt;&lt;/p&gt;
+&lt;ol</summary>
+      
+    
+    
+    
+    <category term="hexo教程" scheme="https://lyy1119.github.io/categories/hexo%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="hexo" scheme="https://lyy1119.github.io/tags/hexo/"/>
+    
+    <category term="教程" scheme="https://lyy1119.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+</feed>
