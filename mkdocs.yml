@@ -6,16 +6,9 @@ extra:
     language: 'zh'
 
 theme:
-  name: 'material'
-  palette:
-    - primary: 'Light Green'
-    - accent: 'Pink'
+  name: material
   features:
     - content.code.copy
-
-  #font:
-    #text: 'Ubuntu'
-    #code: 'Ubuntu Mono'
   language: 'zh'
 
 extra_javascript:
