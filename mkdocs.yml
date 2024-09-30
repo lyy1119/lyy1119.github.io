@@ -3,25 +3,39 @@ plugins:
     - search
 extra:
   search:
-    language: 'ja'
+    language: 'zh'
 
 theme:
   name: 'material'
   palette:
-    primary: 'Light Green'
-    accent: 'Pink'
-  feature:
-    tabs: false
+    - primary: 'Light Green'
+    - accent: 'Pink'
+  features:
+    - content.code.copy
+
   #font:
     #text: 'Ubuntu'
     #code: 'Ubuntu Mono'
   language: 'zh'
 
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  # mathjax
+  # - javascripts/mathjax.js # 有问题，开了反而公式没了
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  # katex
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - admonition
   - codehilite:
       guess_lang: false
@@ -52,3 +66,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist
   - pymdownx.tilde
+
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
