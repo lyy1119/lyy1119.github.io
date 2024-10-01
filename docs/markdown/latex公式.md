@@ -53,14 +53,57 @@
 |$\psi$|\psi|$\Psi$|\Psi|
 |$\omega$|\omega|$\Omega$|\Omega|
 
-## 字母向量、上横线、下横线、上尖、上波浪线、一阶导数、二阶导数
+## 字母向量、箭头、上下划线、上尖、上波浪线、一阶导数、二阶导数
 
 |名称|效果|tex|
 |---|---|---|
-|向量（上箭头）|$\vec{a}$|\vec{}|
-|平均值（上横线）|$\overline{a}$|\overline{}|
-|下横线|$\underline{a}$|\underline{}|
-|(线性回归，直线方程) 尖|$\widehat{a}$|\widehat{}|
-|颚化符号  等价无穷小|$\widetilde{a}$|\widetilde{}|
-|一阶导数（上点）|$\dot{a}$|\dot{}|
-|二阶导数（上两点）|$\ddot{a}$|\ddot{}|
+|向量（上箭头）|$\vec{a}$|\vec{a}|
+|左箭头|$\overleftarrow{abc}$|\overleftarrow{abc}|
+|右箭头|$\overrightarrow{abc}$|\overrightarrow{abc}|
+|平均值（上划线）|$\overline{abc}$|\overline{abc}|
+|下划线|$\underline{abc}$|\underline{abc}|
+|(线性回归，直线方程) 尖|$\widehat{abc}$|\widehat{abc}|
+|颚化符号  等价无穷小|$\widetilde{abc}$|\widetilde{abc}|
+|一阶导数（上点）|$\dot{a}$|\dot{a}|
+|二阶导数（上两点）|$\ddot{a}$|\ddot{a}|
+|上花括号|$\overbrace{abc}$|\overbrace{abc}|
+|下花括号|$\underbrace{abc}$|\underbrace{abc}|
+
+## 数学结构
+
+|名称|效果|tex|
+|---|---|---|
+|分式|$\frac{a}{b}$|$\frac{a}{b}$|
+|根式|$\sqrt{abc}$|\sqrt{abc}|
+|n次根|$\sqrt[n]{abc}$|\sqrt[n]{abc}|
+
+## 界定符
+
+|名称|效果|tex|
+|---|---|---|
+|竖线|$\|$|\||
+||$\vert$|\vert|
+|双竖线|$\\\|$|\\\||
+||$\Vert$|\Vert|
+|花括号|$\{$|\\\{|
+||$\}$|\\\}|
+|尖括号|$\lang$|\lang|
+||$\rang$|\rang|
+||$\lfloor$|\lfloor|
+||$\rfloor$|\rfloor|
+||$\lceil$|\lceil|
+||$\rceil$|\rceil|
+|斜线|$/$|/|
+|反斜线|$\backslash$|\backslash|
+|中括号|$[$|[|
+||$]$|]|
+|向上箭头|$\uparrow$|\uparrow|
+||$\Uparrow$|\Uparrow|
+|向下箭头|$\downarrow$|\downarrow|
+||$\Downarrow$|\Downarrow|
+||$\llcorner$|\llcorner|
+||$\lrcorner$|\lrcorner|
+||$\ulcorner$|\ulcorner|
+||$\urcorner$|\urcorner|
+
+## 大小可变符号
