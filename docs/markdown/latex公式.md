@@ -61,6 +61,14 @@ $d_{2}^{2}$
 |$\psi$|\psi|$\Psi$|\Psi|
 |$\omega$|\omega|$\Omega$|\Omega|
 
-## 数学符号
+## 字母向量、上横线、下横线、上尖、上波浪线、一阶导数、二阶导数
 
-待写……
+|名称|效果|tex|
+|---|---|---|
+|向量（上箭头）|$\vec{a}$|\vec{}|
+|平均值（上横线）|$\overline{a}$|\overline{}|
+|下横线|$\underline{a}$|\underline{}|
+|(线性回归，直线方程) 尖|$\widehat{a}$|\widehat{}|
+|颚化符号  等价无穷小|$\widetilde{a}$|\widetilde{}|
+|一阶导数（上点）|$\dot{a}$|\dot{}|
+|二阶导数（上两点）|$\ddot{a}$|\ddot{}|
