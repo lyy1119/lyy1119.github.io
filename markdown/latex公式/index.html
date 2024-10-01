@@ -787,30 +787,43 @@
 
 <h1 id="markdownlatexkatex">markdown中Latex或Katex公式<a class="headerlink" href="#markdownlatexkatex" title="Permanent link">&para;</a></h1>
 <h2 id="_1">上下标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>上标：
-如：<span class="arithmatex">\(10^5\)</span><br />
-<div class="language-latex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s">$</span><span class="m">10</span><span class="nb">^{</span><span class="m">5</span><span class="nb">}</span><span class="s">$</span>
-</span></code></pre></div></li>
-<li>下标：
-如<span class="arithmatex">\(d_2\)</span>:<br />
-<div class="language-latex highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="s">$</span><span class="nb">d_{</span><span class="m">2</span><span class="nb">}</span><span class="s">$</span>
-</span></code></pre></div></li>
-</ul>
-<p>上述两例中<code>{}</code>表示作用范围，对于单个字符可以不加，对于多个字符则是必须的。  </p>
-<ul>
-<li>
-<p>同时使用上下标
-如：<span class="arithmatex">\(d_2^2\)</span><br />
-<div class="language-latex highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="s">$</span><span class="nb">d_{</span><span class="m">2</span><span class="nb">}^{</span><span class="m">2</span><span class="nb">}</span><span class="s">$</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>特例</p>
-</li>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>效果</th>
+<th>tex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上标</td>
+<td><span class="arithmatex">\(10^5\)</span></td>
+<td>10^{5}</td>
+</tr>
+<tr>
+<td>下标</td>
+<td><span class="arithmatex">\(d_{2}\)</span></td>
+<td>d_{2}</td>
+</tr>
+<tr>
+<td>上下标</td>
+<td><span class="arithmatex">\(d_{2}^{2}\)</span></td>
+<td>d_{2}^{2}</td>
+</tr>
+</tbody>
+</table>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>上下标两例中<code>{}</code>表示作用范围，对于单个字符可以不加，对于多个字符则是必须的。  </p>
+</details>
+<details class="note" open="open">
+<summary>特例</summary>
+<ol>
 <li>有一些markdown渲染器，如pandoc，无法渲染<code>\degree</code>，可以使用<code>\circ</code>作为上标表示角度的单位。  </li>
 <li>一撇：如<span class="arithmatex">\(K'\)</span>，可以像这样写：<code>$K'$</code>  </li>
-</ul>
+</ol>
+</details>
 <h2 id="_2">希腊字母<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>对于大写希腊字母，在前面加var（如\varxxx）一般表示斜体，部分大写希腊字母没有\varxxx的形式  </li>
