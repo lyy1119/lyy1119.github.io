@@ -1050,8 +1050,21 @@
 <ol>
 <li>下载源码并解压</li>
 <li>复制<code>script\makefile.mingw</code>到根目录，修改makefile内容，将所有<code>-mno-cygwin</code>参数去掉（对于高版本的mingw的gcc来说，已经没有这个参数了）</li>
-<li>复制libharu文件夹下include所有h头文件和win32/include下所有头文件到include目录；复制libhpdf.a到lib目录</li>
+<li>修改<code>src/hpdf_objects.c</code>的部分代码，注释以下内容。
+   <div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">   </span><span class="c1">// case HPDF_OCLASS_DIRECT:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span><span class="c1">//     HPDF_Direct_Free (obj);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="c1">//     break;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">   </span><span class="p">...</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">   </span><span class="c1">// case HPDF_OCLASS_DIRECT:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="c1">//     ret = HPDF_Direct_Write (obj, stream);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">   </span><span class="c1">//     break;</span>
+</span></code></pre></div></li>
+<li>编译，复制libharu文件夹下include所有h头文件和win32/include下所有头文件到include目录；复制libhpdf.a到lib目录</li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>如果不注释，编译程序时会报错找不到HPDF_Direct_Free和HPDF_Direct_Write的定义，我翻看了源码和头文件，并未找到这两个函数的定义，所以决定直接注释这两处的代码。</p>
+</div>
 
 
 
