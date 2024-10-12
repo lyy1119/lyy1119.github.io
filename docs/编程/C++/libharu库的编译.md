@@ -32,4 +32,17 @@ libharu库有两个依赖库，分别是zlib和libpng。所以，需要先编译
 
 1. 下载源码并解压
 2. 复制`script\makefile.mingw`到根目录，修改makefile内容，将所有`-mno-cygwin`参数去掉（对于高版本的mingw的gcc来说，已经没有这个参数了）
-3. 复制libharu文件夹下include所有h头文件和win32/include下所有头文件到include目录；复制libhpdf.a到lib目录
+3. 修改`src/hpdf_objects.c`的部分代码，注释以下内容。
+   ```C++
+      // case HPDF_OCLASS_DIRECT:
+      //     HPDF_Direct_Free (obj);
+      //     break;
+      ...
+      // case HPDF_OCLASS_DIRECT:
+      //     ret = HPDF_Direct_Write (obj, stream);
+      //     break;
+   ```
+4. 编译，复制libharu文件夹下include所有h头文件和win32/include下所有头文件到include目录；复制libhpdf.a到lib目录
+
+!!!info
+      如果不注释，编译程序时会报错找不到HPDF_Direct_Free和HPDF_Direct_Write的定义，我翻看了源码和头文件，并未找到这两个函数的定义，所以决定直接注释这两处的代码。
