@@ -9,8 +9,9 @@ libharu库有两个依赖库，分别是zlib和libpng。所以，需要先编译
 
 对于我下载的mingw来说，默认include目录是`mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include`或者更深一层的`C:\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++`。  
 
+因为不同来源的mingw的gcc默认include目录和lib目录可能不同，所以下面不会给出具体路径，而是简称include目录和lib目录
 
-### zlib库的编译
+### 1.zlib库的编译
 
 1. 在浏览器搜索zlib，下载源码文件。
 2. 解压缩，将文件夹下`win32\makefile.gcc`文件复制到源码根目录下，使用make指定`makefile.gcc`这个文件。mingw下默认的make其实是`mingw32-make`，不过我已经将其重命名为make了。
@@ -20,7 +21,15 @@ libharu库有两个依赖库，分别是zlib和libpng。所以，需要先编译
 ```
 3. 复制`libz.a`到mingw的lib文件夹。复制`zlib.h`和`zconf.h`到include文件夹。
 
-### libpng库的编译
+### 2.libpng库的编译
 
 1. 搜索libpng，下载源码（官网给的是sourceforge）
-2. 
+2. 解压缩，将文件夹下的`scripts\makefile.gcc`复制到根目录
+3. `make -f makefile.gcc`，注意，这里可能会报错，要将第四十行`PNGLIBCONF_H_PREBUILT = scripts/pnglibconf.h.prebuilt`的/改为反斜杠`\ `
+4. 将`libpng.a`复制到mingw的lib文件夹下，将png.h和pngconf.h复制到include文件夹下
+
+### 3.libharu库的编译
+
+1. 下载源码并解压
+2. 复制`script\makefile.mingw`到根目录，修改makefile内容，将所有`-mno-cygwin`参数去掉（对于高版本的mingw的gcc来说，已经没有这个参数了）
+3. 复制libharu文件夹下include所有h头文件和win32/include下所有头文件到include目录；复制libhpdf.a到lib目录
