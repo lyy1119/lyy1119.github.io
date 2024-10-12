@@ -876,18 +876,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zlib" class="md-nav__link">
+  <a href="#1zlib" class="md-nav__link">
     <span class="md-ellipsis">
-      zlib库的编译
+      1.zlib库的编译
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#libpng" class="md-nav__link">
+  <a href="#2libpng" class="md-nav__link">
     <span class="md-ellipsis">
-      libpng库的编译
+      2.libpng库的编译
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3libharu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.libharu库的编译
     </span>
   </a>
   
@@ -968,18 +977,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zlib" class="md-nav__link">
+  <a href="#1zlib" class="md-nav__link">
     <span class="md-ellipsis">
-      zlib库的编译
+      1.zlib库的编译
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#libpng" class="md-nav__link">
+  <a href="#2libpng" class="md-nav__link">
     <span class="md-ellipsis">
-      libpng库的编译
+      2.libpng库的编译
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3libharu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.libharu库的编译
     </span>
   </a>
   
@@ -1011,7 +1029,8 @@
 <h3 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>所有库编译后，需要将lib文件和头文件放到mingw中g++或gcc的默认include目录，这个目录根据你下载的mingw不同可能有所不同。可以试试将.h头文件放到目录下include后编译会不会报错，来判断这个目录是不是编译器的include默认目录。lib文件夹一般就是mingw根目录下的lib文件夹。  </p>
 <p>对于我下载的mingw来说，默认include目录是<code>mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include</code>或者更深一层的<code>C:\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++</code>。  </p>
-<h3 id="zlib">zlib库的编译<a class="headerlink" href="#zlib" title="Permanent link">&para;</a></h3>
+<p>因为不同来源的mingw的gcc默认include目录和lib目录可能不同，所以下面不会给出具体路径，而是简称include目录和lib目录</p>
+<h3 id="1zlib">1.zlib库的编译<a class="headerlink" href="#1zlib" title="Permanent link">&para;</a></h3>
 <ol>
 <li>在浏览器搜索zlib，下载源码文件。</li>
 <li>解压缩，将文件夹下<code>win32\makefile.gcc</code>文件复制到源码根目录下，使用make指定<code>makefile.gcc</code>这个文件。mingw下默认的make其实是<code>mingw32-make</code>，不过我已经将其重命名为make了。
@@ -1020,10 +1039,18 @@
 </span></code></pre></div></li>
 <li>复制<code>libz.a</code>到mingw的lib文件夹。复制<code>zlib.h</code>和<code>zconf.h</code>到include文件夹。</li>
 </ol>
-<h3 id="libpng">libpng库的编译<a class="headerlink" href="#libpng" title="Permanent link">&para;</a></h3>
+<h3 id="2libpng">2.libpng库的编译<a class="headerlink" href="#2libpng" title="Permanent link">&para;</a></h3>
 <ol>
 <li>搜索libpng，下载源码（官网给的是sourceforge）</li>
-<li></li>
+<li>解压缩，将文件夹下的<code>scripts\makefile.gcc</code>复制到根目录</li>
+<li><code>make -f makefile.gcc</code>，注意，这里可能会报错，要将第四十行<code>PNGLIBCONF_H_PREBUILT = scripts/pnglibconf.h.prebuilt</code>的/改为反斜杠<code>\</code></li>
+<li>将<code>libpng.a</code>复制到mingw的lib文件夹下，将png.h和pngconf.h复制到include文件夹下</li>
+</ol>
+<h3 id="3libharu">3.libharu库的编译<a class="headerlink" href="#3libharu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>下载源码并解压</li>
+<li>复制<code>script\makefile.mingw</code>到根目录，修改makefile内容，将所有<code>-mno-cygwin</code>参数去掉（对于高版本的mingw的gcc来说，已经没有这个参数了）</li>
+<li>复制libharu文件夹下include所有h头文件和win32/include下所有头文件到include目录；复制libhpdf.a到lib目录</li>
 </ol>
 
 
