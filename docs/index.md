@@ -6,7 +6,8 @@
 
 ![Static Badge](https://img.shields.io/badge/Github-Profile-blue) [lyy1119](https://github.com/lyy1119)  
 ![Static Badge](https://img.shields.io/badge/email-red) lyy2286301015@126.com  
-![Static Badge](https://img.shields.io/badge/wiki-grey) [lyy1119.github.io](lyy1119.github.io)
+![Static Badge](https://img.shields.io/badge/wiki-blue) [exp.lyy19.top](https://exp.lyy19.top)  
+![Static Badge](https://img.shields.io/badge/wiki-githubpage-blue) [lyy1119.github.io](https://lyy1119.github.io)
 
 ## mkdocs使用方法
 
