@@ -4,10 +4,53 @@
 
 ## 关于我
 
-![Static Badge](https://img.shields.io/badge/Github-Profile-blue) [lyy1119](https://github.com/lyy1119)  
-![Static Badge](https://img.shields.io/badge/email-red) lyy2286301015@126.com  
-![Static Badge](https://img.shields.io/badge/wiki-blue) [exp.lyy19.top](https://exp.lyy19.top)  
-![Static Badge](https://img.shields.io/badge/wiki-githubpage-blue) [lyy1119.github.io](https://lyy1119.github.io)
+<style>
+    .parent {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 6fr 2fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-color:#4FC9F1;
+    border-style:inset;
+    border-width:5px;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+    padding: 1em;
+    }
+
+    .div1 { grid-area: 1 / 1 / 5 / 2; }
+    .div2 { grid-area: 1 / 2 / 5 / 4; }
+    .div3 { grid-area: 1 / 2 / 2 / 3; }
+    .div4 { grid-area: 1 / 3 / 2 / 4; padding-left: 10px;}
+    .div5 { grid-area: 2 / 2 / 3 / 3; }
+    .div6 { grid-area: 2 / 3 / 3 / 4; padding-left: 10px;}
+    .div7 { grid-area: 3 / 2 / 4 / 3; }
+    .div8 { grid-area: 3 / 3 / 4 / 4; padding-left: 10px;}
+    .div9 { grid-area: 4 / 2 / 5 / 3; }
+    .div10 { grid-area: 4 / 3 / 5 / 4; padding-left: 10px;}
+</style>
+
+<div class="parent">
+
+<div class="div1">
+    <img align=center style="border-radius: 5% 5% 5% 5%;width: 80%" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/1709210261156.png"></div>
+
+<div class="div2"></div>
+
+<div class="div3"><img align=center src=https://img.shields.io/badge/Github-Profile-blue></div>
+
+<div class="div4"><a href="https://github.com/lyy1119">lyy1119</a></div>
+
+<div class="div5"><img align=center src="https://img.shields.io/badge/email-red"></div>
+
+<div class="div6">lyy2286301015@126.com</div>
+
+<div class="div7"><img align=center src=https://img.shields.io/badge/wiki-blue></div>
+<div class="div8"><a href="https://exp.lyy19.top/">exp.lyy19.top</a></div>
+<div class="div9"><img align=center src=https://img.shields.io/badge/wiki-githubpages-blue></div>
+<div class="div10"><a href="https://lyy1119.github.io/">lyy1119.github.io</a></div>
+</div>
 
 ## mkdocs使用方法
 
