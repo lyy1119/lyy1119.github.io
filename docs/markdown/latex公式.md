@@ -77,6 +77,37 @@
 |根式|$\sqrt{abc}$|\sqrt{abc}|
 |n次根|$\sqrt[n]{abc}$|\sqrt[n]{abc}|
 
+## 数学运算符号
+
+|名称|效果|tex|
+|---|----|---|
+|加|$+$|+|
+|减|$-$|-|
+|乘|$\times$|\times|
+|除|$\div$|\div|
+|点乘|$\cdot$|\cdot|
+|星乘|$\ast$|\ast|
+|等于|$=$|=|
+|不等于|$\ne$|\neq或\ne|
+|加减|$\pm$|\pm|
+|减加|$\mp$|\mp|
+|求和|$\sum$|\sum|
+|连乘|$\prod$|\prod|
+|余积|$\coprod$|\coprod|
+|（一重）积分|$\int$|\int|
+|一重闭曲线积分|$\oint$|\oint|
+|二重积分|$\iint$|\iint|
+|三重积分|$\iiint$|\iiint|
+|闭曲面积分|$\oiint$|\oiint|
+|体积积分|$\oiiint$|\oiiint|
+||$\biguplus$|\biguplus|
+|并集|$\bigcup$|\bigcup|
+|交集|$\bigcap$|\bigcap|
+||$\bigodot$|\bigodot|
+||$\bigvee$|\bigvee|
+||$\bigwedge$|\bigwedge|
+||$\bigsqcup$|\bigsqcup|
+
 ## 界定符
 
 |名称|效果|tex|
