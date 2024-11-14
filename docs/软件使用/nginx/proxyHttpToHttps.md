@@ -47,3 +47,8 @@ certbot --nginx
 ```shell
 systemctl status certbot.timer
 ```
+
+手动测试证书续期是否工作：  
+```shell
+certbot renew --dry-run
+```
