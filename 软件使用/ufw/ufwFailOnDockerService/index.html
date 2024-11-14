@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../docker/saveUploadImage/">
+        <link rel="prev" href="../../nginx/proxyHttpToHttps/">
       
-      
-        <link rel="next" href="../git%E5%91%BD%E4%BB%A4/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Windows下git配置文件所在位置 - lyy19's Wiki</title>
+        <title>ufw对docker服务端口无效 - lyy19's Wiki</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windowsgit" class="md-skip">
+        <a href="#ufwdocker" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Windows下git配置文件所在位置
+              ufw对docker服务端口无效
             
           </span>
         </div>
@@ -1346,19 +1344,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
         
           
           <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
@@ -1372,7 +1368,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             Git
@@ -1383,19 +1379,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../git/gitconfig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1391,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1417,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      <a href="../../git/git%E5%91%BD%E4%BB%A4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,17 +1557,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" checked>
         
           
           <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
@@ -1595,7 +1583,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_10">
             <span class="md-nav__icon md-icon"></span>
             Ufw
@@ -1606,10 +1594,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ufw/ufwFailOnDockerService/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ufw对docker服务端口无效
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1618,6 +1626,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      原因
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决方法
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1658,6 +1704,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      原因
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决方法
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1671,8 +1743,18 @@
                   
 
 
-<h1 id="windowsgit">Windows下git配置文件所在位置<a class="headerlink" href="#windowsgit" title="Permanent link">&para;</a></h1>
-<p>Windows下git配置文件名为：<code>.gitconfig</code>，位置在<code>C:/Users/%USERNAME%</code></p>
+<h1 id="ufwdocker">ufw对docker服务端口无效<a class="headerlink" href="#ufwdocker" title="Permanent link">&para;</a></h1>
+<h2 id="_1">原因<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>docker自动在防火墙列表中添加了开放端口的规则. 所以根本就没走到ufw端口就被放行了。  </p>
+<h2 id="_2">解决方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>修改docker的配置文件<code>/etc/docker/daemon.json</code>(若没有就新建一个), 添加如下内容:  </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="s2">&quot;iptables&quot;</span>:<span class="w"> </span><span class="nb">false</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">}</span>
+</span></code></pre></div>
+<p>重启docker  </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
+</span></code></pre></div>
 
 
 

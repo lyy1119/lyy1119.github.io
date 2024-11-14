@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../docker/saveUploadImage/">
+        <link rel="prev" href="../../mkdocs/mkdocs%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%83%A8%E7%BD%B2/">
       
       
-        <link rel="next" href="../git%E5%91%BD%E4%BB%A4/">
+        <link rel="next" href="../../ufw/ufwFailOnDockerService/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Windows下git配置文件所在位置 - lyy19's Wiki</title>
+        <title>Nginx将http反向代理到https - lyy19's Wiki</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windowsgit" class="md-skip">
+        <a href="#nginxhttphttps" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Windows下git配置文件所在位置
+              Nginx将http反向代理到https
             
           </span>
         </div>
@@ -1346,19 +1346,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
         
           
           <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
@@ -1372,7 +1370,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             Git
@@ -1383,19 +1381,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../git/gitconfig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1393,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1417,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      <a href="../../git/git%E5%91%BD%E4%BB%A4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1507,17 +1495,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" checked>
         
           
           <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
@@ -1531,7 +1521,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
             Nginx
@@ -1542,10 +1532,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../nginx/proxyHttpToHttps/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Nginx将http反向代理到https
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1554,6 +1564,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.安装nginx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2etcnginxconfdnginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.在/etc/nginx/conf.d下建立nginx反向代理文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certbotnginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装certbot和nginx插件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      检查certbot定时刷新证书服务状态
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1658,6 +1724,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.安装nginx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2etcnginxconfdnginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.在/etc/nginx/conf.d下建立nginx反向代理文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certbotnginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装certbot和nginx插件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      检查certbot定时刷新证书服务状态
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1671,8 +1781,41 @@
                   
 
 
-<h1 id="windowsgit">Windows下git配置文件所在位置<a class="headerlink" href="#windowsgit" title="Permanent link">&para;</a></h1>
-<p>Windows下git配置文件名为：<code>.gitconfig</code>，位置在<code>C:/Users/%USERNAME%</code></p>
+<h1 id="nginxhttphttps">Nginx将http反向代理到https<a class="headerlink" href="#nginxhttphttps" title="Permanent link">&para;</a></h1>
+<h2 id="1nginx">1.安装nginx<a class="headerlink" href="#1nginx" title="Permanent link">&para;</a></h2>
+<h2 id="2etcnginxconfdnginx">2.在/etc/nginx/conf.d下建立nginx反向代理文件<a class="headerlink" href="#2etcnginxconfdnginx" title="Permanent link">&para;</a></h2>
+<p>例如 website.conf:<br />
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>server {
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    server_name xxx.xxx.xxx;  # 要分发证书的域名
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    location / {
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        proxy_pass https://localhost:port;  # 将port反向代理到HTTPS
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        proxy_set_header Host $host;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        proxy_set_header X-Real-IP $remote_addr;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        proxy_set_header X-Forwarded-Proto $scheme;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    }
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>}
+</span></code></pre></div></p>
+<p>退出编辑，测试nginx<br />
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nginx<span class="w"> </span>-t
+</span></code></pre></div></p>
+<p>重启nginx<br />
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+</span></code></pre></div></p>
+<h2 id="certbotnginx">安装certbot和nginx插件<a class="headerlink" href="#certbotnginx" title="Permanent link">&para;</a></h2>
+<p>安装certbot和插件  </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-nginx
+</span></code></pre></div>
+<p>使用certbot自动检测nginx配置并分发证书<br />
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>certbot<span class="w"> </span>--nginx
+</span></code></pre></div></p>
+<h2 id="certbot">检查certbot定时刷新证书服务状态<a class="headerlink" href="#certbot" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>systemctl<span class="w"> </span>status<span class="w"> </span>certbot.timer
+</span></code></pre></div>
+<p>手动测试证书续期是否工作：<br />
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>certbot<span class="w"> </span>renew<span class="w"> </span>--dry-run
+</span></code></pre></div></p>
 
 
 
