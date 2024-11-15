@@ -1747,14 +1747,18 @@
 <h2 id="_1">原因<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>docker自动在防火墙列表中添加了开放端口的规则. 所以根本就没走到ufw端口就被放行了。  </p>
 <h2 id="_2">解决方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>修改docker的配置文件<code>/etc/docker/daemon.json</code>(若没有就新建一个), 添加如下内容:  </p>
+<p>一下有删除线的是错误做法（指单纯关闭<code>iptables</code>），设置<code>"iptables": false</code><a href="https://jueee.github.io/docker-doc/about-docker-iptables-false.html">会中断 docker-compose 的 DNS 发现</a>。  </p>
+<p>从而导致docker内程序无法访问其他同网络的docker服务 <strong>甚至不能访问外部主机连接的互联网</strong> 。  </p>
+<p><del>修改docker的配置文件<code>/etc/docker/daemon.json</code>(若没有就新建一个), 添加如下内容:</del>  </p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="s2">&quot;iptables&quot;</span>:<span class="w"> </span><span class="nb">false</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">}</span>
 </span></code></pre></div>
-<p>重启docker  </p>
+<p><del>重启docker</del>  </p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
 </span></code></pre></div>
+<p><strong>正确的解决方法</strong> 是：对于内部服务container，去掉docker-compose.yml端口映射即可，去掉后只是外网无法访问这个服务，但是同一docker网络下的别的容器依然能访问。<br />
+或者参照<a href="https://jueee.github.io/docker-doc/about-docker-iptables-false.html">这个解决方法</a>。  </p>
 
 
 
