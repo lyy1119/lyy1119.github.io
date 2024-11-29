@@ -66,6 +66,8 @@
 
 本网站使用github repository作为图床，如果图片加载失败，可能你的网络连接存在问题。  
 
+本网站**部分内容使用ai生成**并经过审核，对于ai生成的文字内容，将在标题打上形如 ![Static Badge](https://img.shields.io/badge/Generated_By-OpenAI-red) 的tag。
+
 ## 你好，访客
 
 如果你恰好进入了我的网站，并看到了这段文字，那么欢迎你。在这个网站里，记录了许多我自己总结的经验，希望它们能帮到你。  
