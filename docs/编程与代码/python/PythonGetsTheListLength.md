@@ -1,6 +1,6 @@
 # Python获取列表长度
 
-![Static Badge](https://img.shields.io/badge/Generated_By-OpenAI-red)
+![Static Badge](https://img.shields.io/badge/Generated_By-OpenAI-red)  
 
 在 Python 中，可以使用内置函数 `len()` 获取列表的长度。以下是一个简单的示例：
 
