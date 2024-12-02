@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../PythonGetsTheListLength/">
+        <link rel="prev" href="../packPythonFileInOneFile/">
       
       
-        <link rel="next" href="../pythonObtainsTheComputerNameAndIpAddress/">
+        <link rel="next" href="../pythonThrowsACustomErrorMessage/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>python打包程序为单一可执行文件 - lyy19's Wiki</title>
+        <title>Python获取计算机名与IP - lyy19's Wiki</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python" class="md-skip">
+        <a href="#pythonip" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              python打包程序为单一可执行文件
+              Python获取计算机名与IP
             
           </span>
         </div>
@@ -769,6 +769,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../packPythonFileInOneFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python打包程序为单一可执行文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -785,7 +806,7 @@
           
   
   <span class="md-ellipsis">
-    python打包程序为单一可执行文件
+    Python获取计算机名与IP
   </span>
   
 
@@ -796,7 +817,7 @@
         
   
   <span class="md-ellipsis">
-    python打包程序为单一可执行文件
+    Python获取计算机名与IP
   </span>
   
 
@@ -818,18 +839,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1pythoninstaller" class="md-nav__link">
+  <a href="#windows-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      1.安装pythoninstaller
+      Windows 和 Linux 均适用
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2.打包
+      注意
     </span>
   </a>
   
@@ -839,27 +860,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pythonObtainsTheComputerNameAndIpAddress/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Python获取计算机名与IP
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2009,18 +2009,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1pythoninstaller" class="md-nav__link">
+  <a href="#windows-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      1.安装pythoninstaller
+      Windows 和 Linux 均适用
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2.打包
+      注意
     </span>
   </a>
   
@@ -2041,14 +2041,40 @@
                   
 
 
-<h1 id="python">python打包程序为单一可执行文件<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
-<h2 id="1pythoninstaller">1.安装pythoninstaller<a class="headerlink" href="#1pythoninstaller" title="Permanent link">&para;</a></h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pythoninstaller
+<h1 id="pythonip">Python获取计算机名与IP<a class="headerlink" href="#pythonip" title="Permanent link">&para;</a></h1>
+<p><img alt="Static Badge" src="https://img.shields.io/badge/ALL_Generated_By-OpenAI-red" />  </p>
+<p>在 Python 中，可以通过 <code>socket</code> 模块获取计算机名，代码如下：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">socket</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 获取计算机名</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">hostname</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;计算机名: </span><span class="si">{</span><span class="n">hostname</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="2">2.打包<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pyinstaller<span class="w"> </span>--noconsole<span class="w"> </span>--onefile<span class="w"> </span>file.py<span class="w"> </span><span class="c1"># 无控制台</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pyinstaller<span class="w"> </span>--onefile<span class="w"> </span>file.py<span class="w"> </span><span class="c1">#有控制台</span>
-</span></code></pre></div>
+<h3 id="windows-linux">Windows 和 Linux 均适用<a class="headerlink" href="#windows-linux" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong><code>socket.gethostname()</code></strong>：</li>
+<li>
+<p>返回的是计算机的主机名。此方法在 Windows 和 Linux 系统中均适用。</p>
+</li>
+<li>
+<p>如果需要获取计算机的完整域名（FQDN）：
+   <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">fqdn</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">getfqdn</span><span class="p">()</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;完整域名: </span><span class="si">{</span><span class="n">fqdn</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>获取主机对应的 IP 地址</strong>：
+   <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ip_address</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">hostname</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IP 地址: </span><span class="si">{</span><span class="n">ip_address</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<h3 id="_1">注意<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>返回值取决于操作系统和网络配置。</li>
+<li>如果获取到的是 <code>localhost</code> 或回环地址（如 <code>127.0.0.1</code>），可能需要检查网络设置。</li>
+</ul>
 
 
 

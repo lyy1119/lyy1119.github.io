@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../PythonGetsTheListLength/">
+        <link rel="prev" href="../../markdown/markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/">
       
       
-        <link rel="next" href="../pythonObtainsTheComputerNameAndIpAddress/">
+        <link rel="next" href="../PythonGetsTheListLength/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>python打包程序为单一可执行文件 - lyy19's Wiki</title>
+        <title>Python生成指定格式的日期 - lyy19's Wiki</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              python打包程序为单一可执行文件
+              Python生成指定格式的日期
             
           </span>
         </div>
@@ -727,10 +727,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../PythonGeneratesDatesInASpecificFormat/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -739,6 +748,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -769,30 +779,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    python打包程序为单一可执行文件
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../packPythonFileInOneFile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,44 +791,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1pythoninstaller" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.安装pythoninstaller
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.打包
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2002,32 +1954,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1pythoninstaller" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.安装pythoninstaller
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.打包
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2041,14 +1967,16 @@
                   
 
 
-<h1 id="python">python打包程序为单一可执行文件<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
-<h2 id="1pythoninstaller">1.安装pythoninstaller<a class="headerlink" href="#1pythoninstaller" title="Permanent link">&para;</a></h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pythoninstaller
+<h1 id="python">Python生成指定格式的日期<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<p><img alt="Static Badge" src="https://img.shields.io/badge/ALL_Generated_By-OpenAI-red" />  </p>
+<p>在Python中，可以使用<code>datetime</code>模块来生成和格式化日期。要以<code>yyyy-mm-dd</code>的格式生成当前日期，可以使用如下代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 获取当前日期并格式化为 &#39;yyyy-mm-dd&#39;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">current_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">current_date</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="2">2.打包<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pyinstaller<span class="w"> </span>--noconsole<span class="w"> </span>--onefile<span class="w"> </span>file.py<span class="w"> </span><span class="c1"># 无控制台</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pyinstaller<span class="w"> </span>--onefile<span class="w"> </span>file.py<span class="w"> </span><span class="c1">#有控制台</span>
-</span></code></pre></div>
+<p>这段代码会输出当前日期，格式为 <code>yyyy-mm-dd</code>，例如 <code>2024-12-01</code>。</p>
 
 
 
