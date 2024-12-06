@@ -2138,7 +2138,8 @@
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
 </span></code></pre></div>
 <p><strong>正确的解决方法</strong> 是：对于内部服务container，去掉docker-compose.yml端口映射即可，去掉后只是外网无法访问这个服务，但是同一docker网络下的别的容器依然能访问。<br />
-或者参照<a href="https://jueee.github.io/docker-doc/about-docker-iptables-false.html">这个解决方法</a>。  </p>
+实测下面的方法也不行。<br />
+<del>或者参照<a href="https://jueee.github.io/docker-doc/about-docker-iptables-false.html">这个解决方法</a>.</del></p>
 
 
 
