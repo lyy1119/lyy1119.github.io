@@ -26,4 +26,5 @@ systemctl restart docker
 
 
 **正确的解决方法** 是：对于内部服务container，去掉docker-compose.yml端口映射即可，去掉后只是外网无法访问这个服务，但是同一docker网络下的别的容器依然能访问。  
-或者参照[这个解决方法](https://jueee.github.io/docker-doc/about-docker-iptables-false.html)。  
+实测下面的方法也不行。  
+~~或者参照[这个解决方法](https://jueee.github.io/docker-doc/about-docker-iptables-false.html).~~
