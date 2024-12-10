@@ -137,4 +137,40 @@
 ||$\ulcorner$|\ulcorner|
 ||$\urcorner$|\urcorner|
 
-## 大小可变符号
+## 函数名称
+
+|名称|效果|tex|
+|---|---|---|
+|arccos|$\arccos$|\arccos|
+|arcsin|$\arcsin$|\arcsin|
+|arctan|$\arctan$|\arctan|
+|arg|$\arg$|\arg|
+|cos|$\cos$|\cos|
+|cosh|$\cosh$|\cosh|      
+|cot|$\cot$|\cot|
+|coth|$\coth$|\coth|
+|csc|$\csc$|\csc|
+|deg|$\deg$|\deg|
+|det|$\det$|\det|
+|dim|$\dim$|\dim|
+|exp|$\exp$|\exp|
+|gcd|$\gcd$|\gcd|
+|hom|$\hom$|\hom|
+|inf|$\inf$|\inf|
+|ker|$\ker$|\ker|
+|lg|$\lg$|\lg|
+|lim|$\lim$|\lim|
+|liminf|$\liminf$|\liminf|
+|limsup|$\limsup$|\limsup|
+|ln|$\ln$|\ln|
+|log|$\log$|\log|
+|max|$\max$|\max|
+|min|$\min$|\min|
+|Pr|$\Pr$|\Pr|
+|sec|$\sec$|\sec|
+|sin|$\sin$|\sin|
+|sinh|$\sinh$|\sinh|
+|sup|$\sup$|\sup|
+|tan|$\tan$|\tan|
+|tanh|$\tanh$|\tanh|
+
