@@ -29,7 +29,8 @@ tsc code.ts
 ```
 
 ## 变量声明
-This table is ![Static Badge](https://img.shields.io/badge/Generated_By-OpenAI-red)
+This table is ![Static Badge](https://img.shields.io/badge/Generated_By-OpenAI-red)  
+
 |关键词|作用域| 提升（Hoisting）|赋值规则|
 |--|--|--|--|
 |let|块作用域|会被提升，但不会被初始化，使用前必须显式声明，否则会报错（进入“暂时性死区”，TDZ）|不能在同一作用域中重复声明，但可以重新赋值|
