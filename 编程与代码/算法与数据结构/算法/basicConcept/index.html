@@ -12,7 +12,7 @@
         <link rel="prev" href="../../../python/pythonThrowsACustomErrorMessage/">
       
       
-        <link rel="next" href="../../../%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%88%91%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">
+        <link rel="next" href="../recursion/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -1143,6 +1143,15 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
+      空间复杂度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
       参考资料
     </span>
   </a>
@@ -1153,6 +1162,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    递归
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2387,6 +2417,15 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
+      空间复杂度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
       参考资料
     </span>
   </a>
@@ -2444,9 +2483,22 @@
 <ol>
 <li>时间复杂度仅仅是用来估计代码运行快慢的，不用作代表代码运行的具体时间长短。</li>
 <li><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的代码运行速度快。（因为还需要考虑计算机本身的运行速度和问题复杂度）</li>
-<li>常见时间复杂度效率排序：<span class="arithmatex">\(O(1)&gt;O(\log n)&gt;O(n)&gt;O(n\log n)&gt;O(n^2)&gt;O(n^2 \log n)&gt;O(n^3)\)</span></li>
+<li>常见时间复杂度效率排序：<span class="arithmatex">\(O(1)&gt;O(\log n)&gt;O(n)&gt;O(n\log n)&gt;O(n^2)&gt;O(n^2 \log n)&gt;O(n^3)\)</span>  </li>
 </ol>
-<h2 id="_5">参考资料<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><strong>如何计算时间复杂度</strong>：<br />
+1. 确定问题规模n
+2. 是否存在循环折半过程，若有，则存在<span class="arithmatex">\(log n\)</span>
+3. 若有<span class="arithmatex">\(k\)</span>层关于<span class="arithmatex">\(n\)</span>的循环，则存在<span class="arithmatex">\( n^k \)</span>
+4. 对于更复杂的情况，应当根据算法执行过程判断</p>
+<h2 id="_5">空间复杂度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><strong>空间复杂度</strong>：用来估计算法占用的内存大小的式子。  </p>
+<p>空间复杂度的表示方式与时间复杂度的表示方式完全相同。  </p>
+<p>例如：<br />
+- 算法使用了几个变量：<span class="arithmatex">\( O(1) \)</span>
+- 算法使用了长度为<span class="arithmatex">\( n \)</span>的一维列表：<span class="arithmatex">\( O(n) \)</span>
+- 算法使用了<span class="arithmatex">\( m \times n \)</span>的二维列表：<span class="arithmatex">\( O(mn) \)</span></p>
+<p><strong>“空间换时间”</strong>：用更多的内存节省计算时间。  </p>
+<h2 id="_6">参考资料<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.bilibili.com/video/BV1mp4y1D7UP/?share_source=copy_web&amp;vd_source=491de6e534fd41e7710953a476bfd784">【清华计算机博士带你学习Python算法+数据结构】</a></p>
 
 
