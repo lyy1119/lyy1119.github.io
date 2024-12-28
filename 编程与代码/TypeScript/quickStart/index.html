@@ -2949,12 +2949,37 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tsc<span class="w"> </span>code.ts
 </span></code></pre></div>
 <h2 id="_4">变量声明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>This table is <img alt="Static Badge" src="https://img.shields.io/badge/Generated_By-OpenAI-red" />
-|关键词|作用域| 提升（Hoisting）|赋值规则|
-|--|--|--|--|
-|let|块作用域|会被提升，但不会被初始化，使用前必须显式声明，否则会报错（进入“暂时性死区”，TDZ）|不能在同一作用域中重复声明，但可以重新赋值|
-|const|块作用域|会提升，但也处于“暂时性死区”，使用前必须显式声明| 常量，必须在声明时初始化，且不能重新赋值但如果const声明的是对象或数组，其属性或内容是可以被修改的。|
-|var|函数作用域|提升到其作用域的顶部，但不会初始化为值，未赋值前默认为 undefined|可以多次声明和赋值，同名变量不会报错。|</p>
+<p>This table is <img alt="Static Badge" src="https://img.shields.io/badge/Generated_By-OpenAI-red" />  </p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>作用域</th>
+<th>提升（Hoisting）</th>
+<th>赋值规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>let</td>
+<td>块作用域</td>
+<td>会被提升，但不会被初始化，使用前必须显式声明，否则会报错（进入“暂时性死区”，TDZ）</td>
+<td>不能在同一作用域中重复声明，但可以重新赋值</td>
+</tr>
+<tr>
+<td>const</td>
+<td>块作用域</td>
+<td>会提升，但也处于“暂时性死区”，使用前必须显式声明</td>
+<td>常量，必须在声明时初始化，且不能重新赋值但如果const声明的是对象或数组，其属性或内容是可以被修改的。</td>
+</tr>
+<tr>
+<td>var</td>
+<td>函数作用域</td>
+<td>提升到其作用域的顶部，但不会初始化为值，未赋值前默认为 undefined</td>
+<td>可以多次声明和赋值，同名变量不会报错。</td>
+</tr>
+</tbody>
+</table>
 <p><strong>函数作用域</strong>：即变量的作用范围限制在声明所在的函数中。如果在代码块（如 if 或 for）中用 var 声明变量，变量的作用域会扩展到整个函数或全局作用域，与之相关的成为**块级作用域**。</p>
 <p><strong>块作用域（block scope）</strong>：即变量的作用范围限制在声明所在的代码块中</p>
 <p>使用示例：
