@@ -14,7 +14,7 @@
 8. 计数排序
 9. 基数排序
 
-## 1.冒泡排序
+## 1.冒泡排序 bubble sort
 
 比较列表中两个相邻数，如果前面比后面大（升序排序），则交换两个数。  
 冒泡排序每运行一个循环，列表有序区大小变大一个，无序区大小减小一个。每次只对无序区排序。初始时，整个列表都是无序区。  
@@ -56,3 +56,17 @@ def bubble_sort(li: list):
             break
 ```
 
+## 2.选择排序 selection sort
+
+循环遍历 \( n \) 次列表（ \( n \) 为列表规模）。每次寻找无序区的最小值（升序排序），并按照顺序依次与第 \( i \) 个交换（ \( i \) 表示第几大的数），并缩小无序区。  
+
+### 代码实现
+
+```python
+# python
+def sort(li: list):
+    for i in range(len(li) - 1):
+        minValue = min(li[i:])
+        minIndex = li.index(minValue , i)
+        li[i] , li[minIndex] = li[minIndex] , li[i]
+```
