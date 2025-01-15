@@ -1044,6 +1044,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../python/sliceOperation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    切片操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../python/swapInPython/" class="md-nav__link">
         
   
@@ -1265,13 +1286,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-bubble-sort" class="md-nav__link">
     <span class="md-ellipsis">
-      1.冒泡排序
+      1.冒泡排序 bubble sort
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.冒泡排序">
+    <nav class="md-nav" aria-label="1.冒泡排序 bubble sort">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1287,6 +1308,30 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       改进
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.选择排序 selection sort
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.选择排序 selection sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
     </span>
   </a>
   
@@ -2509,13 +2554,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-bubble-sort" class="md-nav__link">
     <span class="md-ellipsis">
-      1.冒泡排序
+      1.冒泡排序 bubble sort
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.冒泡排序">
+    <nav class="md-nav" aria-label="1.冒泡排序 bubble sort">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2531,6 +2576,30 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       改进
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.选择排序 selection sort
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.选择排序 selection sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
     </span>
   </a>
   
@@ -2570,7 +2639,7 @@
 <li>计数排序</li>
 <li>基数排序</li>
 </ol>
-<h2 id="1">1.冒泡排序<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="1-bubble-sort">1.冒泡排序 bubble sort<a class="headerlink" href="#1-bubble-sort" title="Permanent link">&para;</a></h2>
 <p>比较列表中两个相邻数，如果前面比后面大（升序排序），则交换两个数。<br />
 冒泡排序每运行一个循环，列表有序区大小变大一个，无序区大小减小一个。每次只对无序区排序。初始时，整个列表都是无序区。  </p>
 <p>因为当无序区只剩一个时，不用再排序，所以整个冒泡排序需要运行 <span class="arithmatex">\( n-1 \)</span> 次循环。时间复杂度为 <span class="arithmatex">\( O(n^2) \)</span> 。  </p>
@@ -2601,6 +2670,16 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">exchange</span><span class="p">:</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="k">break</span>
 </span></code></pre></div></p>
+<h2 id="2-selection-sort">2.选择排序 selection sort<a class="headerlink" href="#2-selection-sort" title="Permanent link">&para;</a></h2>
+<p>循环遍历 <span class="arithmatex">\( n \)</span> 次列表（ <span class="arithmatex">\( n \)</span> 为列表规模）。每次寻找无序区的最小值（升序排序），并按照顺序依次与第 <span class="arithmatex">\( i \)</span> 个交换（ <span class="arithmatex">\( i \)</span> 表示第几大的数），并缩小无序区。  </p>
+<h3 id="_4">代码实现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># python</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">sort</span><span class="p">(</span><span class="n">li</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">li</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="n">minValue</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">li</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">minIndex</span> <span class="o">=</span> <span class="n">li</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">minValue</span> <span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">,</span> <span class="n">li</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">li</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="p">,</span> <span class="n">li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></code></pre></div>
 
 
 
