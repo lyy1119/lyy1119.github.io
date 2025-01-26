@@ -137,4 +137,43 @@ def quick_sort(li: list , left: int , right: int):
 1. 使用了递归，消耗资源
 2. 若每次partition的操作元素都是最大或者最小的，则每次递归列表无序长度只会减一，会出现所谓 **最坏情况** 。（解决方法：将partition选取的元素随机化）  
 
-## 5.堆排序
+## 5.堆排序 Heap sort
+
+### 堆排序的过程
+
+1. 建立堆（大根堆）
+2. 得到堆顶元素，为最大元素
+3. 去掉堆顶元素，将最后一个元素放在堆顶，通过一次向下调整重新使堆有序，获得第二大的元素
+4. 重复直至堆为空
+
+### 代码实现
+
+```python
+# python
+def sift(li: list , low: int , high: int):
+    i = low
+    j = 2 * i + 1
+    while j <= high:
+        if j + 1 <= high and li[j+1] > li[j]:
+            j = j + 1
+        if li[j] > li[i]:
+            li[j] , li[i] = li[i] , li[j]
+            i = j
+            j = 2 * i + 1
+        else:
+            break
+
+def heap_sort(li: list):
+    n = len(li)
+    # 建堆
+    for i in range((n-2)//2 , -1 , -1):
+        sift(li , i , n-1)
+    # 拿出、排序
+    high = n - 1
+    # 交换
+    while high > 0:
+        li[0] , li[high] = li[high] , li[0]
+        # 减小无序区大小
+        high -= 1
+        sift(li , 0 , high)
+```
