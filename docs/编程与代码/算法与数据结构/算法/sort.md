@@ -139,6 +139,8 @@ def quick_sort(li: list , left: int , right: int):
 
 ## 5.堆排序 Heap sort
 
+**时间复杂度** ： \( O(n \log n) \)
+
 ### 堆排序的过程
 
 1. 建立堆（大根堆）
