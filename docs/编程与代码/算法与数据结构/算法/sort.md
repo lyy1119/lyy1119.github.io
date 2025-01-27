@@ -288,9 +288,34 @@ def count_sort(li , maxCount=100):
             index += 1
 ```
 
-## 9.桶排序
+## 9.桶排序 Bucket sort
 
 将元素放在不同的 **桶** 中，对每个桶进行排序。  
 
+桶排序的效率取决于数据的分布，需要采用合适的分桶策略。  
+
 ![20250127145243](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250127145243.png)  
 
+### 代码实现
+
+```python
+def bucket_sort(li: list , n=100 , maxNumber=100000):
+    # 创建桶
+    buckets = [[] for i in range(n)]
+    # 分桶并排序
+    for i in li:
+        targetBucketIndex = max(i//(maxNumber//n) , n - 1)
+        buckets[targetBucketIndex].append(i)
+        # bubble sort
+        for i in range(len(buckets[targetBucketIndex]) - 1 , 0 , -1):
+            if buckets[targetBucketIndex][i] < buckets[targetBucketIndex][i-1]:
+                buckets[targetBucketIndex][i] , buckets[targetBucketIndex][i-1] = buckets[targetBucketIndex][i-1] , buckets[targetBucketIndex][i]
+            else:
+                break
+    # 输出
+    index = 0
+    for i in buckets:
+        for j in i:
+            li[index] = j
+            index += 1
+```
