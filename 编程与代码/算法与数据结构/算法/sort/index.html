@@ -3405,6 +3405,8 @@
 </span></code></pre></div>
 <h2 id="10">10.基数排序<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
 <p>可以看作多关键字排序。对于数字而言，可以对每一位排序。先对个位排序，然后按顺序输出，再对十位、百位排序。最后输出的就是有序数列。  </p>
+<p><strong>时间复杂度</strong> ： <span class="arithmatex">\( O(kn) \)</span></p>
+<p><strong>空间复杂度</strong> ： <span class="arithmatex">\( O(k+n) \)</span></p>
 <h3 id="_13">代码实现<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># python</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">radix_sort</span><span class="p">(</span><span class="n">li</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
