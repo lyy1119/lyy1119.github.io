@@ -236,4 +236,33 @@ def merge_sort(li , low , high):
 
 ```python
 # python
+def insertion_sort(li: list , step):
+    # 升序排序
+    length = len(li)
+    for i in range(step , length):
+        # i 代表有序区右侧索引
+        # 比较
+        temp = li[i]    # 保存要插入的值
+        # j = i - step
+        for j in range(i - step , -2 , -step):
+            # 反向遍历
+            # print("j=" , j)
+            if li[j] > temp and j >= 0:
+                # 如果索引为j的元素比索引为i的元素大，则索引为i的元素应该插入在索引为j的元素前，索引为j的元素后移
+                li[j+step] = li[j]
+            else:
+                # 索引为j的元素小于等于索引为i的元素，插入元素应当插入在j+1，不移动元素，将值插入到j+1
+                li[j+step] = temp
+                # print(f"j={j},break")
+                break
+        else:
+            li[j+step] = temp
+
+def shell_sort(li):
+    length = len(li)
+    step = length //2
+    while step > 0:
+        insertion_sort(li , step)
+        step //= 2
 ```
+
