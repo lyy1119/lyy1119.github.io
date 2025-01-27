@@ -186,3 +186,6 @@ def heap_sort(li: list):
 
 ## 6.归并排序 Merge sort
 
+**归并** ：若一个列表分成两段有序列表，则将两段有序列表合并成一个有序列表的操作成为归并。  
+
+![20250127110841](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250127110841.png)
