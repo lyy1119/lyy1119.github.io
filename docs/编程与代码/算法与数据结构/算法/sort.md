@@ -290,3 +290,7 @@ def count_sort(li , maxCount=100):
 
 ## 9.桶排序
 
+将元素放在不同的 **桶** 中，对每个桶进行排序。  
+
+![20250127145243](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250127145243.png)  
+
