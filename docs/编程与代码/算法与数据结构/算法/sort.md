@@ -186,6 +186,40 @@ def heap_sort(li: list):
 
 ## 6.归并排序 Merge sort
 
-**归并** ：若一个列表分成两段有序列表，则将两段有序列表合并成一个有序列表的操作成为归并。  
+**归并操作** ：若一个列表分成两段有序列表，则将两段有序列表合并成一个有序列表的操作成为归并。  
 
-![20250127110841](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250127110841.png)
+![20250127110841](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250127110841.png)  
+
+
+**时间复杂度** ： \( O(n \log n) \)
+
+### 代码实现
+
+```python
+# python
+def merge(li: list , low: int , mid: int , high: int):
+    """
+    asceding sort
+    """
+    res = []
+    i = low
+    j = mid + 1
+    while i <= mid and j <= high:
+        if li[i] > li[j]:
+            res.append(li[j])
+            j += 1
+        else:
+            res.append(li[i])
+            i += 1
+    if i <= mid:
+        res += li[i:mid+1]
+    else:
+        res += li[j:high+1]
+    li[low:high+1] = res
+
+def merge_sort(li , low , high):
+    if low < high:
+        merge_sort(li , low , (low+high)//2)
+        merge_sort(li , (low+high)//2+1 , high)
+        merge(li , low , (low+high)//2 , high)
+```
