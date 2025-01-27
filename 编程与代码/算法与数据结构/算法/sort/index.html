@@ -1598,6 +1598,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.桶排序
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3037,6 +3046,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.桶排序
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3270,8 +3288,19 @@
 <p><strong>任务情景</strong> ：现在有一些数，这些数在0到100之间，但数的数量不定，可能超过100，现在需要设计一个时间复杂度为 <span class="arithmatex">\( O(n) \)</span> 的算法。  </p>
 <p>通过建立一个长度为100的列表即可，然后遍历整个数组，记录每个数的出现次数即可，然后输出。  </p>
 <h3 id="_11">代码实现<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">count_sort</span><span class="p">(</span><span class="n">li</span> <span class="p">,</span> <span class="n">maxCount</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">count</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxCount</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="c1"># output</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="k">for</span> <span class="n">i</span> <span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="k">while</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>            <span class="n">li</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>            <span class="n">value</span> <span class="o">-=</span> <span class="mi">1</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
 </span></code></pre></div>
+<h2 id="9">9.桶排序<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
 
 
 
