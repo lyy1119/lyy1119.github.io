@@ -275,4 +275,18 @@ def shell_sort(li):
 ### 代码实现
 
 ```python
+def count_sort(li , maxCount=100):
+    count = [0 for i in range(maxCount+1)]
+    for i in li:
+        count[i] += 1
+    # output
+    index = 0
+    for i , value in enumerate(count):
+        while value > 0:
+            li[index] = i
+            value -= 1
+            index += 1
 ```
+
+## 9.桶排序
+
