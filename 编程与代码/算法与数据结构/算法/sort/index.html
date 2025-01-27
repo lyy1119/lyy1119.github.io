@@ -1599,11 +1599,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
+  <a href="#9-bucket-sort" class="md-nav__link">
     <span class="md-ellipsis">
-      9.桶排序
+      9.桶排序 Bucket sort
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="9.桶排序 Bucket sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3047,11 +3062,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
+  <a href="#9-bucket-sort" class="md-nav__link">
     <span class="md-ellipsis">
-      9.桶排序
+      9.桶排序 Bucket sort
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="9.桶排序 Bucket sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3300,9 +3330,31 @@
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>            <span class="n">value</span> <span class="o">-=</span> <span class="mi">1</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
 </span></code></pre></div>
-<h2 id="9">9.桶排序<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h2 id="9-bucket-sort">9.桶排序 Bucket sort<a class="headerlink" href="#9-bucket-sort" title="Permanent link">&para;</a></h2>
 <p>将元素放在不同的 <strong>桶</strong> 中，对每个桶进行排序。  </p>
+<p>桶排序的效率取决于数据的分布，需要采用合适的分桶策略。  </p>
 <p><img alt="20250127145243" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250127145243.png" />  </p>
+<h3 id="_12">代码实现<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">bucket_sort</span><span class="p">(</span><span class="n">li</span><span class="p">:</span> <span class="nb">list</span> <span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span> <span class="p">,</span> <span class="n">maxNumber</span><span class="o">=</span><span class="mi">100000</span><span class="p">):</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="c1"># 创建桶</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">buckets</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="c1"># 分桶并排序</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="n">targetBucketIndex</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="o">//</span><span class="p">(</span><span class="n">maxNumber</span><span class="o">//</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="c1"># bubble sort</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>            <span class="k">if</span> <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>                <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="p">,</span> <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="n">buckets</span><span class="p">[</span><span class="n">targetBucketIndex</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>            <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>                <span class="k">break</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="c1"># 输出</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">buckets</span><span class="p">:</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>            <span class="n">li</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></code></pre></div>
 
 
 
