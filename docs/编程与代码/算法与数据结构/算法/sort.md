@@ -319,3 +319,25 @@ def bucket_sort(li: list , n=100 , maxNumber=100000):
             li[index] = j
             index += 1
 ```
+
+## 10.基数排序
+
+可以看作多关键字排序。对于数字而言，可以对每一位排序。先对个位排序，然后按顺序输出，再对十位、百位排序。最后输出的就是有序数列。  
+
+### 代码实现
+
+```python
+# python
+def radix_sort(li: list):
+    maxNumber = max(li)
+    i = 0
+    while 10 ** i <= maxNumber:
+        buckets = [[] for i in range(10)]
+        for j in li:
+            bucketIndex = (j//(10**i))%10
+            buckets[bucketIndex].append(j)
+        li.clear()
+        for j in buckets:
+            li += j
+        i += 1
+```
