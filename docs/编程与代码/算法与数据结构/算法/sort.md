@@ -223,3 +223,17 @@ def merge_sort(li , low , high):
         merge_sort(li , (low+high)//2+1 , high)
         merge(li , low , (low+high)//2 , high)
 ```
+
+## 7.希尔排序 Shell sort
+
+是插入排序的改进版本，[希尔排序通过将比较的全部元素分为几个区域来提升插入排序的性能。这样可以让一个元素可以一次性地朝最终位置前进一大步。](https://zh.wikipedia.org/wiki/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F)  
+
+![Sorting_shellsort_anim](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/Sorting_shellsort_anim.gif)
+
+### 代码实现
+
+在插入排序的基础上修改即可，代码如下：  
+
+```python
+# python
+```
