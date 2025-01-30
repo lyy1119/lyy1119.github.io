@@ -29,6 +29,9 @@ class Stack():
         return self.data.pop()
 
     def get_top(self):
-        return self.data[-1]
+        if len(self.data) > 0:
+            return self.data[-1]
+        else:
+            return None
 ```
 
