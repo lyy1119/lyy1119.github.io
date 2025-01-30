@@ -9,3 +9,26 @@
 - 出栈 pop
 - 取栈顶 gettop
 
+![20250130174253](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250130174253.png)  
+
+**python中栈的简单实现** ：  
+- 进栈：`list.append(i)`
+- 出栈：`list.pop()`
+- 取栈顶：`list[-1]`
+
+```python
+# python
+class Stack():
+    def __init__(self):
+        self.data = []
+
+    def push(self , element):
+        self.data.append(element)
+
+    def pop(self):
+        return self.data.pop()
+
+    def get_top(self):
+        return self.data[-1]
+```
+
