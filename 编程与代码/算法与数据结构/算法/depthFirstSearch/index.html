@@ -2752,6 +2752,10 @@
 <h1 id="_1">深度优先搜索<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">迷宫问题——栈实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><img alt="20250131192526" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250131192526.png" /></p>
+<p><strong>思路</strong> ：</p>
+<blockquote>
+<p>使用栈记录路径，每走一步就push入栈，并按一定顺序搜索可走的下一步，直到遇到无路可走。无路可走时，依次出栈，知道遇到最近的一个存在可走路径的点（将走过的路标记），然后从该点开始继续上述循环。最后便能找到一条走出迷宫的路径。</p>
+</blockquote>
 <p>测试输入样例：<br />
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">maze</span> <span class="o">=</span> <span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">[</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="p">,</span>
