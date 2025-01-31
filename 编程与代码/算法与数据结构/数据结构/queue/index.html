@@ -1234,6 +1234,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    队列 Queue
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1244,6 +1256,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      队列的实现（python）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2656,6 +2696,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      队列的实现（python）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2671,6 +2728,13 @@
 
 
 <h1 id="queue">队列 Queue<a class="headerlink" href="#queue" title="Permanent link">&para;</a></h1>
+<p><strong>队列的相关概念</strong> ：<br />
+- 队尾 rear
+- 对头 front</p>
+<p><strong>队列的性质</strong> ：先进先出。  </p>
+<h2 id="python">队列的实现（python）<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+<p><img alt="20250131165359" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250131165359.png" />  </p>
+<p>假定列表是环形的，用两个变量存 <strong>front</strong> 和 <strong>rear</strong> 的索引，其中front的索引是实际队头元素的 <span class="arithmatex">\( 索引-1 \)</span> 。当rear和front变量所存索引相同时，表面 <strong>队空</strong> ，当front和rear所存索引数字为 <span class="arithmatex">\( front - 1 = rear \)</span> 时，表示 <strong>队满</strong> ，每次出队或者入队，front和rear分别+1并对队列长度取模。  </p>
 
 
 
