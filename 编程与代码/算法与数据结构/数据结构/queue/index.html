@@ -1203,6 +1203,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../hashTable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    哈希表 Hash Table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../heap/" class="md-nav__link">
         
   
@@ -1304,9 +1326,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#python-list" class="md-nav__link">
     <span class="md-ellipsis">
-      代码实现
+      基于python list的代码实现
     </span>
   </a>
   
@@ -2787,9 +2809,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#python-list" class="md-nav__link">
     <span class="md-ellipsis">
-      代码实现
+      基于python list的代码实现
     </span>
   </a>
   
@@ -2819,7 +2841,7 @@
 <h2 id="python">队列的实现（python）<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <p><img alt="20250131165359" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250131165359.png" />  </p>
 <p>假定列表是环形的，用两个变量存 <strong>front</strong> 和 <strong>rear</strong> 的索引，其中front的索引是实际队头元素的 <span class="arithmatex">\( 索引-1 \)</span> 。当rear和front变量所存索引相同时，表面 <strong>队空</strong> ，当front和rear所存索引数字为 <span class="arithmatex">\( front - 1 = rear \)</span> 时，表示 <strong>队满</strong> ，每次出队或者入队，front和rear分别+1并对队列长度取模。  </p>
-<h2 id="_1">代码实现<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="python-list">基于python list的代码实现<a class="headerlink" href="#python-list" title="Permanent link">&para;</a></h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Queue</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">front</span> <span class="o">=</span> <span class="mi">0</span>
