@@ -2875,7 +2875,8 @@
 - 有键获取值： <strong>get(key)</strong>
 - 根据键删除值： <strong>delete(key)</strong></p>
 <h2 id="_1">哈希表的特例——直接寻址表<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>直接寻址表是一种最简单的键值存储方式，适用于 <strong>键值范围固定且较小</strong> 的情况。</p>
+<p>直接寻址表是一种最简单的键值存储方式，适用于 <strong>键值范围固定且较小</strong> 的情况。  </p>
+<p>直接寻址表可以看作是一种**特殊的哈希表**，其中**哈希函数为恒等函数**（即 <span class="arithmatex">\( h(k) = k \)</span>），并且键的范围正好适配数组大小。</p>
 <h3 id="_2">工作原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>设键的取值范围为 <span class="arithmatex">\([0, U-1]\)</span>，即所有可能的键都在一个固定范围内。</li>
