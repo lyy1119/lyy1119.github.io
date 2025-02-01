@@ -1292,6 +1292,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      哈希冲突
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="哈希冲突">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么会发生哈希冲突？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决哈希冲突的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2865,6 +2898,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      哈希冲突
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="哈希冲突">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么会发生哈希冲突？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决哈希冲突的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2913,6 +2979,27 @@
 <h2 id="_4">哈希的概念<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>哈希就是一个映射函数，将键通过一个函数映射到另一个域。  </p>
 <p><strong>取余</strong> 操作就可以看作是哈希。  </p>
+<h2 id="_5">哈希冲突<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><strong>哈希冲突</strong> 是指 <strong>不同的键经过哈希函数计算后映射到相同的哈希表索引</strong> ，导致多个数据试图存放在相同的位置。由于哈希表的大小通常远小于可能的键值范围，冲突是 <strong>不可避免</strong> 的，需要特殊的处理方法来解决。</p>
+<hr />
+<h3 id="_6">为什么会发生哈希冲突？<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>假设我们有一个哈希表，大小为 <code>m = 10</code>，而存储的键可能有数百个甚至更多。如果使用哈希函数：
+[
+h(k) = k \mod 10
+]
+那么，所有与 <code>10</code> 同余的键（如 <code>10, 20, 30...</code>）都会映射到同一个索引，导致冲突。例如：
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">h</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">h</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">h</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">0</span>
+</span></code></pre></div>
+这就造成了哈希冲突，因为 <code>10, 20, 30</code> 都映射到了索引 <code>0</code>。</p>
+<hr />
+<h3 id="_7">解决哈希冲突的方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>为了有效使用哈希表，我们需要 <strong>冲突解决策略</strong> ，主要有以下几种：
+- 链地址法
+- 线性探测
+- 二次探测
+- 双重哈希</p>
 
 
 
