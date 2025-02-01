@@ -1212,6 +1212,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    哈希表 Hash Table
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1222,6 +1234,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      哈希表的特例——直接寻址表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="哈希表的特例——直接寻址表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2744,6 +2808,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      哈希表的特例——直接寻址表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="哈希表的特例——直接寻址表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2769,6 +2874,23 @@
 - 插入键值对： <strong>insert</strong>
 - 有键获取值： <strong>get(key)</strong>
 - 根据键删除值： <strong>delete(key)</strong></p>
+<h2 id="_1">哈希表的特例——直接寻址表<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>直接寻址表是一种最简单的键值存储方式，适用于 <strong>键值范围固定且较小</strong> 的情况。</p>
+<h3 id="_2">工作原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>设键的取值范围为 <span class="arithmatex">\([0, U-1]\)</span>，即所有可能的键都在一个固定范围内。</li>
+<li>直接创建一个大小为 <span class="arithmatex">\( U \)</span> 的数组 <code>T[0:U-1]</code>，其中：</li>
+<li>若某个键 <span class="arithmatex">\( k \)</span> 存在，则 <code>T[k]</code> 处存储对应的值。</li>
+<li>若 <span class="arithmatex">\( k \)</span> 不存在，则 <code>T[k]</code> 为空（可以是 <code>None</code> 或特殊标记）。</li>
+<li>插入、删除、查找的时间复杂度均为 <span class="arithmatex">\( O(1) \)</span>。</li>
+</ul>
+<h3 id="_3">优缺点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>优点</strong>：
+- 查找速度极快，所有操作均为 <span class="arithmatex">\( O(1) \)</span>。
+- 结构简单，容易实现。</p>
+<p>❌ <strong>缺点</strong>：
+- 当键的范围 <span class="arithmatex">\( U \)</span> 很大时，会造成**空间浪费**，因为即使只使用了很少的键，整个数组仍然需要占用 <span class="arithmatex">\( O(U) \)</span> 的空间。
+- 仅适用于**键的范围较小且稠密的情况**，否则会导致大量未使用的数组元素。</p>
 
 
 
