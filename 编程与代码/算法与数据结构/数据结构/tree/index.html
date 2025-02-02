@@ -1203,6 +1203,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../binarySearchTree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉搜索树
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../hashTable/" class="md-nav__link">
         
   
@@ -1370,20 +1392,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#binary-tree" class="md-nav__link">
     <span class="md-ellipsis">
-      树
+      二叉树 Binary tree
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+    <nav class="md-nav" aria-label="二叉树 Binary tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       二叉树的顺序存储
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉树的遍历顺序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2818,20 +2855,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#binary-tree" class="md-nav__link">
     <span class="md-ellipsis">
-      树
+      二叉树 Binary tree
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+    <nav class="md-nav" aria-label="二叉树 Binary tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       二叉树的顺序存储
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉树的遍历顺序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2854,11 +2906,54 @@
 <h1 id="_1">树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><a href="https://zh.wikipedia.org/wiki/%E6%A0%91_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)">维基百科_树</a></p>
-<h2 id="_3">树<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h2 id="_4">二叉树的顺序存储<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="binary-tree">二叉树 Binary tree<a class="headerlink" href="#binary-tree" title="Permanent link">&para;</a></h2>
+<p>只有左右两分支的树。  </p>
+<h3 id="_3">二叉树的顺序存储<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>将二叉树从根节点到叶，一次从左到右存入顺序存入列表，如下图所示。  </p>
 <p><img alt="20250126153344" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250126153344.png" />  </p>
-<p>则父节点和子节点索引的关系为：若父节点索引为<span class="arithmatex">\( i \)</span> ，则子左节点为 <span class="arithmatex">\( 2i+1 \)</span> ，子右节点为 <span class="arithmatex">\( 2i+2 \)</span> 。若子节点索引为 <span class="arithmatex">\( i \)</span> ，则父节点的所有为 <span class="arithmatex">\( (i-1)//2 \)</span> （整除）。</p>
+<p>则父节点和子节点索引的关系为：若父节点索引为<span class="arithmatex">\( i \)</span> ，则子左节点为 <span class="arithmatex">\( 2i+1 \)</span> ，子右节点为 <span class="arithmatex">\( 2i+2 \)</span> 。若子节点索引为 <span class="arithmatex">\( i \)</span> ，则父节点的所有为 <span class="arithmatex">\( (i-1)//2 \)</span> （整除）。  </p>
+<h3 id="_4">二叉树的遍历顺序<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>前序遍历</li>
+<li>中序遍历</li>
+<li>后序遍历</li>
+<li>层级遍历</li>
+</ol>
+<p><img alt="20250202145758" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250202145758.png" /></p>
+<p><strong>代码实现</strong> ：<br />
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># python</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># 前序遍历</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">pre_order</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">if</span> <span class="n">root</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">pre_order</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">leftChild</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">pre_order</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">rightChild</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># 中序遍历</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">in_order</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">if</span> <span class="n">root</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">pre_order</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">leftChild</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="n">pre_order</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">rightChild</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># 后序遍历</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">post_order</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">if</span> <span class="n">root</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="n">pre_order</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">leftChild</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="n">pre_order</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">rightChild</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># 层次遍历</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># 使用队列实现</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">def</span><span class="w"> </span><span class="nf">level_order</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="n">node</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">leftChild</span><span class="p">:</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">leftChild</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">rightChild</span><span class="p">:</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>            <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">rightChild</span><span class="p">)</span>
+</span></code></pre></div></p>
 
 
 
