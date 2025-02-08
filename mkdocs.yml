@@ -17,6 +17,12 @@ extra:
     #   name: "朋友2昵称"
     #   width: 50
     #   height: 50
+    - url: "https://blog.aclgh.top/"
+      img: "https://blog.aclgh.top/_astro/avatar.F7g_9tkz_ZJsBOi.webp"
+      alt: "aclgh"
+      name: "aclgh"
+      width: 50
+      height: 50
 
 theme:
   name: material
