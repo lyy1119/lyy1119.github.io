@@ -4,12 +4,26 @@ plugins:
 extra:
   search:
     language: 'zh'
+  friend_links:
+    - url: "https://www.stary112.xyz/"
+      img: "https://s2.loli.net/2023/04/21/5PfCj3OpUdzeNSI.jpg"
+      alt: "Stary112"
+      name: "Stary112"
+      width: 50
+      height: 50
+    # - url: "https://friend2.example.com"
+    #   img: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/1709210261156.png"
+    #   alt: "朋友2头像"
+    #   name: "朋友2昵称"
+    #   width: 50
+    #   height: 50
 
 theme:
   name: material
   features:
     - content.code.copy
   language: 'zh'
+  custom_dir: overrides
 
 extra_javascript:
   # mathjax
@@ -68,5 +82,6 @@ markdown_extensions:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - css/friendLink.css
 
 copyright: <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024090415号</a><p><img src="/img/beian.png" width="12"/> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802045029" rel="noreferrer" target="_blank">京公网安备11010802045029</a>
