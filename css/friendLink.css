@@ -1,0 +1,22 @@
+.avatar {
+    border-radius: 50%;
+  }
+
+  .friend-links {
+    /* 可选：对整个友链区域进行整体样式调整 */
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .friend-link {
+    display: inline-block;
+    margin: 10px;
+    text-align: center; /* 保证图片和昵称都居中 */
+  }
+  
+  .friend-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
