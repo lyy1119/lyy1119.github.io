@@ -1214,6 +1214,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    二叉搜索树
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1224,6 +1236,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉搜索数的实现
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二叉搜索数的实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      插入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2768,6 +2832,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉搜索数的实现
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二叉搜索数的实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      插入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2788,7 +2893,15 @@
 - 若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值；
 - 若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值；
 - 任意节点的左、右子树也分别为二叉查找树；</p>
-<p>二叉查找树相比于其他数据结构的优势在于查找、插入的时间复杂度较低。为 <span class="arithmatex">\( O(\log n) \)</span>。二叉查找树是基础性数据结构，用于构建更为抽象的数据结构，如集合、多重集、关联数组等。</p>
+<p>二叉查找树相比于其他数据结构的优势在于查找、插入的时间复杂度较低。为 <span class="arithmatex">\( O(\log n) \)</span>。二叉查找树是基础性数据结构，用于构建更为抽象的数据结构，如集合、多重集、关联数组等。  </p>
+<h2 id="_2">二叉搜索数的实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">插入<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>从根节点开始，如果该节点的值比插入值大，向左子树继续；如果该节点的数比插入值小，向右子树继续。直至左子节点或右子节点为空。将值插入到目标左子节点或右子节点。  </p>
+<h3 id="_4">查询<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>从根节点开始，当前节点比目标值大就</p>
+<p><strong>代码实现</strong>：<br />
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># python</span>
+</span></code></pre></div></p>
 
 
 
