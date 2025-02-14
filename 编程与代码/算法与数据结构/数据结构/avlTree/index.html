@@ -2973,6 +2973,7 @@
 2. 右旋
 3. 右旋-左旋
 4. 左旋-右旋</p>
+<p>所以，AVL树插入后，需要进行上面四种之一的平衡操作，不过在进行平衡操作之前，需要找到最小的和子树，只需要对最小的不平衡子树进行平衡操作即可。寻找最小不平衡子树的方法是从插入出向上查找。  </p>
 <h2 id="avl_2">AVL树的平衡方式<a class="headerlink" href="#avl_2" title="Permanent link">&para;</a></h2>
 <h3 id="1">1.左旋<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>AVL树的不平衡是由于对某节点的右子节点的右子树插入导致的。<br />
