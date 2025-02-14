@@ -1298,6 +1298,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#4-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.左旋-右旋
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2924,6 +2933,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#4-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.左旋-右旋
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2953,7 +2971,8 @@
 <p>AVL树的插入先是和BST树一样，先插入，但是插入后有可能导致AVL树不平衡，即高度差大于1，此时就需要进行平衡操作，而平衡操作又根据树插入后的状态分为以下三种方式：<br />
 1. 左旋
 2. 右旋
-3. 右旋-左旋</p>
+3. 右旋-左旋
+4. 左旋-右旋</p>
 <h2 id="avl_2">AVL树的平衡方式<a class="headerlink" href="#avl_2" title="Permanent link">&para;</a></h2>
 <h3 id="1">1.左旋<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>AVL树的不平衡是由于对某节点的右子节点的右子树插入导致的。<br />
@@ -2968,6 +2987,10 @@
 解决方法是先右旋再左旋。<br />
 <img alt="20250214190637" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250214190637.png" />  </p>
 <p><img alt="Screenshot_20250214_191428_Samsung Notes" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/Screenshot_20250214_191428_Samsung%20Notes.jpg" /></p>
+<h3 id="4-">4.左旋-右旋<a class="headerlink" href="#4-" title="Permanent link">&para;</a></h3>
+<p>由于对根节点的左节点的右子树的插入导致的不平衡。<br />
+先左旋再右旋。<br />
+<img alt="20250214191756" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250214191756.png" />  </p>
 
 
 
