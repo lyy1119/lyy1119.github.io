@@ -1261,6 +1261,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#avl_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL树的平衡方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AVL树的平衡方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.左旋
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2845,6 +2878,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#avl_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL树的平衡方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AVL树的平衡方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.左旋
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2865,6 +2931,15 @@
 <p>AVL树是一种自平衡二叉查找树。在AVL树中，任一节点对应的两棵子树的最大 <strong>高度差</strong> 为1，因此它也被称为 <strong>高度平衡树</strong> 。  </p>
 <p><img alt="20250213195538" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250213195538.png" /></p>
 <h2 id="avl_1">AVL树的插入<a class="headerlink" href="#avl_1" title="Permanent link">&para;</a></h2>
+<p>AVL树的插入可以分成 <strong>插入</strong> 和 <strong>平衡</strong> 这两步。  </p>
+<p>AVL树的插入先是和BST树一样，先插入，但是插入后有可能导致AVL树不平衡，即高度差大于1，此时就需要进行平衡操作，而平衡操作又根据树插入后的状态分为以下三种方式：<br />
+1. 左旋</p>
+<h2 id="avl_2">AVL树的平衡方式<a class="headerlink" href="#avl_2" title="Permanent link">&para;</a></h2>
+<h3 id="1">1.左旋<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>AVL树的不平衡是由于对某节点的右子节点的右子树插入导致的。<br />
+左旋的操作如下所示，将右子节点的左子树作为右子节点，将当前节点作为原右子节点的左子节点，原右子节点替代当前节点的位置。  </p>
+<p><img alt="20250214185941" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250214185941.png" />  </p>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 
 
 
