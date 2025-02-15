@@ -6,3 +6,4 @@
 
 **解决方法** ： 设置 -> 连接 -> 监听端口 -> 点击随机按钮  
 
+![20250215140253](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250215140253.png)
