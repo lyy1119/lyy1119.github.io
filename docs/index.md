@@ -48,7 +48,7 @@
 <div class="div6">lyy2286301015@126.com</div>
 
 <div class="div7"><img align=center src=https://img.shields.io/badge/wiki-blue></div>
-<div class="div8"><a href="https://exp.lyy19.top/">exp.lyy19.top</a></div>
+<div class="div8"><a href="https://exp.lyy19.top/">wiki.lyy19.top</a></div>
 <div class="div9"><img align=center src=https://img.shields.io/badge/wiki-githubpages-blue></div>
 <div class="div10"><a href="https://lyy1119.github.io/">lyy1119.github.io</a></div>
 </div>
