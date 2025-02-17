@@ -1,7 +1,15 @@
 site_name: lyy19's Wiki
+site_author: lyy119
+site_description: "这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床"
+
 plugins:
     - search
 extra:
+  # social:
+  #   - type: "twitter"
+  #     url: "https://twitter.com/example"
+  meta:
+    og_image: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/1709210261156.png"
   search:
     language: 'zh'
   friend_links:
@@ -42,6 +50,7 @@ extra_javascript:
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 markdown_extensions:
+  - meta
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -85,8 +94,8 @@ markdown_extensions:
   - pymdownx.tasklist
   - pymdownx.tilde
 
-extra_javascript:
-  - js/meta.js
+# extra_javascript:
+#   - js/meta.js
 
 
 extra_css:
