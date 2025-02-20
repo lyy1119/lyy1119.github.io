@@ -32,10 +32,13 @@ steam://open/console
 download_depot 632360 632361 7660073450841700654
 ```
 
-!!!caution
+!!! Caution
     注意，在下载期间不会看到任何提示，不要关闭steam或休眠电脑等，在下载好后会出现这样的提示：`Depot download complete : "D:\Program Files (x86)\Steam\steamapps\content\app_632360\depot_632361" (1836 files, manifest 7660073450841700654) `
 
 下载好先前的版本后，如希望steam能同步成就等，可以覆盖原游戏文件。若希望回到最新版本，检查游戏完整性或重下即可。不希望覆盖原文件可以 **添加非steam游戏** 。  
+
+或者你可以使用我做得torrent下载旧版本。  
+torrentid：8c9932dd983813912906a0956d3b1f2dfe141664
 
 ## 连接服务器
 
