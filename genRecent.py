@@ -38,6 +38,7 @@ def get_git_files():
     cmd = [
         'git',
         'log',
+        'main',
         '--pretty=format:%H',
         '--name-only',
         f'-n {GIT_COMMIT_COUNT}',
