@@ -34,3 +34,18 @@
 例：  
 32，94，128，1286，6，71  
 
+```python
+# python
+numbers = ["32","94","128","1286","6","71"]
+
+def number_connection(numbers: list):
+    for i in range(len(numbers) - 1 , 0 , -1):
+        for j in range(i):
+            if int(numbers[j] + numbers[j+1]) < int(numbers[j+1] + numbers[j]):
+                numbers[j] , numbers[j+1] = numbers[j+1] , numbers[j]
+    return "".join(numbers)
+
+if __name__ == "__main__":
+    print(number_connection(numbers))
+```
+
