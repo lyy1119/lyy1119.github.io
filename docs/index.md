@@ -118,53 +118,106 @@ document.addEventListener('DOMContentLoaded', () => {
 ## 关于我
 
 <style>
-    .parent {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 6fr 2fr 3fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    border-color:#4FC9F1;
-    border-style:inset;
-    border-width:5px;
-    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
-    padding: 1em;
-    min-width: 25em;
-    }
+.profile-card {
+    background-color: var(--md-default-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
 
-    .div1 { grid-area: 1 / 1 / 5 / 2; padding: 5px;min-width: 10em;margin: -0.5em 1em 0 auto;}
-    .div2 { grid-area: 1 / 2 / 5 / 4; }
-    .div3 { grid-area: 1 / 2 / 2 / 3; min-width: 7em;}
-    .div4 { grid-area: 1 / 3 / 2 / 4; padding-left: 10px;}
-    .div5 { grid-area: 2 / 2 / 3 / 3; }
-    .div6 { grid-area: 2 / 3 / 3 / 4; padding-left: 10px;}
-    .div7 { grid-area: 3 / 2 / 4 / 3; }
-    .div8 { grid-area: 3 / 3 / 4 / 4; padding-left: 10px;}
-    .div9 { grid-area: 4 / 2 / 5 / 3; }
-    .div10 { grid-area: 4 / 3 / 5 / 4; padding-left: 10px;}
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--md-primary-fg-color);
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    margin: 0;
+    color: var(--md-primary-fg-color);
+    font-size: 1.8em;
+}
+
+.profile-motto {
+    color: var(--md-typeset-color);
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.profile-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--md-typeset-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-link:hover {
+    color: var(--md-accent-fg-color);
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-links {
+        justify-content: center;
+    }
+}
 </style>
 
-<div class="parent">
-
-<div class="div1">
-    <img align=center style="border-radius: 5% 5% 5% 5%;" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/1709210261156.png" alt="来自github的图片加载失败，请检查网络"></div>
-
-<div class="div2"></div>
-
-<div class="div3"><img align=center src=https://img.shields.io/badge/Github-Profile-blue></div>
-
-<div class="div4"><a href="https://github.com/lyy1119">lyy1119</a></div>
-
-<div class="div5"><img align=center src="https://img.shields.io/badge/email-red"></div>
-
-<div class="div6">lyy2286301015@126.com</div>
-
-<div class="div7"><img align=center src=https://img.shields.io/badge/wiki-blue></div>
-<div class="div8"><a href="https://exp.lyy19.top/">wiki.lyy19.cn</a></div>
-<div class="div9"><img align=center src=https://img.shields.io/badge/wiki-githubpages-blue></div>
-<div class="div10"><a href="https://lyy1119.github.io/">lyy1119.github.io</a></div>
+<div class="profile-card">
+    <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/1709210261156.png" alt="Avatar" class="profile-avatar">
+    <div class="profile-info">
+        <h1 class="profile-name">LYY19</h1>
+        <p class="profile-motto">Stay hungry, stay foolish</p>
+        <div class="profile-links">
+            <a href="https://github.com/lyy1119" target="_blank" class="profile-link">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+            <a href="lyy2286301015@126.com" class="profile-link">
+                <i class="fas fa-envelope"></i>
+                Email
+            </a>
+        </div>
+    </div>
 </div>
+
+<script>
+// 添加简单的交互效果
+document.querySelector('.profile-card').addEventListener('click', function() {
+    this.style.transform = 'scale(0.98)';
+    setTimeout(() => {
+        this.style.transform = '';
+    }, 200);
+});
+</script>
+
 
 ## mkdocs使用方法
 

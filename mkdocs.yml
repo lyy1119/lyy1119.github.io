@@ -38,6 +38,11 @@ extra:
       name: "天鹅绒房间"
       width: 50
       height: 50
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lyy1119
+    - icon: fontawesome/solid/envelope
+      link: mailto:lyy2286301015@126.com
 
 theme:
   name: material
@@ -45,6 +50,8 @@ theme:
     - content.code.copy
   language: 'zh'
   custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github 
 
 extra_javascript:
   # mathjax
@@ -108,5 +115,7 @@ markdown_extensions:
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
   - css/friendLink.css
+  - https://kit.fontawesome.com/c22cdc6971.js  # 替换为你的Font Awesome官方kit代码
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
 
 copyright: <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024090415号</a><p><img src="/img/beian.png" width="12"/> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802045425" rel="noreferrer" target="_blank">京公网安备11010802045425</a>
