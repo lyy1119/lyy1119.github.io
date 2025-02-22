@@ -2,6 +2,119 @@
 
 这是一个使用mkdocs搭建的wiki，mkdocs官方文档见： [mkdocs.org](https://www.mkdocs.org)  
 
+## 📖 最近更新
+
+<!-- 最近更新占位符 -->
+<div id="recent-posts-container">
+  <div class="loading-spinner" style="display: none;"></div>
+  <ul id="recent-posts-list"></ul>
+</div>
+<script>
+// 改进版本：包含完整的加载状态管理
+const recentPosts = {
+  container: null,
+  list: null,
+  spinner: null,
+
+  init() {
+    this.container = document.getElementById('recent-posts-container');
+    this.list = document.getElementById('recent-posts-list');
+    this.spinner = document.querySelector('.loading-spinner');
+    
+    if (!this.container) return;
+
+    this.showLoading();
+    this.loadPosts()
+      .finally(() => this.hideLoading());
+  },
+
+  showLoading() {
+    if (this.spinner) {
+      this.spinner.style.display = 'inline-block';
+    }
+    if (this.list) {
+      this.list.innerHTML = '';
+    }
+  },
+
+  hideLoading() {
+    if (this.spinner) {
+      this.spinner.style.display = 'none';
+    }
+  },
+
+  async loadPosts() {
+    try {
+      const response = await fetch('/data/recent_posts.json?_=' + Date.now());
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const posts = await response.json();
+      this.render(posts);
+      
+    } catch (error) {
+      console.error('Recent posts load failed:', error);
+      this.showError('暂时无法加载最新文章');
+    }
+  },
+
+  render(posts) {
+    if (!this.list) return;
+    
+    if (posts.length === 0) {
+      this.list.innerHTML = '<li class="empty">暂无最近更新</li>';
+      return;
+    }
+
+    this.list.innerHTML = posts.slice(0, 5).map(post => `
+      <li class="post-item">
+        <a href="${post.url}" class="post-link">
+          ${post.title}
+          <span class="post-date">${post.date}</span>
+        </a>
+      </li>
+    `).join('');
+  },
+
+  showError(message) {
+    if (this.list) {
+      this.list.innerHTML = `<li class="error">${message}</li>`;
+    }
+  }
+};
+
+// 初始化（带防抖处理）
+let initialized = false;
+document.addEventListener('DOMContentLoaded', () => {
+  if (!initialized) {
+    recentPosts.init();
+    initialized = true;
+  }
+});
+</script>
+
+<style>
+/* 改进后的加载动画 */
+.loading-spinner {
+  display: none; /* 默认隐藏 */
+  width: 24px;
+  height: 24px;
+  margin: 8px 0;
+  border: 3px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border-top-color: #007bff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 其他样式保持不变... */
+</style>
+
 ## 关于我
 
 <style>

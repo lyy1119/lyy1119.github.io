@@ -222,27 +222,6 @@ This file was automatically generated - do not edit
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               {% block content %}
-
-              {# 自定义的最近更新 #}
-              {% if page.is_homepage %}
-              <section class="recent-posts" style="margin-bottom: 2em">
-                <h2>📝 最近更新</h2>
-                <ul>
-                  {% for post in config.extra.recent_posts %}
-                  <li style="margin: 0.8em 0">
-                    <a href="{{ post.url }}" style="text-decoration: none">
-                      {{ post.title }}
-                      <small style="color: #666; margin-left: 0.5em">
-                        ({{ post.date | default("最新", true) }})
-                      </small>
-                    </a>
-                  </li>
-                  {% endfor %}
-                </ul>
-              </section>
-              {% endif %}
-              {{ super() }} {# 保留原始内容渲染 #}
-
               {% include "partials/content.html" %}
               {% endblock %}
             </article>
