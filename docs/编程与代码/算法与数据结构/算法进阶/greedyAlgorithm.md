@@ -69,3 +69,27 @@ if __name__ == "__main__":
 |10|2|14|
 |11|12|16|
 
+```python
+# python
+activity = [(1,4) , (3,5) , (0,6) , (5,7) , (3,9) , (5,9) , (6,10) , (8,11) , (8,12) , (2,14) , (12,16)]
+
+def activity_selection(activity: list):
+    # 贪结束时间最早的
+    # 按结束时间从小到大排序
+    activity.sort(key=lambda x: x[1])
+    # 开始安排
+    res = []
+    startTime = 0
+
+    for i in activity:
+        if i[1] >= startTime:
+            if  not res or res[-1][1] <= i[0]:
+                res.append(i)
+                startTime = i[1]
+    print(res)
+    return res
+
+if __name__ == "__main__":
+    activity_selection(activity)
+```
+
