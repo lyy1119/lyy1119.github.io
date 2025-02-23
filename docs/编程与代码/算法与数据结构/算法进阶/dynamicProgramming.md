@@ -67,6 +67,31 @@ def fibonacci_no_recursion(n):
 
 式中， \( p_n \) 表示不切割所获得的收益。 \( r_n \) 表示长度为n的钢条的最优方案的收益。  
 
-```python
+进一步优化，从结果考虑，最优方案一定是由一个不切割的长度和一个切割的长度组成，如9可以看作2+2+2+3，也可以看作3+6，其中6是还需要切割的，3是不用切割的。由此，我们将递推式简化如下：  
 
+$$ r_n = \max_{1 \leq i \leq n} (p_i + r_{n-i}) $$
+
+```python
+# python
+p = [0 , 1 , 5 , 8 , 9 , 10 , 17 , 17 , 20 , 24 , 30]
+
+def solution(p: list , n: int) -> list:
+    subSolve = [
+        [0 , []] ,
+        [1 , [1]] ,
+    ]
+    if n > 1:
+        # 递推
+        while len(subSolve) <= n:
+            nextIndex = len(subSolve)
+            bestDivision = [0 , []]
+            # r_n = \max_{1 \leq i \leq n} (p_i + r_{n-i})
+            for i in range(1 , nextIndex + 1):
+                if i > 10:
+                    break
+                nowValue = p[i] + subSolve[nextIndex - i][0]
+                if nowValue > bestDivision[0]:
+                    bestDivision = [nowValue , [i] + subSolve[nextIndex - i][1]]
+            subSolve.append(bestDivision)
+    return subSolve[n][0] , subSolve[n][1]
 ```
