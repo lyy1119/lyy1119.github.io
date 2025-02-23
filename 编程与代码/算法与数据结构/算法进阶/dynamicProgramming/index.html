@@ -78,6 +78,8 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <link rel="stylesheet" href="../../../../css/custom.css">
+  
   <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
   
   
@@ -1791,6 +1793,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      例题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.钢条切割问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3117,6 +3143,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      例题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.钢条切割问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3157,6 +3207,86 @@
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 </span></code></pre></div></p>
 <p>其中，递归的实现在n很大时，由于重复的子任务执行次数太多，其效率十分低下。而非递归的实现则避免了这一点。非递归的实现就可以看作是一种动态规划思想。  </p>
+<h2 id="_3">例题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="1">1.钢条切割问题<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>问题描述</strong> ：某公司出售钢条，出售价格与钢条长度之间的关系如下。现有一段长度为n的钢条，求切割方案，使总收益最大化。  </p>
+<table>
+<thead>
+<tr>
+<th>长度 <span class="arithmatex">\( i \)</span></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>价格 <span class="arithmatex">\( p_i \)</span></td>
+<td>1</td>
+<td>5</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>17</td>
+<td>17</td>
+<td>20</td>
+<td>24</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解题思路</strong> ：<br />
+考虑长度为n的钢条的所有情况是不现实的。先考虑长度小于等于10的钢条，根据上表，长度小于等于10的钢条售出方案可以分为两种——切割和不切割。若不切割，其价格可以在表中得出，若切割，只需考虑怎么分成两部分就行。理由如下：  </p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\( i \)</span></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\( r[i] \)</span></td>
+<td>0</td>
+<td>1</td>
+<td>5</td>
+<td>8</td>
+<td>10</td>
+<td>13</td>
+<td>17</td>
+<td>18</td>
+<td>22</td>
+<td>25</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>从长度为0开始考虑。显然，长度为0的钢条最高只能卖0元。长度为1的钢条无法切割，只能按题目所给表卖1元。  </p>
+<p>而长度为2的钢条可以分为切割与不切割两种。若切割，分为1和1，而两个1的钢条的最优售出价值以求出，为1元，合计2元。若不切割，则按题目所给表，售出5元。显然5元是最优解。  </p>
+<p>再考虑长度为3的钢条。分成切割与不切割两种，切割则可分为1和2。长度为1和2的钢条的最优售出方案的价格已经算出，分别为1和5.若不切割，则售出8元，显然8是最优方案。  </p>
+<p>再来看长度为4的钢条，根据上述方法，切割时，分为1和3、2和2两种，分别售出9和10元，不切割时售出9元，因此切割成2和2是最优解。<br />
+以此类推……  </p>
+<p>至于为什么只看切一次的情况，给出理由如下：例如长度为10时，可分为5和5，而5右可以分成5个1或者2加3。但是，长度为5的钢条的最优解已经给出，是在比较了长度为5的钢条的各种切割方法后给出的。可以论证，若切三次讨论售价能产生比只看两次有更优方案，则三次中某两次的和——长度为 <span class="arithmatex">\( a \)</span> 的切割方案必然比相应先前求出的长度为 <span class="arithmatex">\( a \)</span> 的最优切割方案还要好，但这是矛盾的，因为长度为0、1、2的方案就是最优解，如果存在上述情况，则会出现比表中0、1、2的最优解还要好的方案。很显然，这是不可能的。</p>
+<p>根据上述思路，我们可以发现，</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>
+</span></code></pre></div>
 
 
 
