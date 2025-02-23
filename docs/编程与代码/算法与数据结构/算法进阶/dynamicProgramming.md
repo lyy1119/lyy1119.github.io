@@ -99,4 +99,42 @@ def solution(p: list , n: int) -> list:
 ### 2.最长公共子序列问题
 
 现有两个字母序列X和Y，求两个字母串序列的最长公共子序列。  
+（子序列可以是不连续的，但是顺序不能变）  
 
+例如两个序列：  
+X：ABCBDAB  
+Y：BDCABA  
+
+对于任意两个序列，有以下结论：  
+
+- 若两个序列的尾字母相同，则该字母必然在最长公共子序列Z中；
+- 若两个序列的尾字母不相同，则最长子序列必然是其中一个序列去掉末尾字母后与另一个序列的最长公共子序列。
+
+则有以下的递推式：  
+$$ c[i , j] = \begin{cases}
+    0 , (i == 0 ro j == 0) \\
+    c[i-1 , j-1] + 1 , (i,j > 0 and x_i == y_j) \\
+    \max (c[i , j - 1] , c[i - 1 , j]), (i,j > 0 and x_i != y_j)
+\end{cases} $$
+
+![20250223123415](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250223123415.png)  
+
+```python
+# python
+def LCS(x: str , y: str) -> str:
+    n = len(x)
+    m = len(y)
+    res = [[[0 , ''] for j in range(m+1)] for i in range(n+1)]
+    for i in range(n+1):
+        for j in range(m+1):
+            if i == 0 or j == 0:
+                continue
+            elif x[i-1] == y[j-1]:
+                res[i][j] = [res[i-1][j-1][0] + 1 , res[i-1][j-1][1] + x[i-1]]
+            else: # x[i-1] != y[j-1]
+                if res[i][j-1][0] > res[i-1][j][0]:
+                    res[i][j] = res[i][j-1]
+                else:
+                    res[i][j] = res[i-1][j]
+    return res[n][m]
+```
