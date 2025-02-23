@@ -3284,7 +3284,9 @@
 <p>再来看长度为4的钢条，根据上述方法，切割时，分为1和3、2和2两种，分别售出9和10元，不切割时售出9元，因此切割成2和2是最优解。<br />
 以此类推……  </p>
 <p>至于为什么只看切一次的情况，给出理由如下：例如长度为10时，可分为5和5，而5右可以分成5个1或者2加3。但是，长度为5的钢条的最优解已经给出，是在比较了长度为5的钢条的各种切割方法后给出的。可以论证，若切三次讨论售价能产生比只看两次有更优方案，则三次中某两次的和——长度为 <span class="arithmatex">\( a \)</span> 的切割方案必然比相应先前求出的长度为 <span class="arithmatex">\( a \)</span> 的最优切割方案还要好，但这是矛盾的，因为长度为0、1、2的方案就是最优解，如果存在上述情况，则会出现比表中0、1、2的最优解还要好的方案。很显然，这是不可能的。</p>
-<p>根据上述思路，我们可以发现，</p>
+<p>根据上述思路，我们可以发现如下递推式：  </p>
+<p><span class="arithmatex">\( r_n = \max ( p_n , r_1 + r_{n-1} , r_2 + r_{n-2} , \cdots , r_{n-1} + r_1 ) \)</span>  </p>
+<p>式中， <span class="arithmatex">\( p_n \)</span> 表示不切割所获得的收益。 <span class="arithmatex">\( r_n \)</span> 表示长度为n的钢条的最优方案的收益。  </p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>
 </span></code></pre></div>
 
