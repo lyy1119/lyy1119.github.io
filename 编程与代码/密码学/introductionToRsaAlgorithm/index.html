@@ -1364,6 +1364,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RSA加密算法简介
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1373,6 +1384,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      加密过程
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3172,6 +3211,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      加密过程
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
               </div>
             </div>
@@ -3186,6 +3242,20 @@
 
 
 <h1 id="rsa">RSA加密算法简介<a class="headerlink" href="#rsa" title="Permanent link">&para;</a></h1>
+<p>RSA是一种非对称加密算法。  </p>
+<p>其加密系统的密钥分为 <strong>公钥</strong> 和 <strong>私钥</strong> 。<br />
+其中公钥用于加密，是公开的。私钥用于解密，是私有的。  </p>
+<p><img alt="20250223140856" src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250223140856.png" />  </p>
+<h2 id="_1">加密过程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>随机选取两个质数 <span class="arithmatex">\( p \)</span> 、 <span class="arithmatex">\( q \)</span></li>
+<li>计算 <span class="arithmatex">\( n = p \times q \)</span></li>
+<li>选取一个与 <span class="arithmatex">\( \phi(n)=(p-1)(q-1) \)</span> 互质的数 <span class="arithmatex">\( e \)</span></li>
+<li>对模 <span class="arithmatex">\( \phi(n) \)</span> ，计算 <span class="arithmatex">\( e \)</span> 的逆元 <span class="arithmatex">\( d \)</span> ，满足 <span class="arithmatex">\( (e \times d) \% \phi(n) = 1 \)</span></li>
+<li>则公钥为 <span class="arithmatex">\( (e,n) \)</span> ；私钥为 <span class="arithmatex">\( (d,n) \)</span></li>
+<li>加密过程： <span class="arithmatex">\( c = (m^e) \% n \)</span></li>
+<li>解密过程： <span class="arithmatex">\( m = (c^d) \% n \)</span></li>
+</ol>
 
 
 
