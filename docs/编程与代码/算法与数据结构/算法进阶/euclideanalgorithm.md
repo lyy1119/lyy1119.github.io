@@ -18,3 +18,38 @@ def gcd(a , b):
 
 ## 应用：分数计算的实现
 
+```python
+class Fraction:
+    def __init__(self , numerator: int , denominator: int):
+        self.numerator = numerator
+        self.denominator = denominator
+        self.simplify()
+
+    @staticmethod
+    def gcd(a: int , b: int) -> int:
+        if a < b:
+            a , b = b , a
+        while b > 0:
+            a = a % b
+            a , b = b , a
+        return a
+
+    def simplify(self):
+        gcd = Fraction.gcd(self.denominator , self.numerator)
+        self.denominator /= gcd
+        self.numerator /= gcd
+
+    def __add__(self , other):
+        denominator = other.denominator*self.denominator
+        numerator = self.numerator*other.denominator + other.numerator*self.denominator
+        return Fraction(numerator , denominator)
+
+    def __str__(self):
+        return f"{int(self.numerator)}/{int(self.denominator)}"
+    
+if __name__ == "__main__":
+    f = Fraction(1 , 3)
+    print(f)
+    f = f + Fraction(1 , 4)
+    print(f)
+```
