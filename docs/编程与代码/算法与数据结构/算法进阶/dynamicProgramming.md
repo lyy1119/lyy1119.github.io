@@ -95,3 +95,8 @@ def solution(p: list , n: int) -> list:
             subSolve.append(bestDivision)
     return subSolve[n][0] , subSolve[n][1]
 ```
+
+### 2.最长公共子序列问题
+
+现有两个字母序列X和Y，求两个字母串序列的最长公共子序列。  
+
