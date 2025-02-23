@@ -117,5 +117,6 @@ extra_css:
   - css/friendLink.css
   - https://kit.fontawesome.com/c22cdc6971.js  # 替换为你的Font Awesome官方kit代码
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+  - css/custom.css
 
 copyright: <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024090415号</a><p><img src="/img/beian.png" width="12"/> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802045425" rel="noreferrer" target="_blank">京公网安备11010802045425</a>
