@@ -109,6 +109,46 @@ def insertion_sort(li: list):
 
 使用两个元素记录目标列表的左右端元素索引，将用于Partition操作的元素记为“中间元素”，在升序排序时，依次移动右/左索引标记，将右侧小于中间元素的元素放置在左侧，这样右侧就有一个空位；然后将右侧小于中间元素的数放在左侧，循环往复，直到左侧索引大于右侧。  
 
+#### 更优的分区算法——Hoare 分区法
+
+若将左侧第一个作为选定量，则从右边开始，向左查找，直到找到比选定量小的数。再从左边向右查找，直到找到比选定量大的数。然后检查是否左右指针相遇，若未相遇，则交换两指针所指的值；若相遇则将选定量与该处交换，然后返回左或右索引。  
+
+实现如下：（C++）  
+```C++
+int partition(int* li , int left , int right)
+{
+    int randint = random(left , right);
+    // swap
+    int temp = li[randint];
+    li[randint] = li[left];
+    li[left] = temp;
+    int tempIndex = left;
+
+    while(left < right)
+    {
+        // 从右侧开始，寻找比归位数小的
+        while(left < right && li[right] >= temp)
+        {
+            right --;
+        }
+        while(left < right && li[left] <= temp)
+        {
+            left ++;
+        }
+        if(left == right)
+            break;
+        int a = li[right];
+        li[right] = li[left];
+        li[left] = a;
+
+    }
+    // 找到了正确位置
+    li[tempIndex] = li[left];
+    li[left] = temp;
+    return left;
+}
+```
+
 ### 代码实现——递归
 
 ```python
