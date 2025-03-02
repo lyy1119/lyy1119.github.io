@@ -1,9 +1,10 @@
-default: gitPush recentPost gitPush
-
-gitPush:
+default: 
 	git add .
 	git commit -m "write exp"
 	git push origin main
 
-recentPost:
 	python genRecent.py
+
+	git add .
+	git commit -m "write exp"
+	git push origin main
