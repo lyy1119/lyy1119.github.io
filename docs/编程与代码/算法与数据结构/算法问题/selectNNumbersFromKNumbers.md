@@ -27,3 +27,30 @@ def selectNumber(start: int , stop: int , k: int , li: list) -> list:
                 res.append([li[i]])
     return res
 ```
+
+## 进阶问题——有序数的排列组合
+
+若给定从1到n这n个自然数，要求输出所有可能的排列组合，并按照字典顺序排序。
+
+可以使用 **广度优先算法** ，先初始化一个可以作为头数字的、以列表为元素的列表。使用队列这一数据结构，将元素逐一出队，然后加上尾元素，再逐一入队，直至头元素的长度符合要求。
+
+### 代码实现
+
+```python
+n = int(input()) # n表示给定的自然数范围，从1到n
+
+from collections import deque
+
+numbers = [i for i in range(1,n+1)]
+res = deque([[i] for i in range(1,n+1)])
+
+while len(res[0]) < n:
+    i = res.popleft()
+    for j in numbers:
+        if j in i:
+            continue
+        else:
+            newList = i.copy()
+            newList.append(j)
+            res.append(newList)
+```
