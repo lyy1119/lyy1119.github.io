@@ -2559,6 +2559,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他问题
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3691,6 +3700,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他问题
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3758,6 +3776,11 @@
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>chevereto_images:/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/backup<span class="w"> </span>alpine<span class="w"> </span>tar<span class="w"> </span>xzf<span class="w"> </span>/backup/chevereto_images.tar.gz<span class="w"> </span>-C<span class="w"> </span>/data
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>chevereto_config:/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/backup<span class="w"> </span>alpine<span class="w"> </span>tar<span class="w"> </span>xzf<span class="w"> </span>/backup/chevereto_config.tar.gz<span class="w"> </span>-C<span class="w"> </span>/data
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>chevereto_db:/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/backup<span class="w"> </span>alpine<span class="w"> </span>tar<span class="w"> </span>xzf<span class="w"> </span>/backup/chevereto_db.tar.gz<span class="w"> </span>-C<span class="w"> </span>/data
+</span></code></pre></div></p>
+<h2 id="_2">其他问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>如果你使用了nginx做反向代理，那么可能上传时会报错 <code>Server error (Internal server error)</code> ，这是由于nginx的默认<code>client_max_body_size</code> 太小导致的。  </p>
+<p>在<code>/etc/nginx/nginx.conf</code>中的http下添加：<br />
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>client_max_body_size 125m; # 大小比你允许的最大上传大小大一点即可
 </span></code></pre></div></p>
 
 
