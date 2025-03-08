@@ -10,7 +10,7 @@ server {
     server_name xxx.xxx.xxx;  # 要分发证书的域名
 
     location / {
-        proxy_pass https://localhost:port;  # 将port反向代理到HTTPS
+        proxy_pass https://localhost:port;  # 将port反向代理到HTTPS，如果你的原网址是http，要改过来
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
