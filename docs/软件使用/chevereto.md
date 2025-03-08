@@ -35,4 +35,26 @@ volumes:
   chevereto_images:
   chevereto_config:
   chevereto_db:
+```  
+
+## 如何迁移数据
+
+你的数据存储在 Docker 卷里，迁移时只需备份这些卷：  
+```shell
+docker-compose down
+docker volume create chevereto_images
+docker volume create chevereto_config
+docker volume create chevereto_db
+```  
+然后复制旧数据：  
+```shell
+docker run --rm -v chevereto_images:/data -v $(pwd):/backup alpine tar czf /backup/chevereto_images.tar.gz -C /data .
+docker run --rm -v chevereto_config:/data -v $(pwd):/backup alpine tar czf /backup/chevereto_config.tar.gz -C /data .
+docker run --rm -v chevereto_db:/data -v $(pwd):/backup alpine tar czf /backup/chevereto_db.tar.gz -C /data .
+```  
+恢复数据：  
+```shell
+docker run --rm -v chevereto_images:/data -v $(pwd):/backup alpine tar xzf /backup/chevereto_images.tar.gz -C /data
+docker run --rm -v chevereto_config:/data -v $(pwd):/backup alpine tar xzf /backup/chevereto_config.tar.gz -C /data
+docker run --rm -v chevereto_db:/data -v $(pwd):/backup alpine tar xzf /backup/chevereto_db.tar.gz -C /data
 ```
