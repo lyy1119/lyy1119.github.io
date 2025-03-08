@@ -58,3 +58,12 @@ docker run --rm -v chevereto_images:/data -v $(pwd):/backup alpine tar xzf /back
 docker run --rm -v chevereto_config:/data -v $(pwd):/backup alpine tar xzf /backup/chevereto_config.tar.gz -C /data
 docker run --rm -v chevereto_db:/data -v $(pwd):/backup alpine tar xzf /backup/chevereto_db.tar.gz -C /data
 ```
+
+## 其他问题
+
+如果你使用了nginx做反向代理，那么可能上传时会报错 `Server error (Internal server error)` ，这是由于nginx的默认`client_max_body_size` 太小导致的。  
+
+在`/etc/nginx/nginx.conf`中的http下添加：  
+```conf
+client_max_body_size 125m; # 大小比你允许的最大上传大小大一点即可
+```
