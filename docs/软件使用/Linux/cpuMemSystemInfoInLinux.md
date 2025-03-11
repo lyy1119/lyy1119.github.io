@@ -145,9 +145,13 @@ cpufreq-set -c $i -d 4.50GHz -u 4.94GHz
 
 ### 永久生效
 
-如果想要永久生效，必须手动写一个systemctl service或者将命令写入 `/etc/rc.local` ,并启用rc.local服务。通常情况下，还必须手写一个`rc.local.service`。（所以可以直接写一个单独的service）  
+如果想要永久生效，必须手动写一个systemctl service或者将命令写入 `/etc/rc.local` ,并启用rc.local服务。通常情况下，还必须手写一个`rc-local.service`。（所以可以直接写一个单独的service）  
 
-rc.local.service  
+```bash
+sudo vim /etc/systemd/system/rc-local.service
+```
+
+rc-local.service  
 ```yaml
 [Unit]
 Description=Run /etc/rc.local at startup
