@@ -1,5 +1,10 @@
 [
   {
+    "title": "在Linux下查看CPU频率、内存速度、GPU状态",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/cpuMemSystemInfoInLinux/",
+    "date": "03/11"
+  },
+  {
     "title": "使用scrutiny docker的若干问题",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/scrutiny/",
     "date": "03/10"
@@ -17,11 +22,6 @@
   {
     "title": "certbot使用中的常见问题",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/certbotFAQ/",
-    "date": "03/08"
-  },
-  {
-    "title": "docker-compose.yml模板与解释",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/dockerComposeTemple/",
     "date": "03/08"
   }
 ]
