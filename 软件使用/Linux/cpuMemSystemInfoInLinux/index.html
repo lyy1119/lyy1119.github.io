@@ -4016,62 +4016,64 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>cpufreq-set<span class="w"> </span>-c<span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-d<span class="w"> </span><span class="m">4</span>.50GHz<span class="w"> </span>-u<span class="w"> </span><span class="m">4</span>.94GHz
 </span></code></pre></div></p>
 <h3 id="_3">永久生效<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>如果想要永久生效，必须手动写一个systemctl service或者将命令写入 <code>/etc/rc.local</code> ,并启用rc.local服务。通常情况下，还必须手写一个<code>rc.local.service</code>。（所以可以直接写一个单独的service）  </p>
-<p>rc.local.service<br />
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p p-Indicator">[</span><span class="nv">Unit</span><span class="p p-Indicator">]</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="l l-Scalar l-Scalar-Plain">Description=Run /etc/rc.local at startup</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="l l-Scalar l-Scalar-Plain">After=network.target</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="l l-Scalar l-Scalar-Plain">[Service]</span>
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="l l-Scalar l-Scalar-Plain">Type=forking</span>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="l l-Scalar l-Scalar-Plain">ExecStart=/etc/rc.local start</span>
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="l l-Scalar l-Scalar-Plain">TimeoutSec=0</span>
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="l l-Scalar l-Scalar-Plain">RemainAfterExit=yes</span>
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="l l-Scalar l-Scalar-Plain">[Install]</span>
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="l l-Scalar l-Scalar-Plain">WantedBy=multi-user.target</span>
+<p>如果想要永久生效，必须手动写一个systemctl service或者将命令写入 <code>/etc/rc.local</code> ,并启用rc.local服务。通常情况下，还必须手写一个<code>rc-local.service</code>。（所以可以直接写一个单独的service）  </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/systemd/system/rc-local.service
+</span></code></pre></div>
+<p>rc-local.service<br />
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p p-Indicator">[</span><span class="nv">Unit</span><span class="p p-Indicator">]</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="l l-Scalar l-Scalar-Plain">Description=Run /etc/rc.local at startup</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="l l-Scalar l-Scalar-Plain">After=network.target</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="l l-Scalar l-Scalar-Plain">[Service]</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="l l-Scalar l-Scalar-Plain">Type=forking</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="l l-Scalar l-Scalar-Plain">ExecStart=/etc/rc.local start</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="l l-Scalar l-Scalar-Plain">TimeoutSec=0</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="l l-Scalar l-Scalar-Plain">RemainAfterExit=yes</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="l l-Scalar l-Scalar-Plain">[Install]</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="l l-Scalar l-Scalar-Plain">WantedBy=multi-user.target</span>
 </span></code></pre></div></p>
 <p>rc.local<br />
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">#!/bin/sh</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="l l-Scalar l-Scalar-Plain">for i in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">echo performance | sudo tee $i &gt; /dev/null;</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="l l-Scalar l-Scalar-Plain">done</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="l l-Scalar l-Scalar-Plain">for i in $(seq 0 15);do</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">cpufreq-set -c $i -d 4.50GHz -u 4.94GHz</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="l l-Scalar l-Scalar-Plain">done</span>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="l l-Scalar l-Scalar-Plain">exit 0</span><span class="w"> </span><span class="c1"># 必须以exit 0 结束</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">#!/bin/sh</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="l l-Scalar l-Scalar-Plain">for i in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">echo performance | sudo tee $i &gt; /dev/null;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="l l-Scalar l-Scalar-Plain">done</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="l l-Scalar l-Scalar-Plain">for i in $(seq 0 15);do</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">cpufreq-set -c $i -d 4.50GHz -u 4.94GHz</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="l l-Scalar l-Scalar-Plain">done</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="l l-Scalar l-Scalar-Plain">exit 0</span><span class="w"> </span><span class="c1"># 必须以exit 0 结束</span>
 </span></code></pre></div></p>
 <p>此外，记得给 <code>rc.local</code> 加可执行权限<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/etc/rc.local
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/etc/rc.local
 </span></code></pre></div></p>
 <h3 id="_4">其他问题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>笔者使用的是AMD CPU，在笔者试图调整频率时发现不论是什么策略，可用频率都是离散的且最高频率并没有达到物理限制。最初的输出如下：<br />
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">analyzing CPU 15</span><span class="p">:</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acpi-cpufreq</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span><span class="nt">CPUs which run at the same hardware frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">  </span><span class="nt">CPUs which need to have their frequency coordinated by software</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">  </span><span class="nt">maximum transition latency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4294.55 ms.</span>
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">  </span><span class="nt">hardware limits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.60 GHz - 4.93 GHz</span>
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">  </span><span class="nt">available frequency steps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.30 GHz, 1.80 GHz, 1.60 GHz</span>
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">  </span><span class="nt">available cpufreq governors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">powersave, conservative, userspace, ondemand, performance, schedutil</span>
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">  </span><span class="nt">current policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frequency should be within 1.60 GHz and 3.30 GHz.</span>
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">                  </span><span class="l l-Scalar l-Scalar-Plain">The governor &quot;ondemand&quot; may decide which speed to use</span>
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">                  </span><span class="l l-Scalar l-Scalar-Plain">within this range.</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">analyzing CPU 15</span><span class="p">:</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acpi-cpufreq</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nt">CPUs which run at the same hardware frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">  </span><span class="nt">CPUs which need to have their frequency coordinated by software</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span><span class="nt">maximum transition latency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4294.55 ms.</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="nt">hardware limits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.60 GHz - 4.93 GHz</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span><span class="nt">available frequency steps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.30 GHz, 1.80 GHz, 1.60 GHz</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span><span class="nt">available cpufreq governors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">powersave, conservative, userspace, ondemand, performance, schedutil</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">  </span><span class="nt">current policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frequency should be within 1.60 GHz and 3.30 GHz.</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">                  </span><span class="l l-Scalar l-Scalar-Plain">The governor &quot;ondemand&quot; may decide which speed to use</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">                  </span><span class="l l-Scalar l-Scalar-Plain">within this range.</span>
 </span></code></pre></div></p>
 <p>在折腾一番后发现，电源的管理策略并不是amd的amd_pstate，而是一个名为<code>acpi-cpufreq</code>的设备在调控CPU运行频率。而且笔者在卸载这个调控设备后也无法加载且找不到pstate的调控设备。在笔者电脑的BIOS已经开启pstate支持下，问题显然在系统。通过<code>uname -r</code>笔者发现系统内核是6.1，而检索表明，Linux内核在6.1仅支持被动<code>passive</code>的pstate，只有在6.4及以上才支持<code>active</code>模式的pstate。那么，只需要更新内核、在grub中写明amd_pstate的模式即可。  </p>
 <p>更新内核：<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-t<span class="w"> </span>bookworm-backports<span class="w"> </span>linux-image-amd64
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-t<span class="w"> </span>bookworm-backports<span class="w"> </span>linux-image-amd64
 </span></code></pre></div></p>
 <p>更改grub文件：<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/default/grub
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/default/grub
 </span></code></pre></div>
 修改以下行<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;quiet amd_pstate=active&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;quiet amd_pstate=active&quot;</span>
 </span></code></pre></div>
 更新grub配置并重新启动：<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>update-grub
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>sudo<span class="w"> </span>reboot
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>sudo<span class="w"> </span>update-grub
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>sudo<span class="w"> </span>reboot
 </span></code></pre></div></p>
 <p>此时再使用 <code>cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_driver</code> 查看当前的CPU频率调节驱动。  </p>
 
