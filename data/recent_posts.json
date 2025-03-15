@@ -1,5 +1,10 @@
 [
   {
+    "title": "使用docker快速搭建nextcloud",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/fastbegin/",
+    "date": "03/15"
+  },
+  {
     "title": "通过docker部署zerotier Linux客户端",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/zerotier/useZerotierInDocker/",
     "date": "03/15"
@@ -18,10 +23,5 @@
     "title": "使用scrutiny docker的若干问题",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/scrutiny/",
     "date": "03/10"
-  },
-  {
-    "title": "chevereto图床docker-compose",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/chevereto/",
-    "date": "03/08"
   }
 ]
