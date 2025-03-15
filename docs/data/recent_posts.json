@@ -1,5 +1,15 @@
 [
   {
+    "title": "在服务器上部署qbittorrent webui",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/qbittorrent/deploy/",
+    "date": "03/15"
+  },
+  {
+    "title": "qbittorrent webui使用的若干问题",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/qbittorrent/webuiFAQ/",
+    "date": "03/15"
+  },
+  {
     "title": "使用docker快速搭建nextcloud",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/fastbegin/",
     "date": "03/15"
@@ -10,18 +20,8 @@
     "date": "03/15"
   },
   {
-    "title": "qbittorrent webui使用的若干问题",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/qbittorrent/webuiFAQ/",
-    "date": "03/14"
-  },
-  {
     "title": "在Linux下查看CPU频率、内存速度、GPU状态",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/cpuMemSystemInfoInLinux/",
     "date": "03/11"
-  },
-  {
-    "title": "使用scrutiny docker的若干问题",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/scrutiny/",
-    "date": "03/10"
   }
 ]
