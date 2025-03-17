@@ -17,7 +17,7 @@ Description=qBittorrent-nox service
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/qbittorrent-nox
+ExecStart=/usr/bin/qbittorrent-nox # --webui-port=9090 使用这个参数在启动时固定端口
 Restart=on-failure
 
 [Install]
