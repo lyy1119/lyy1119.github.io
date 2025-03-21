@@ -1,5 +1,5 @@
 default: commit recentPost push
-
+	echo "https://wiki.lyy19.cn"
 commit:
 	git add .
 	git commit -m "write exp"
