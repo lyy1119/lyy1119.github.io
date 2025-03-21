@@ -1,5 +1,10 @@
 [
   {
+    "title": "我的makefile模板",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
+    "date": "03/21"
+  },
+  {
     "title": "在vscode中使用msys2 bash（Windows下）",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/MSYS2/useMsys2InVscode/",
     "date": "03/21"
@@ -17,11 +22,6 @@
   {
     "title": "qbittorrent webui使用的若干问题",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/qbittorrent/webuiFAQ/",
-    "date": "03/15"
-  },
-  {
-    "title": "使用docker快速搭建nextcloud",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/fastbegin/",
     "date": "03/15"
   }
 ]
