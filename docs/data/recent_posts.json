@@ -1,5 +1,10 @@
 [
   {
+    "title": "我的makefile模板",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
+    "date": "03/22"
+  },
+  {
     "title": "git快速开始",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/git/gitQuickStart/",
     "date": "03/21"
@@ -7,11 +12,6 @@
   {
     "title": "Vim的使用",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/vimHotKey/",
-    "date": "03/21"
-  },
-  {
-    "title": "我的makefile模板",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
     "date": "03/21"
   },
   {
