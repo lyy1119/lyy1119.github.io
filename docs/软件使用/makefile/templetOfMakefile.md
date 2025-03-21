@@ -15,7 +15,7 @@ ifeq ($(OS),Linux)
 else ifeq ($(OS),Darwin)
     RM := rm -rf
 else ifneq (,$(findstring MSYS,$(OS)))
-    RM := del /f /q  # MSYS2 uses Windows del
+    RM := rm -rf # MSYS2 uses rm
 else ifneq (,$(findstring MINGW,$(OS)))
     RM := del /f /q  # MinGW uses Windows del
 else ifneq (,$(findstring CYGWIN,$(OS)))
