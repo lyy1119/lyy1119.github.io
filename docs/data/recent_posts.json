@@ -1,5 +1,10 @@
 [
   {
+    "title": "Linux或bash光标消失",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/cursesDisapper/",
+    "date": "03/22"
+  },
+  {
     "title": "我的makefile模板",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
     "date": "03/22"
@@ -17,11 +22,6 @@
   {
     "title": "在vscode中使用msys2 bash（Windows下）",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/MSYS2/useMsys2InVscode/",
-    "date": "03/21"
-  },
-  {
-    "title": "在msys2的bash中开启中文支持",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/MSYS2/enableSupportForChineseInBash/",
     "date": "03/21"
   }
 ]
