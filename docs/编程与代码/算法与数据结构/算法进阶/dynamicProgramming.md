@@ -111,10 +111,11 @@ Y：BDCABA
 - 若两个序列的尾字母不相同，则最长子序列必然是其中一个序列去掉末尾字母后与另一个序列的最长公共子序列。
 
 则有以下的递推式：  
-$$ c[i , j] = \begin{cases}
-    0 , (i == 0 ro j == 0) \\
-    c[i-1 , j-1] + 1 , (i,j > 0 and x_i == y_j) \\
-    \max (c[i , j - 1] , c[i - 1 , j]), (i,j > 0 and x_i != y_j)
+$$ c[i , j] = 
+\begin{cases}
+    0 , (i = 0 \hspace{0.5em} or \hspace{0.5em} j = 0) \\\\[1em]
+    c[i-1 , j-1] + 1 , (i,j > 0 \hspace{0.5em} and \hspace{0.5em} x_i = y_j) \\\\[1em]
+    \max (c[i , j - 1] , c[i - 1 , j]), (i,j > 0 \hspace{0.5em} and \hspace{0.5em} x_i \neq y_j)
 \end{cases} $$
 
 ![20250223123415](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250223123415.png)  
