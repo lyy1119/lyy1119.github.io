@@ -1,5 +1,10 @@
 [
   {
+    "title": "MySQL笔记",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/MySQL/tutorial/",
+    "date": "04/12"
+  },
+  {
     "title": "Vim使用教程",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/vim/",
     "date": "04/04"
@@ -18,10 +23,5 @@
     "title": "我的makefile模板",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
     "date": "03/22"
-  },
-  {
-    "title": "git快速开始",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/git/gitQuickStart/",
-    "date": "03/21"
   }
 ]
