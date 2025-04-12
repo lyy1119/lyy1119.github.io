@@ -1305,6 +1305,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.创建表
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4181,6 +4190,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.创建表
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4212,6 +4230,41 @@
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">alter</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dbName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">read</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span></code></pre></div></p>
 <p>当数据库被设置成只读时，数据库不能修改和删除。  </p>
+<h2 id="2">2.创建表<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p><strong>在数据库中创建一个表</strong><br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">);</span>
+</span></code></pre></div></p>
+<p>如：<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">employee_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">first_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">last_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">hourly_pay</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">hire_date</span><span class="w"> </span><span class="nb">DATE</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">);</span>
+</span></code></pre></div></p>
+<p>其中<code>VARCHAR(50)</code>中的数字50代表这个字符串最大长度50。<code>DECIMAL(5,2)</code>中的第一个数字5代表最大值，2代表小数点后位数。  </p>
+<p><strong>选定table</strong><br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>重命名table</strong><br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>删除table</strong><br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>在table中添加列</strong><br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">ADD</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>注意，第一行没有分号</strong>  </p>
+<p><strong>修改table中的列标题</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originColumnName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
 
 
 
