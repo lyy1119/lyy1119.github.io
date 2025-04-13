@@ -1,6 +1,7 @@
 # MySQL笔记
 
 mysql的语句关键词是 **大小写不敏感的** 。  
+mysql语句以分号作为一句话的结束，所以根据个人习惯，可以将一行语句分成多行书写。  
 
 ## 1.Database的创建与删除
 
@@ -76,3 +77,58 @@ ADD <columName> <dataType>;
 ALTER TABLE <tableName>
 RENAME COLUMN <originColumnName> TO <newName>;
 ```
+
+**修改列的数据类型**
+```sql
+ALTER TABLE <tableName>
+MODIFY COLUMN <columnName> <dataType>;
+```
+
+**移动列的顺序**
+```sql
+ALTER TABLE <tableName>
+MODIFY <column1Name> <dataType>
+AFTER <column2Name>;
+```
+将列1移动到列2的右侧。  
+
+**将某列移动到首列**
+```sql
+ALTER TABLE <tableName>
+MODIFY <columnName> <dataType>
+FIRST;
+```
+
+**删除某列**
+```sql
+ALTER TABLE <tableName>
+DROP COLUMN <columnName>;
+```
+
+## 3.插入数据（在表中插入行）
+
+**插入一行数据**
+```sql
+INSERT INTO <tableName>
+VALUES (...);
+```
+在括号中写入一行中每列的内容。注意每列的数据格式，输入值要和数据格式对应，每列之间用 **逗号** 隔开。  
+
+如：  
+```sql
+INSERT INTO employees
+VALUES (1 , "LIN" , "Y" , 25 , "2025-04-13");
+```
+
+**一次插入多行**
+```sql
+INSERT INTO <tableName>
+VALUES () , () , () , ();
+```
+
+**仅插入部分数据（部分列）**
+```sql
+INSERT INTO <tableName> (columnName1 , columnName2)
+VALUES (value1 , value2);
+```
+上述语句仅插入表的`columnName1`和`columnName2`列的数据。  
