@@ -1314,6 +1314,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.插入数据（在表中插入行）
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4199,6 +4208,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.插入数据（在表中插入行）
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4215,7 +4233,8 @@
 
 
 <h1 id="mysql">MySQL笔记<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
-<p>mysql的语句关键词是 <strong>大小写不敏感的</strong> 。  </p>
+<p>mysql的语句关键词是 <strong>大小写不敏感的</strong> 。<br />
+mysql语句以分号作为一句话的结束，所以根据个人习惯，可以将一行语句分成多行书写。  </p>
 <h2 id="1database">1.Database的创建与删除<a class="headerlink" href="#1database" title="Permanent link">&para;</a></h2>
 <p><strong>创建一个database</strong><br />
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="o">&lt;</span><span class="n">databaseName</span><span class="o">&gt;</span><span class="p">;</span>
@@ -4265,6 +4284,44 @@
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originColumnName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div></p>
+<p><strong>修改列的数据类型</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>移动列的顺序</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">column1Name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">AFTER</span><span class="w"> </span><span class="o">&lt;</span><span class="n">column2Name</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div>
+将列1移动到列2的右侧。  </p>
+<p><strong>将某列移动到首列</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">FIRST</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>删除某列</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<h2 id="3">3.插入数据（在表中插入行）<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p><strong>插入一行数据</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(...);</span>
+</span></code></pre></div>
+在括号中写入一行中每列的内容。注意每列的数据格式，输入值要和数据格式对应，每列之间用 <strong>逗号</strong> 隔开。  </p>
+<p>如：<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;LIN&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Y&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;2025-04-13&quot;</span><span class="p">);</span>
+</span></code></pre></div></p>
+<p><strong>一次插入多行</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">();</span>
+</span></code></pre></div></p>
+<p><strong>仅插入部分数据（部分列）</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">columnName1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">columnName2</span><span class="p">)</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span>
+</span></code></pre></div>
+上述语句仅插入表的<code>columnName1</code>和<code>columnName2</code>列的数据。  </p>
 
 
 
