@@ -20,7 +20,6 @@
 \documentclass[nofoot]{article} % 或其他文档类
 ```
 
-
 ### 注意事项
 1. 如果文档使用了 `\maketitle`，标题页默认会调用 `\thispagestyle{plain}`，可能需要额外添加：
    ```latex
