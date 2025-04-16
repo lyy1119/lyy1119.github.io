@@ -1,5 +1,10 @@
 [
   {
+    "title": "我的makefile模板",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
+    "date": "04/16"
+  },
+  {
     "title": "Python内置算法工具",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/python/toolsInPython/",
     "date": "04/16"
@@ -18,10 +23,5 @@
     "title": "Vim使用教程",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/vim/",
     "date": "04/04"
-  },
-  {
-    "title": "动态规划 Dynamic Programming",
-    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E8%BF%9B%E9%98%B6/dynamicProgramming/",
-    "date": "03/26"
   }
 ]
