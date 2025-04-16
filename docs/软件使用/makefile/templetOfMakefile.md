@@ -5,6 +5,9 @@
 ```makefile
 # CC设置
 CC = gcc
+TRAGE = # output file full name
+ARGS = # input parameters here
+TEMP = # temp files need to be deleted
 
 # OS
 OS := $(shell uname -s)
@@ -28,8 +31,11 @@ default: compile .clean
 
 compile:
     #  仅仅是示例
-    $(CC) $(TARGET) $(OUT)
+    $(CC) $(ARGS) $(TARGET) $(OUT)
 
 .clean:
-    $(RM) file
+    $(RM) $(TEMP)
+
+clean:
+    $(RM) $(TARGET)
 ```
