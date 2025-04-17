@@ -50,11 +50,6 @@ CREATE TABLE employees (
 
 其中`VARCHAR(50)`中的数字50代表这个字符串最大长度50。`DECIMAL(5,2)`中的第一个数字5代表最大值，2代表小数点后位数。  
 
-**选定table**  
-```sql
-SELECT * FROM <tableName>;
-```
-
 **重命名table**  
 ```sql
 RENAME TABLE <originName> TO <newName>;
@@ -132,3 +127,49 @@ INSERT INTO <tableName> (columnName1 , columnName2)
 VALUES (value1 , value2);
 ```
 上述语句仅插入表的`columnName1`和`columnName2`列的数据。  
+
+## 4.查看数据
+
+**选定/查看table的所有列**  
+```sql
+SELECT * FROM <tableName>;
+```
+
+**选定/查看table的特定列**
+```sql
+SELECT <colName1> <colName2>
+FROM <tableName>;
+```
+列名不是必须按照表中的左右的，可以交换
+
+**查看特定行**
+```sql
+SELECT * FROM <tableName>
+WHERE <columnName> = <value you want>;
+```
+实际上`=`是一个操作符，会返回为true的行，所以可以这样写。  
+
+```sql
+SELECT * FROM <table>
+WHERE hourly_pay >= 0;
+```
+
+## sql中的保留符号
+
+|名称|符号|
+|---|---|
+|空|`NULL`|
+
+## sql中的比较操作符
+
+|名称|符号|
+|---|---|
+|等于|`==`|
+|大于|`>`|
+|小于|`<`|
+|不等于|`!=`|
+
+
+## 其他注意事项
+
+1. sql中判断是否是空只能用`IS`
