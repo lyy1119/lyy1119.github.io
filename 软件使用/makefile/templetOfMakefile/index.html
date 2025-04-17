@@ -24,8 +24,8 @@
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="我的makefile模板 - lyy19's Wiki">
-  <meta name="twitter:title" content="我的makefile模板 - lyy19's Wiki" />
+  <meta property="og:title" content="makefile模板 - lyy19's Wiki">
+  <meta name="twitter:title" content="makefile模板 - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>我的makefile模板 - lyy19's Wiki</title>
+  <title>makefile模板 - lyy19's Wiki</title>
   
   
   
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              我的makefile模板
+              makefile模板
             
           </span>
         </div>
@@ -3676,7 +3676,7 @@
         
   
   <span class="md-ellipsis">
-    我的makefile模板
+    makefile模板
   </span>
   
 
@@ -4161,43 +4161,44 @@
               
 
 
-<h1 id="makefile">我的makefile模板<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
+<h1 id="makefile">makefile模板<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
 <p>边学边写中……  </p>
 <div class="language-makefile highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># CC设置</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">CC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>gcc
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">TRAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># output file full name</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">ARGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># input parameters here</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nv">TEMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># temp files need to be deleted</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c"># OS</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nv">OS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>uname<span class="w"> </span>-s<span class="k">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c"># RM</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cp">ifeq ($(OS),Linux)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cp">else ifeq ($(OS),Darwin)</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="cp">else ifneq (,$(findstring MSYS,$(OS)))</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="c1"># MSYS2 uses rm</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cp">else ifneq (,$(findstring MINGW,$(OS)))</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>del<span class="w"> </span>/f<span class="w"> </span>/q<span class="w">  </span><span class="c1"># MinGW uses Windows del</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="cp">else ifneq (,$(findstring CYGWIN,$(OS)))</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w">  </span><span class="c1"># Cygwin uses rm</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="cp">else</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unknown OS&quot;</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="cp">endif</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="nf">default</span><span class="o">:</span><span class="w"> </span><span class="n">compile</span> .<span class="n">clean</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="nf">compile</span><span class="o">:</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c">    #  仅仅是示例</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span><span class="k">$(</span>ARGS<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span><span class="w"> </span><span class="k">$(</span>OUT<span class="k">)</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nf">.clean</span><span class="o">:</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="k">$(</span>RM<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TEMP<span class="k">)</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nf">clean</span><span class="o">:</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="k">$(</span>RM<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">SOURCE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># source code file name</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">TARGET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># output file full name</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nv">ARGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># input parameters here</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nv">TEMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># temp files need to be deleted</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c"># OS</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nv">OS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>uname<span class="w"> </span>-s<span class="k">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c"># RM</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cp">ifeq ($(OS),Linux)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cp">else ifeq ($(OS),Darwin)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cp">else ifneq (,$(findstring MSYS,$(OS)))</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="c1"># MSYS2 uses rm</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cp">else ifneq (,$(findstring MINGW,$(OS)))</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>del<span class="w"> </span>/f<span class="w"> </span>/q<span class="w">  </span><span class="c1"># MinGW uses Windows del</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="cp">else ifneq (,$(findstring CYGWIN,$(OS)))</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w">  </span><span class="c1"># Cygwin uses rm</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="cp">else</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span>RM<span class="w"> </span>:<span class="o">=</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unknown OS&quot;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="cp">endif</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nf">default</span><span class="o">:</span><span class="w"> </span><span class="n">compile</span> .<span class="n">clean</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="nf">compile</span><span class="o">:</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c">    #  仅仅是示例</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span><span class="k">$(</span>ARGS<span class="k">)</span><span class="w"> </span><span class="k">$(</span>SOURCE<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nf">.clean</span><span class="o">:</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="k">$(</span>RM<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TEMP<span class="k">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nf">clean</span><span class="o">:</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">$(</span>RM<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span>
 </span></code></pre></div>
 
 
