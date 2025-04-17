@@ -1344,6 +1344,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.查看数据
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      sql中的保留符号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      sql中的比较操作符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他注意事项
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4238,6 +4274,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.查看数据
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      sql中的保留符号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      sql中的比较操作符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他注意事项
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4287,62 +4359,122 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">);</span>
 </span></code></pre></div></p>
 <p>其中<code>VARCHAR(50)</code>中的数字50代表这个字符串最大长度50。<code>DECIMAL(5,2)</code>中的第一个数字5代表最大值，2代表小数点后位数。  </p>
-<p><strong>选定table</strong><br />
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
-</span></code></pre></div></p>
 <p><strong>重命名table</strong><br />
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div></p>
 <p><strong>删除table</strong><br />
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div></p>
 <p><strong>在table中添加列</strong><br />
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">ADD</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">ADD</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
 <strong>注意，第一行没有分号</strong>  </p>
 <p><strong>修改table中的列标题</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originColumnName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">originColumnName</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">newName</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div></p>
 <p><strong>修改列的数据类型</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div></p>
 <p><strong>移动列的顺序</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">column1Name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">AFTER</span><span class="w"> </span><span class="o">&lt;</span><span class="n">column2Name</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">column1Name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">AFTER</span><span class="w"> </span><span class="o">&lt;</span><span class="n">column2Name</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
 将列1移动到列2的右侧。  </p>
 <p><strong>将某列移动到首列</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">FIRST</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">FIRST</span><span class="p">;</span>
 </span></code></pre></div></p>
 <p><strong>删除某列</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div></p>
 <h2 id="3">3.插入数据（在表中插入行）<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p><strong>插入一行数据</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(...);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(...);</span>
 </span></code></pre></div>
 在括号中写入一行中每列的内容。注意每列的数据格式，输入值要和数据格式对应，每列之间用 <strong>逗号</strong> 隔开。  </p>
 <p>如：<br />
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;LIN&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Y&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;2025-04-13&quot;</span><span class="p">);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;LIN&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Y&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;2025-04-13&quot;</span><span class="p">);</span>
 </span></code></pre></div></p>
 <p><strong>一次插入多行</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">();</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">();</span>
 </span></code></pre></div></p>
 <p><strong>仅插入部分数据（部分列）</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">columnName1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">columnName2</span><span class="p">)</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">columnName1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">columnName2</span><span class="p">)</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span>
 </span></code></pre></div>
 上述语句仅插入表的<code>columnName1</code>和<code>columnName2</code>列的数据。  </p>
+<h2 id="4">4.查看数据<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p><strong>选定/查看table的所有列</strong><br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>选定/查看table的特定列</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">colName1</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">colName2</span><span class="o">&gt;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div>
+列名不是必须按照表中的左右的，可以交换</p>
+<p><strong>查看特定行</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">value</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div>
+实际上<code>=</code>是一个操作符，会返回为true的行，所以可以这样写。  </p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">hourly_pay</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span></code></pre></div>
+<h2 id="sql">sql中的保留符号<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空</td>
+<td><code>NULL</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sql_1">sql中的比较操作符<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等于</td>
+<td><code>==</code></td>
+</tr>
+<tr>
+<td>大于</td>
+<td><code>&gt;</code></td>
+</tr>
+<tr>
+<td>小于</td>
+<td><code>&lt;</code></td>
+</tr>
+<tr>
+<td>不等于</td>
+<td><code>!=</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">其他注意事项<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>sql中判断是否是空只能用<code>IS</code></li>
+</ol>
 
 
 
