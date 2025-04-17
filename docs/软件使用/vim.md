@@ -1,5 +1,9 @@
 # Vim使用教程
 
+## vim配置
+
+windows MSYS2的vim默认配置文件在`/usr/share/vim/vim91/defaults.vim`。  
+
 根据自身习惯，罗列的常用快捷键等。  
 
 Vim的模式： `NORMAL`、`INSERT`、`REPALCE`、`VISUAL`  
