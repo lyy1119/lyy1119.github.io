@@ -1,11 +1,12 @@
-# 我的makefile模板
+# makefile模板
 
 边学边写中……  
 
 ```makefile
 # CC设置
 CC = gcc
-TRAGE = # output file full name
+SOURCE = # source code file name
+TARGET = # output file full name
 ARGS = # input parameters here
 TEMP = # temp files need to be deleted
 
@@ -31,7 +32,7 @@ default: compile .clean
 
 compile:
     #  仅仅是示例
-    $(CC) $(ARGS) $(TARGET) $(OUT)
+    $(CC) $(ARGS) $(SOURCE) $(TARGET)
 
 .clean:
     $(RM) $(TEMP)
