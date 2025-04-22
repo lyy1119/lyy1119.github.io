@@ -154,6 +154,48 @@ SELECT * FROM <table>
 WHERE hourly_pay >= 0;
 ```
 
+## 5.更改与删除行
+
+**更改某行的某列**
+```sql
+UPDATE <tableName>
+SET <columnName> = <value>
+WHERE <columnName2> = <value2>;
+```
+上述语句将表`tablename`中列`columnname2`的值为`value2`的行的`columnName`列数据更改为`value`。  
+
+如果要改变某特定行的多列值，可以这样写：
+```sql
+UPDATE <tableName>
+SET <column1> = <value1>,
+    <column2> = <value2>
+WHERE <column3> = <value3>;
+```
+
+**将某一行的某一列的值设置为空**
+```sql
+UPDATE <tableName>
+SET <column> = NULL
+WHERE <column2> = <value2>;
+```
+
+**将整列设置为某个值**
+```sql
+UPDATE <tableName>
+SET <columnName> = <value>;
+```
+
+**删除表中的某行**
+```sql
+DELETE FROM <tableName>
+WHERE <columnName> = <value>;
+```
+
+**删除表中所有数据（慎用）**
+```sql
+DELETE FROM <tableName>;
+```
+
 ## sql中的保留符号
 
 |名称|符号|
