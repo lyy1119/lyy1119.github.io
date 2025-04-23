@@ -164,6 +164,19 @@ WHERE <columnName2> = <value2>;
 ```
 上述语句将表`tablename`中列`columnname2`的值为`value2`的行的`columnName`列数据更改为`value`。  
 
+!!! Note
+    如果使用上述语句更改行的某列的值出现以下报错：  
+    `You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.`  
+    是因为当前指定的WHERE column的column不是索引键`key column`  
+    解决方法：  
+    使用如下命令将列设置为索引键或者主键  
+    ```sql
+    -- 添加索引
+    ALTER TABLE employees ADD INDEX (employee_id);
+    -- 设置为主键
+    ALTER TABLE employees ADD PRIMARY KEY (employee_id);
+    ```
+
 如果要改变某特定行的多列值，可以这样写：
 ```sql
 UPDATE <tableName>
@@ -194,6 +207,29 @@ WHERE <columnName> = <value>;
 **删除表中所有数据（慎用）**
 ```sql
 DELETE FROM <tableName>;
+```
+
+## 6.自动保存、保存与回滚
+
+在MySQL中，默认开启自动保存。也就是说你每次做的任何更改都会自动保存。  
+
+**关闭或开启自动保存**
+```sql
+-- 关闭自动保存
+SET AUTOCOMMIT = OFF;
+-- 开启自动保存
+SET AUTOCOMMIT = ON;
+```
+
+**手动保存**
+```sql
+COMMIT;
+```
+
+**回滚**  
+在自动保存关闭的状态下，如果出现错误更改，我们可以归滚到上一次保存。  
+```sql
+ROLLBACK;
 ```
 
 ## sql中的保留符号
