@@ -232,6 +232,28 @@ COMMIT;
 ROLLBACK;
 ```
 
+## 7.获取日期、时间、日期及时间
+
+MySQL中有内置函数获取这些数据。  
+
+我们可以创建如下表来测试。  
+
+```sql
+CREATE TABLE test(
+	myDate DATE,
+    myTime TIME,
+    date_time DATETIME
+);
+-- 插入
+INSERT INTO test
+VALUES (
+	CURRENT_DATE(), CURRENT_TIME(), NOW()
+);
+SELECT * FROM test;
+```
+
+其中可以对`CURRENT_DATE()`加1或者减1以获取明天或者昨天的日期。
+
 ## sql中的保留符号
 
 |名称|符号|
