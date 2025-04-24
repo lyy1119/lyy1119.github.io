@@ -254,6 +254,28 @@ SELECT * FROM test;
 
 其中可以对`CURRENT_DATE()`加1或者减1以获取明天或者昨天的日期。
 
+## 8.表列数据限制
+
+在Mysql中，可以对表的数据做一些限制，如某列下的数据不能相同，如uid。或者必须有值
+
+**UNIQUE限制**  
+`UNIQUE`限制保证这一列下的数据不能相同，添加限制有两种方法。一是在创建表时限制
+```sql
+CREATE TABLE products(
+    productId   INT UNIQUE,
+    productName VARCHAR(25),
+    price       DECIMAL(10, 2)
+);
+```
+以上语句给id列添加了限制条件：唯一。添加了这样的限制的列在加入一个具有相同值的数据时会报错。  
+
+如果已经创建了表，可以通过以下语句添加限制条件。
+```sql
+ALTER TABLE products
+ADD CONSTRAINT
+UNIQUE(productName);
+```
+
 ## sql中的保留符号
 
 |名称|符号|
