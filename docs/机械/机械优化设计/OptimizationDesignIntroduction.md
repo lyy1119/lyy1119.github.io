@@ -46,14 +46,15 @@ $$
 
 上述内容书写成 **数学模型** 应写成如下形式：  
 
-$$\min f( \textbf{X} ) = 2(x_1 x_2 + x_2 x_3 + x_1 x_3) \\[0.5em]
-\textbf{X} = [ x_1 \space x_2 \space x_3 ]^T \in \textbf{R}^4 \\[0.5em]
-\hspace{-4em}\begin{array}{l}
-    s.t. \hspace{0.5em} g_1(\textbf{X}) = - x_1 \leq -1.5 \\
-    \hspace{2em} g_2(\textbf{X}) =  - x_2 < 0 \\
-    \hspace{2em} g_3(\textbf{X}) = - x_3 < 0 \\
-    \hspace{2em} h_1(\textbf{X}) = x_1 x_2 x_3 =1
-\end{array}
+$$
+\begin{align}
+\min f( \textbf{X} ) &= 2(x_1 x_2 + x_2 x_3 + x_1 x_3) \notag \\
+\textbf{X} &= [ x_1 \space x_2 \space x_3 ]^T \in \textbf{R}^4 \notag \\
+    s.t. g_1(\textbf{X}) &= - x_1 \leq -1.5 \notag \\
+    \hspace{2em} g_2(\textbf{X}) &=  - x_2 < 0 \notag \\
+    \hspace{2em} g_3(\textbf{X}) &= - x_3 < 0 \notag \\
+    \hspace{2em} h_1(\textbf{X}) &= x_1 x_2 x_3 =1 \notag
+\end{align}
 $$
 
 ## 相关名词
