@@ -1372,6 +1372,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.获取日期、时间、日期及时间
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       sql中的保留符号
@@ -4320,6 +4329,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.获取日期、时间、日期及时间
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       sql中的保留符号
@@ -4522,6 +4540,22 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 在自动保存关闭的状态下，如果出现错误更改，我们可以归滚到上一次保存。<br />
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">ROLLBACK</span><span class="p">;</span>
 </span></code></pre></div></p>
+<h2 id="7">7.获取日期、时间、日期及时间<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<p>MySQL中有内置函数获取这些数据。  </p>
+<p>我们可以创建如下表来测试。  </p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test</span><span class="p">(</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">myDate</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="n">myTime</span><span class="w"> </span><span class="k">TIME</span><span class="p">,</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="n">date_time</span><span class="w"> </span><span class="n">DATETIME</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">);</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="c1">-- 插入</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">test</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="w">    </span><span class="k">CURRENT_DATE</span><span class="p">(),</span><span class="w"> </span><span class="k">CURRENT_TIME</span><span class="p">(),</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="p">);</span>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">test</span><span class="p">;</span>
+</span></code></pre></div>
+<p>其中可以对<code>CURRENT_DATE()</code>加1或者减1以获取明天或者昨天的日期。</p>
 <h2 id="sql">sql中的保留符号<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
