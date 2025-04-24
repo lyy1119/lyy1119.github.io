@@ -1381,6 +1381,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.表列数据限制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       sql中的保留符号
@@ -4338,6 +4347,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.表列数据限制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       sql中的保留符号
@@ -4556,6 +4574,22 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 </span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">test</span><span class="p">;</span>
 </span></code></pre></div>
 <p>其中可以对<code>CURRENT_DATE()</code>加1或者减1以获取明天或者昨天的日期。</p>
+<h2 id="8">8.表列数据限制<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<p>在Mysql中，可以对表的数据做一些限制，如某列下的数据不能相同，如uid。或者必须有值</p>
+<p><strong>UNIQUE限制</strong><br />
+<code>UNIQUE</code>限制保证这一列下的数据不能相同，添加限制有两种方法。一是在创建表时限制
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="p">(</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">productId</span><span class="w">   </span><span class="nb">INT</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="n">productName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">25</span><span class="p">),</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">    </span><span class="n">price</span><span class="w">       </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="p">);</span>
+</span></code></pre></div>
+以上语句给id列添加了限制条件：唯一。添加了这样的限制的列在加入一个具有相同值的数据时会报错。  </p>
+<p>如果已经创建了表，可以通过以下语句添加限制条件。
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="k">UNIQUE</span><span class="p">(</span><span class="n">productName</span><span class="p">);</span>
+</span></code></pre></div></p>
 <h2 id="sql">sql中的保留符号<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
