@@ -276,6 +276,19 @@ ADD CONSTRAINT
 UNIQUE(productName);
 ```
 
+**NOT NULL限制**
+`NOT NULL`可以限制某列数据必须不为空，当尝试插入数据时，若该列为空，则会报错。  
+```sql
+-- 在创建时加限制
+CREATE TABLE <tableName>(
+    column1 <dataType> NOT NULL,
+    column2 <dataType>
+);
+-- 对现有表加限制
+ALTER TABLE <tableName>
+MODIFY COLUMN <columnName> <dataType> NOT NULL;
+```
+
 ## sql中的保留符号
 
 |名称|符号|
