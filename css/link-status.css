@@ -1,0 +1,11 @@
+.link-status {
+    font-size: 0.65em;        /* 稍微缩小图标 */
+    margin-left: 0em;      /* 缩小左右间距，更贴近链接 */
+    vertical-align: baseline; /* 保持和文字基线对齐 */
+    line-height: 1;           /* 防止上下撑开行高 */
+    display: inline-block;    /* 避免断行 */
+    cursor: help;             /* 鼠标悬停时显示提示手势 */
+    position: relative;       /* 允许后续做更多微调 */
+    top: -1px;                /* 微调图标位置，更贴字 */
+}
+
