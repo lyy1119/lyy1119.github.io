@@ -4397,8 +4397,21 @@
 <p>看到<code>200 join OK</code>就代表加入成功。</p>
 <p>加入成功后需要登陆服务端管理界面的相应网络，勾选<code>Authorized</code>。</p>
 <h3 id="linux">Linux端<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<p>按照<a href="https://www.zerotier.com/download/">官网</a>指示安装zerotier客户端，或者使用Docker使用Zerotier客户端。Docker使用zerotier客户端可以参见我的另一篇笔记。  </p>
+<p>替换目录<code>/var/lib/zerotier-one</code>下的<code>planet</code>文件。  </p>
+<p>重启zerotier服务<br />
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>zerotier-one
+</span></code></pre></div></p>
+<p>在zerotier后台勾选<code>Authorized</code>。</p>
 <h3 id="macos">MacOS端<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p>进入 /Library/Application Support/ZeroTier/One/ 目录，并替换目录下的 planet 文件  </p>
+<p>重启 ZeroTier-One：<br />
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat<span class="w"> </span>/Library/Application<span class="se">\ </span>Support/ZeroTier/One/zerotier-one.pid<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>xargs<span class="w"> </span><span class="nb">kill</span>
+</span></code></pre></div></p>
+<p>加入网络 zerotier-cli join 网络 id  </p>
+<p>管理后台同意加入请求  </p>
 <h3 id="android">Android端<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
+<p>使用<code>ZerotierFix</code>即可，<a href="https://github.com/kaaass/ZerotierFix">GitHub repo</a></p>
 
 
 
