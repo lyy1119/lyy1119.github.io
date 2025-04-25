@@ -276,7 +276,7 @@ ADD CONSTRAINT
 UNIQUE(productName);
 ```
 
-**NOT NULL限制**
+**NOT NULL限制**  
 `NOT NULL`可以限制某列数据必须不为空，当尝试插入数据时，若该列为空，则会报错。  
 ```sql
 -- 在创建时加限制
@@ -287,6 +287,43 @@ CREATE TABLE <tableName>(
 -- 对现有表加限制
 ALTER TABLE <tableName>
 MODIFY COLUMN <columnName> <dataType> NOT NULL;
+```
+
+**自定义限制CHEKC**  
+除了上述限制，我们还可以自定义限制，如限制某一列的数据必须是大于或在某个区间内的数。这样的限制可以使用`CKECK`实现。  
+```sql
+-- 在创建表时添加限制
+CREATE TABLE <tableName>(
+    column1 <dataType>,
+    column2 <dataType>,
+    ...
+    columnN <dataType>,
+    CHECK (column1 >= 50)
+);
+```
+
+建议给限制条件命名，这样方便改动表格时删除限制条件。  
+```sql
+-- 在创建表时添加限制
+CREATE TABLE <tableName>(
+    column1 <dataType>,
+    column2 <dataType>,
+    ...
+    columnN <dataType>,
+    CONSTRAINT <nameOfCheck> CHECK (column1 >= 50)
+);
+```
+
+对已经创建的表，可以通过如下命令添加限制条件。  
+```sql
+ALTER TABLE <tableName>
+ADD CONSTRAINT <nameOfCheck> CHECK (<condition>);
+```
+
+删除表中的某个限制条件  
+```sql
+ALTER TABLE <tableName>
+DROP CHECK <nameOfCheck>;
 ```
 
 ## sql中的保留符号
