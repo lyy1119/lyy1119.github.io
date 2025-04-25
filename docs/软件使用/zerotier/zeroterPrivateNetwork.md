@@ -66,8 +66,30 @@ zerotier-cli.bat join <网络id>
 
 ### Linux端
 
+按照[官网](https://www.zerotier.com/download/)指示安装zerotier客户端，或者使用Docker使用Zerotier客户端。Docker使用zerotier客户端可以参见我的另一篇笔记。  
 
+替换目录`/var/lib/zerotier-one`下的`planet`文件。  
+
+重启zerotier服务  
+```bash
+sudo systemctl restart zerotier-one
+```
+
+在zerotier后台勾选`Authorized`。
 
 ### MacOS端
 
+进入 /Library/Application\ Support/ZeroTier/One/ 目录，并替换目录下的 planet 文件  
+
+重启 ZeroTier-One：  
+```bash
+cat /Library/Application\ Support/ZeroTier/One/zerotier-one.pid | sudo xargs kill
+```
+
+加入网络 zerotier-cli join 网络 id  
+
+管理后台同意加入请求  
+
 ### Android端
+
+使用`ZerotierFix`即可，[GitHub repo](https://github.com/kaaass/ZerotierFix)
