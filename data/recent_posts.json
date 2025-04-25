@@ -1,5 +1,10 @@
 [
   {
+    "title": "Challenge模式申请证书",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/certbot/challengeMode/",
+    "date": "04/25"
+  },
+  {
     "title": "搭建Zerotier私有虚拟局域网指南",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/zerotier/zeroterPrivateNetwork/",
     "date": "04/25"
@@ -17,11 +22,6 @@
   {
     "title": "makefile模板",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/makefile/templetOfMakefile/",
-    "date": "04/17"
-  },
-  {
-    "title": "Vim使用教程",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/vim/",
     "date": "04/17"
   }
 ]
