@@ -1,5 +1,10 @@
 [
   {
+    "title": "防止Http自动跳转为Https",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/chrome/preventHttpAutoHttps/",
+    "date": "04/26"
+  },
+  {
     "title": "去除电影视频中多余的音轨",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/MKVToolNix/deleteTunesInmkv/",
     "date": "04/26"
@@ -17,11 +22,6 @@
   {
     "title": "Steam下载走直连",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/V2ray/steamDirectDownload/",
-    "date": "04/25"
-  },
-  {
-    "title": "Challenge模式申请证书",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/certbot/challengeMode/",
     "date": "04/25"
   }
 ]
