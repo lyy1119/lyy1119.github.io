@@ -1,5 +1,7 @@
 # MySQL笔记
 
+| [参考视频课程（YouTube）](https://www.youtube.com/watch?v=5OdVJbNCSso) |
+
 mysql的语句关键词是 **大小写不敏感的** 。  
 mysql语句以分号作为一句话的结束，所以根据个人习惯，可以将一行语句分成多行书写。  
 
@@ -325,6 +327,27 @@ ADD CONSTRAINT <nameOfCheck> CHECK (<condition>);
 ALTER TABLE <tableName>
 DROP CHECK <nameOfCheck>;
 ```
+
+## 9.列的默认值
+
+对于有些写入操作，比如我们想在写入时自动记录时间，可以使用`DEFAULT`实现。  
+
+在创建表时添加`DEFALUT`  
+```sql
+CREATE TABLE <tabName>(
+    column1 <dataType> DEFAULT <value you wannt be default>,
+    ...
+);
+```
+
+对现有表加`DEFAULT`  
+```sql
+ALTER TABLE <tabName>
+ALTER <colName> SET DEFAULT <value>;
+```
+
+!!! warning 
+    使用`DEFAULT`属性后，插入值时若不想手动指定值，即让表使用设置的默认值，需要指定插入数据属于哪几行，也就是使用指定行的插入方式。
 
 ## sql中的保留符号
 
