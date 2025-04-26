@@ -2,7 +2,7 @@
 
 ## 导航
 
-原项目地址：[https://github.com/xubiaolin/docker-zerotier-planet](https://github.com/xubiaolin/docker-zerotier-plane)
+原项目地址：[https://github.com/xubiaolin/docker-zerotier-planet](https://github.com/xubiaolin/docker-zerotier-planet)
 
 
 | [搭建私有服务器](#搭建私有Planet服务器) | [将客户端加入网络](#将客户端加入网络) |
