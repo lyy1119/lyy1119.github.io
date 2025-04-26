@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../enableSupportForChineseInBash/">
+  <link rel="prev" href="../../certbot/challengeMode/">
   
   
-  <link rel="next" href="../../V2ray/steamDirectDownload/">
+  <link rel="next" href="../../docker/changeSource/">
   
   
   <link rel="icon" href="../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="在vscode中使用msys2 bash（Windows下） - lyy19's Wiki">
-  <meta name="twitter:title" content="在vscode中使用msys2 bash（Windows下） - lyy19's Wiki" />
+  <meta property="og:title" content="防止Http自动跳转为Https - lyy19's Wiki">
+  <meta name="twitter:title" content="防止Http自动跳转为Https - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>在vscode中使用msys2 bash（Windows下） - lyy19's Wiki</title>
+  <title>防止Http自动跳转为Https - lyy19's Wiki</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#vscodemsys2-bashwindows" class="md-skip">
+      <a href="#httphttps" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              在vscode中使用msys2 bash（Windows下）
+              防止Http自动跳转为Https
             
           </span>
         </div>
@@ -3245,19 +3245,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_7" >
         
           
           <label class="md-nav__link" for="__nav_12_7" id="__nav_12_7_label" tabindex="0">
@@ -3271,7 +3269,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_7">
             <span class="md-nav__icon md-icon"></span>
             MSYS2
@@ -3285,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enableSupportForChineseInBash/" class="md-nav__link">
+      <a href="../../MSYS2/enableSupportForChineseInBash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3303,19 +3301,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../MSYS2/useMsys2InVscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3324,7 +3313,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3576,17 +3564,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_11" checked>
         
           
           <label class="md-nav__link" for="__nav_12_11" id="__nav_12_11_label" tabindex="0">
@@ -3600,7 +3590,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_11">
             <span class="md-nav__icon md-icon"></span>
             Chrome
@@ -3611,10 +3601,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../chrome/preventHttpAutoHttps/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3623,6 +3622,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -4441,20 +4441,8 @@
               
 
 
-<h1 id="vscodemsys2-bashwindows">在vscode中使用msys2 bash（Windows下）<a class="headerlink" href="#vscodemsys2-bashwindows" title="Permanent link">&para;</a></h1>
-<p><code>ctrl</code>+<code>shift</code>+<code>p</code>，去掉<code>&gt;</code>，搜索并打开<code>settings.json</code>，用户目录下的那个。  </p>
-<p>在<code>"terminal.integrated.profiles.windows"</code>键下加入如下内容：</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;bash msys2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">            </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">                </span><span class="s2">&quot;C:\\msys64\\usr\\bin\\bash.exe&quot;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="p">],</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="c1">//（json不允许注释，请在写入配置前删除） 此处不能用右边这个参数，会导致不能使用Windows下的git等软件 ：&quot;--login&quot; , &quot;-i&quot;,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">                     </span><span class="s2">&quot;-c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cd &#39;${workspaceFolder}&#39; &amp;&amp; exec bash&quot;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="p">],</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;terminal-cmd&quot;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p">},</span>
-</span></code></pre></div>
-<p><code>ctrl</code> + <code>shift</code> + <code>p</code>,搜索并打开设置，搜索 <code>terminal integrated Windows</code> ，将默认终端改成上述键值。</p>
+<h1 id="httphttps">防止Http自动跳转为Https<a class="headerlink" href="#httphttps" title="Permanent link">&para;</a></h1>
+<p>安装这个chrome插件就行：<a href="https://chromewebstore.google.com/detail/url-rule/enfdapnpdfpgjamddpkdfliienniaimb">URL Rule</a></p>
 
 
 
