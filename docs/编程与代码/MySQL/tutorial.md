@@ -130,6 +130,9 @@ VALUES (value1 , value2);
 ```
 上述语句仅插入表的`columnName1`和`columnName2`列的数据。  
 
+!!! warning
+    只要没有插入完整的各列数据，都需要指定插入的数据是哪几列的。
+
 ## 4.查看数据
 
 **选定/查看table的所有列**  
@@ -261,6 +264,10 @@ SELECT * FROM test;
 在Mysql中，可以对表的数据做一些限制，如某列下的数据不能相同，如uid。或者必须有值
 
 **UNIQUE限制**  
+
+!!! info
+    `UNIQUE`其实是`UNIQUE KEY`的简写
+
 `UNIQUE`限制保证这一列下的数据不能相同，添加限制有两种方法。一是在创建表时限制
 ```sql
 CREATE TABLE products(
@@ -348,6 +355,105 @@ ALTER <colName> SET DEFAULT <value>;
 
 !!! warning 
     使用`DEFAULT`属性后，插入值时若不想手动指定值，即让表使用设置的默认值，需要指定插入数据属于哪几行，也就是使用指定行的插入方式。
+
+## 10.主键
+
+**主键** 也是约束的一种，主键等同于 **NOT NULL** 加 **UNIQUE** ，但是一张表只能有一个主键。
+
+创建表时指定主键  
+```sql
+CREATE TABLE <tabName>(
+    column1 <dataType> PRIMARY KEY,
+    column2 <dataType>,
+    ...
+    columnN <dataType>
+);
+```
+
+对现有表加主键  
+```sql
+ALTER TABLE <tabName>
+ADD CONSTRAINT
+PRIMARY KEY(<columnName>);
+```
+
+## 11.功能与属性
+
+**自增（AUTO_INCREMENT）**  
+
+仅能对被设置成**KEY**的列设置自增属性，且一个表只能有一个有自增属性的列，被设置为自增属性的列在插入时若不指定值，则会从表的最后个值开始自增。  
+
+若表为空，则默认从1开始。但可以手动修改开始的值。  
+
+同时也可以在插入时指定值。  
+
+**在创建表时设置自增属性**
+```sql
+CREATE TABLE <tabName> (
+    -- 一般将主键作为自增的，数据类型只能为INT或BIGINT，如uid
+    column1 <dataType> PRIMARY KEY AUTO_INCREMENT,
+    ...
+    column <dataType>
+);
+```
+
+**对现有表加自增属性**
+```sql
+ALTER TABLE <tabName>
+MODIFY COLUMN <colName> INT AUTO_INCREMENT;
+```
+
+**更改自增的下一个值**
+```sql
+ALTER TABLE <tabName>
+AUTO_INCREMENT = <value>;
+```
+
+!!! warning
+    如果设置的值比表最后一行的值小，下一个自增值会是表最后一行的下一个值。
+
+## 12.索引/键
+
+MySQL中的`KEY`其实就是索引。  
+
+MySQL中有以下类型的键。  
+
+| 类型 | 关键字 | 特点 |
+|--|--|--|
+| 主键 | PRIMARY KEY | 唯一且非空，表里只能有一个 |
+| 唯一键 | UNIQUE KEY | 唯一，可以有多个 |
+| 普通键（一般索引） | KEY / INDEX | 不要求唯一，主要加速查询 |
+
+**在创建表时添加KEY**
+```sql
+CREATE TABLE <tabName> (
+    column1 <dataType>,
+    ...
+    columnN <dataType>,
+    KEY(<columnName>)
+);
+```
+
+**对现有表加KEY**
+```sql
+ALTER TABLE <tabName>
+ADD KEY (<columnName>);
+-- 也可以给索引起名
+ALTER TABLE <tabName>
+ADD KEY <indexName> (<columnName>);
+```
+!!! warning
+    索引名是给数据库优化内部执行速度用的，所有增减删改操作都应该使用列名。
+
+## ADD CONSTRAINT的相关说明
+
+添加constraint的语句书写完整形式如下  
+```sql
+ALTER TABLE <tabName>
+ADD CONSTRAINT <constaintName>
+<constrainType> (<columnName>);
+```
+其中`ADD CONSTRAINT <constaintName>`这一行可以全部省略，也可以只不写命名
 
 ## sql中的保留符号
 
