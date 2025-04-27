@@ -1423,6 +1423,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.主键
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.功能与属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.索引/键
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADD CONSTRAINT的相关说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       sql中的保留符号
@@ -4654,6 +4690,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.主键
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.功能与属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.索引/键
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADD CONSTRAINT的相关说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       sql中的保留符号
@@ -4783,6 +4855,10 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span>
 </span></code></pre></div>
 上述语句仅插入表的<code>columnName1</code>和<code>columnName2</code>列的数据。  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>只要没有插入完整的各列数据，都需要指定插入的数据是哪几列的。</p>
+</div>
 <h2 id="4">4.查看数据<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p><strong>选定/查看table的所有列</strong><br />
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
@@ -4875,8 +4951,12 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 <p>其中可以对<code>CURRENT_DATE()</code>加1或者减1以获取明天或者昨天的日期。</p>
 <h2 id="8">8.表列数据限制<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <p>在Mysql中，可以对表的数据做一些限制，如某列下的数据不能相同，如uid。或者必须有值</p>
-<p><strong>UNIQUE限制</strong><br />
-<code>UNIQUE</code>限制保证这一列下的数据不能相同，添加限制有两种方法。一是在创建表时限制
+<p><strong>UNIQUE限制</strong>  </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>UNIQUE</code>其实是<code>UNIQUE KEY</code>的简写</p>
+</div>
+<p><code>UNIQUE</code>限制保证这一列下的数据不能相同，添加限制有两种方法。一是在创建表时限制
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="p">(</span>
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">productId</span><span class="w">   </span><span class="nb">INT</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
 </span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="n">productName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">25</span><span class="p">),</span>
@@ -4945,6 +5025,101 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 <p class="admonition-title">Warning</p>
 <p>使用<code>DEFAULT</code>属性后，插入值时若不想手动指定值，即让表使用设置的默认值，需要指定插入数据属于哪几行，也就是使用指定行的插入方式。</p>
 </div>
+<h2 id="10">10.主键<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<p><strong>主键</strong> 也是约束的一种，主键等同于 <strong>NOT NULL</strong> 加 <strong>UNIQUE</strong> ，但是一张表只能有一个主键。</p>
+<p>创建表时指定主键<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span><span class="p">(</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="n">column1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="n">column2</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="w">    </span><span class="n">columnN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="p">);</span>
+</span></code></pre></div></p>
+<p>对现有表加主键<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span>
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h2 id="11">11.功能与属性<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p><strong>自增（AUTO_INCREMENT）</strong>  </p>
+<p>仅能对被设置成**KEY**的列设置自增属性，且一个表只能有一个有自增属性的列，被设置为自增属性的列在插入时若不指定值，则会从表的最后个值开始自增。  </p>
+<p>若表为空，则默认从1开始。但可以手动修改开始的值。  </p>
+<p>同时也可以在插入时指定值。  </p>
+<p><strong>在创建表时设置自增属性</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="c1">-- 一般将主键作为自增的，数据类型只能为INT或BIGINT，如uid</span>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="n">column1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">    </span><span class="k">column</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span>
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="p">);</span>
+</span></code></pre></div></p>
+<p><strong>对现有表加自增属性</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">colName</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>更改自增的下一个值</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>如果设置的值比表最后一行的值小，下一个自增值会是表最后一行的下一个值。</p>
+</div>
+<h2 id="12">12.索引/键<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>MySQL中的<code>KEY</code>其实就是索引。  </p>
+<p>MySQL中有以下类型的键。  </p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>关键字</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主键</td>
+<td>PRIMARY KEY</td>
+<td>唯一且非空，表里只能有一个</td>
+</tr>
+<tr>
+<td>唯一键</td>
+<td>UNIQUE KEY</td>
+<td>唯一，可以有多个</td>
+</tr>
+<tr>
+<td>普通键（一般索引）</td>
+<td>KEY / INDEX</td>
+<td>不要求唯一，主要加速查询</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在创建表时添加KEY</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="n">column1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="w">    </span><span class="n">columnN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-47-5"><a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="w">    </span><span class="k">KEY</span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">)</span>
+</span><span id="__span-47-6"><a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="p">);</span>
+</span></code></pre></div></p>
+<p><strong>对现有表加KEY</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="c1">-- 也可以给索引起名</span>
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="k">ADD</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">indexName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+</span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>索引名是给数据库优化内部执行速度用的，所有增减删改操作都应该使用列名。</p>
+</div>
+<h2 id="add-constraint">ADD CONSTRAINT的相关说明<a class="headerlink" href="#add-constraint" title="Permanent link">&para;</a></h2>
+<p>添加constraint的语句书写完整形式如下<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">constaintName</span><span class="o">&gt;</span>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="o">&lt;</span><span class="n">constrainType</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+</span></code></pre></div>
+其中<code>ADD CONSTRAINT &lt;constaintName&gt;</code>这一行可以全部省略，也可以只不写命名</p>
 <h2 id="sql">sql中的保留符号<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
