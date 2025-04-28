@@ -412,7 +412,32 @@ AUTO_INCREMENT = <value>;
 !!! warning
     如果设置的值比表最后一行的值小，下一个自增值会是表最后一行的下一个值。
 
-## 12.索引/键
+## 12.FOREIGN KEY
+
+`FOREIGN KEY`的作用是标记当前列是与外部（另一个表）相关联的，主要用于以下这类场景：  
+- 订单管理中订单表与客户表通过客户id管理
+
+**在创建表时创建FOREIGN KEY**
+```sql
+CREATE TABLE <tabName> (
+    column <dataType>,
+    FOREIGN KEY (column) REFERENCES <anotherTab>(column2)
+);
+```
+
+**对现有表加FOREIGN KEY**
+```sql
+ALTER TABLE <tabName>
+ADD CONSTRAINT <foreignKeyName>
+FOREIGN KEY (<columnIntabName>) REFERENCES <anotherTable>(<anotherColumn>);
+```
+
+!!! warning
+    如果在表1中有指向表2某列的`FOREIGN KEY`，那么sql会自动限制删除表2在表1`FOREIGN KEY`中出现的值的行。
+
+**`FOREIGN KEY`是一种跨表约束**
+
+## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
 
@@ -423,6 +448,7 @@ MySQL中有以下类型的键。
 | 主键 | PRIMARY KEY | 唯一且非空，表里只能有一个 |
 | 唯一键 | UNIQUE KEY | 唯一，可以有多个 |
 | 普通键（一般索引） | KEY / INDEX | 不要求唯一，主要加速查询 |
+| 外键 | FOREIGN KEY | 建立表与表之间的关系，保证数据的一致性和完整性 |
 
 **在创建表时添加KEY**
 ```sql
