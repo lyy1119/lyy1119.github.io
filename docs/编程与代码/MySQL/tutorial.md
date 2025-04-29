@@ -457,6 +457,8 @@ ON <tab1>.<col1> = <tab2>.<col2>;
 
 将`INNER JOIN`换成`LEFT JOIN`、`RIGHT JOIN`就是对应的效果。
 
+![20250429134918](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250429134918.png)  
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
