@@ -437,6 +437,26 @@ FOREIGN KEY (<columnIntabName>) REFERENCES <anotherTable>(<anotherColumn>);
 
 **`FOREIGN KEY`是一种跨表约束**
 
+### 13.JOIN
+
+`JOIN`功能可以通过`FOREIGN KEY`以某种关系展示两个表的内容。分为`LEFT JOIN`、`INNER JOIN`、`RIGHT JOIN`。具体使用可以看作如下Venn图。  
+
+![20250429134124](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250429134124.png)
+
+`INNER JOIN`展示了两个表中都有的数据，此处的有是指都有的`FOREIGN KEY`。`LEFT JOIN`会展示左表中所有的数据以及左表中的`FOREIGN KEY`对应的右表数据。`RIGHT JOIN`则会展示右表即右表中有的`FOREIGN KEY`数据对应的左表数据。
+
+```sql
+SELECT *
+FROM <tab1> INNER JOIN <tab2>
+ON <tab1>.<col1> = <tab2>.<col2>;
+```
+
+语句中`<tab1>.<col1>`和`<tab2>.<col2>`是两个表中的`FOREIGN KEY`的列。  
+
+如果只想获取部分数据，可以将`*`改成具体列名，列名可以是两个表中的。
+
+将`INNER JOIN`换成`LEFT JOIN`、`RIGHT JOIN`就是对应的效果。
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  

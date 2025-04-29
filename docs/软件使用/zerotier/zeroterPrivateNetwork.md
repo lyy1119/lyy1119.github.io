@@ -75,6 +75,11 @@ zerotier-cli.bat join <网络id>
 sudo systemctl restart zerotier-one
 ```
 
+加入网络
+```bash
+sudo zerotier-cli join <network_id>
+```
+
 在zerotier后台勾选`Authorized`。
 
 ### MacOS端
