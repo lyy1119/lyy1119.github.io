@@ -459,6 +459,58 @@ ON <tab1>.<col1> = <tab2>.<col2>;
 
 ![20250429134918](https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250429134918.png)  
 
+## 14.函数
+
+Mysql中有许多内置函数，下面简要介绍如下内置函数的一些使用方法：  
+- `COUNT`
+- `MAX`
+- `MIN`
+- `AVG`
+- `CONCAT`
+
+### `COUNT`
+
+`COUNT`可以计算表中某列共有多少行数据。  
+```sql
+SELECT COUNT(<colName>)
+FROM <tabName>;
+-- 输出列默认名是 COUNT(<colName>)
+-- 可以给输出的列起别名(alias)，下同
+SELECT COUNT(<colName>) AS <alias>
+FROM <tabName>
+```
+
+### `MAX`
+
+`MAX`可以找到列中的最大值。  
+
+```sql
+SELECT MAX(<colName>)
+FROM <tabName>
+```
+
+### `MIN`
+
+`MIN`可以找到列中的最小值
+```sql
+SELECT MIN(<colName>)
+FROM <tabName>
+```
+
+### `AVG`
+
+顾名思义，显示列的平均值。  
+
+代码略
+
+### `CONCAT`
+
+`CONCAT`可以实现将多个字符串拼接显示。如某张表里有`first_name`和`last_name`，可以用如下的方式拼接。  
+```sql
+SELECT CONCAT(first_name, " ", last_name) AS fullName
+FROM employees;
+```
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
