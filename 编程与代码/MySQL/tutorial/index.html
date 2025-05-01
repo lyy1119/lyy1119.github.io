@@ -1653,6 +1653,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.通用匹配符号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       索引/键 总结
@@ -1690,6 +1699,15 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       其他注意事项
     </span>
@@ -5004,6 +5022,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.通用匹配符号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       索引/键 总结
@@ -5041,6 +5068,15 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       其他注意事项
     </span>
@@ -5426,6 +5462,14 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">fullName</span>
 </span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
 </span></code></pre></div></p>
+<h2 id="15">15.通用匹配符号<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
+<p>在MySQL中，有两个通用匹配符号，分别是<code>%</code>代表多个不确定字符、<code>_</code>代表单个不确定字符。  </p>
+<p>要使用通用匹配符号查找数据，不能使用<code>=</code>，而要使用<code>LIKE</code>。  </p>
+<p>示例：<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tab</span><span class="o">&gt;</span>
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;a%&quot;</span>
+</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="c1">-- 寻找工作名为a开头的数据</span>
+</span></code></pre></div></p>
 <h2 id="_1">索引/键 总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>MySQL中的<code>KEY</code>其实就是索引。  </p>
 <p>MySQL中有以下类型的键。  </p>
@@ -5461,19 +5505,19 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 </tbody>
 </table>
 <p><strong>在创建表时添加KEY</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="w">    </span><span class="n">column1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
-</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">    </span><span class="p">...</span>
-</span><span id="__span-54-4"><a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="w">    </span><span class="n">columnN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
-</span><span id="__span-54-5"><a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="w">    </span><span class="k">KEY</span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">)</span>
-</span><span id="__span-54-6"><a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a><span class="p">);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">    </span><span class="n">column1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a><span class="w">    </span><span class="n">columnN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="w">    </span><span class="k">KEY</span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">)</span>
+</span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a><span class="p">);</span>
 </span></code></pre></div></p>
 <p><strong>对现有表加KEY</strong>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
-</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
-</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="c1">-- 也可以给索引起名</span>
-</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
-</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="k">ADD</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">indexName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="c1">-- 也可以给索引起名</span>
+</span><span id="__span-56-4"><a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-56-5"><a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a><span class="k">ADD</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">indexName</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
 </span></code></pre></div></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -5481,9 +5525,9 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 </div>
 <h2 id="add-constraint">ADD CONSTRAINT的相关说明<a class="headerlink" href="#add-constraint" title="Permanent link">&para;</a></h2>
 <p>添加constraint的语句书写完整形式如下<br />
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
-</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">constaintName</span><span class="o">&gt;</span>
-</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="o">&lt;</span><span class="n">constrainType</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tabName</span><span class="o">&gt;</span>
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">constaintName</span><span class="o">&gt;</span>
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="o">&lt;</span><span class="n">constrainType</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">);</span>
 </span></code></pre></div>
 其中<code>ADD CONSTRAINT &lt;constaintName&gt;</code>这一行可以全部省略，也可以只不写命名</p>
 <h2 id="sql">sql中的保留符号<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
@@ -5528,7 +5572,44 @@ mysql语句以分号作为一句话的结束，所以根据个人习惯，可以
 </tr>
 </tbody>
 </table>
-<h2 id="_2">其他注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">逻辑运算符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>名称</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td>与</td>
+<td><code>&lt;condition1&gt; AND &lt;condition2&gt;</code></td>
+</tr>
+<tr>
+<td>OR</td>
+<td>或</td>
+<td><code>&lt;condition1&gt; OR &lt;condition2&gt;</code></td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>非</td>
+<td><code>NOT &lt;condition&gt;</code></td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>在两者中间</td>
+<td><code>&lt;col&gt; BETWEEN &lt;value1&gt; AND &lt;value2&gt;</code></td>
+</tr>
+<tr>
+<td>IN</td>
+<td>在某个集合中</td>
+<td><code>&lt;col&gt; IN ("value1", "2", "3", ...)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">其他注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ol>
 <li>sql中判断是否是空只能用<code>IS</code></li>
 </ol>
