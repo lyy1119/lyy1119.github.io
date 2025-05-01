@@ -511,6 +511,18 @@ SELECT CONCAT(first_name, " ", last_name) AS fullName
 FROM employees;
 ```
 
+## 15.通用匹配符号
+
+在MySQL中，有两个通用匹配符号，分别是`%`代表多个不确定字符、`_`代表单个不确定字符。  
+
+要使用通用匹配符号查找数据，不能使用`=`，而要使用`LIKE`。  
+
+示例：  
+```sql
+SELECT * FROM <tab>
+WHERE job LIKE "a%"
+-- 寻找工作名为a开头的数据
+```
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
@@ -570,6 +582,15 @@ ADD CONSTRAINT <constaintName>
 |小于|`<`|
 |不等于|`!=`|
 
+## 逻辑运算符
+
+|关键词|名称|示例|
+|---|---|---|
+|AND|与|`<condition1> AND <condition2>`|
+|OR|或|`<condition1> OR <condition2>`|
+|NOT|非|`NOT <condition>`|
+|BETWEEN|在两者中间|`<col> BETWEEN <value1> AND <value2>`|
+|IN|在某个集合中|`<col> IN ("value1", "2", "3", ...)`|
 
 ## 其他注意事项
 
