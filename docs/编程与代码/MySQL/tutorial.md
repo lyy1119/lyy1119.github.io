@@ -523,6 +523,55 @@ SELECT * FROM <tab>
 WHERE job LIKE "a%"
 -- 寻找工作名为a开头的数据
 ```
+
+## 16.排序
+
+使用`SELECT`输出数据时还可以进行排序。使用`ORDER BY`进行排序。  
+
+```sql
+SELECT * FROM <tabName>
+ORDER BY <col> ASC, <col2> DESC;
+```
+
+**`ASC`** 代表升序，这是默认的，可以不写。 **`DESC`** 表示降序。上述示例排序了两个列，当第一列相同时按照第二列排序。
+
+## 17.查看部分
+
+使用`LIMIT`可以仅查看数据中的部分，如前10条、第10到20条，这在分页显示时很有用。  
+
+```sql
+SELECT * FROM <tabName>
+LIMIT <n>;
+-- 显示表中前n条数据
+
+SELECT * FROM <tabName>
+LIMIT <offset>, <n>;
+-- 显示从开始往后offset个数据以后的n条数据
+-- 如 LIMIT 10, 10 表示显示第11到20
+```
+
+此外，`LIMIT`还可以结合`ORDER BY`使用，如  
+```sql
+SELECT * FROM <tabName>
+ORDER BY <col> LIMIT <offset>, <n>;
+```
+
+## 18.显示多个表的内容
+
+使用`UNION`可以将多张表的`SELECT`结果合并。  
+
+示例如下：  
+```sql
+SELECT * FROM <tab1>
+UNION
+SELECT * FROM <tab2>;
+```
+
+!!! warning
+    注意，使用`UNION`合并的结果必须具有相同的列数。且列标题会按照`UNION`前的显示。
+
+当`UNION`合并的两结果存在相同数据的行时，默认只显示其中一个，可以使用`UNION ALL`显示重复的所有数据。  
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
