@@ -437,7 +437,7 @@ FOREIGN KEY (<columnIntabName>) REFERENCES <anotherTable>(<anotherColumn>);
 
 **`FOREIGN KEY`是一种跨表约束**
 
-### 13.JOIN
+## 13.JOIN
 
 `JOIN`功能可以通过`FOREIGN KEY`以某种关系展示两个表的内容。分为`LEFT JOIN`、`INNER JOIN`、`RIGHT JOIN`。具体使用可以看作如下Venn图。  
 
@@ -571,6 +571,24 @@ SELECT * FROM <tab2>;
     注意，使用`UNION`合并的结果必须具有相同的列数。且列标题会按照`UNION`前的显示。
 
 当`UNION`合并的两结果存在相同数据的行时，默认只显示其中一个，可以使用`UNION ALL`显示重复的所有数据。  
+
+## 19.高级用法：JOIN自身
+
+当一个表有如下内容时，比如员工之间的等级制度，一个员工的上司是另一个员工时。通常使用员工id记录，为了显示员工的姓名和相应上司的姓名，我们可以`JOIN`表自身。  
+
+示例：
+```sql
+SELECT a.id, a.first_name, a.last_name,
+        CONCAT(b.first_name, " ", b.last_name)
+FROM employees AS a
+INNER JOIN employees AS b
+ON b.id = a.supervisor;
+```
+
+上述SQL语句实现了通过表a中的上司id与表b的id对应的行，展示员工id、员工姓名、员工上司姓名。  
+
+!!! info
+    注意，在对表自身JOIN时，必须使用`AS`给表一个别名，且列必须从以`<别名>.<列>`形式写，因为SQL无法从两个具有相同列名的相同表中区分你所想表达的要求。
 
 ## 索引/键 总结
 
