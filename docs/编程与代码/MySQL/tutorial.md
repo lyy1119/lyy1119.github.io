@@ -590,6 +590,23 @@ ON b.id = a.supervisor;
 !!! info
     注意，在对表自身JOIN时，必须使用`AS`给表一个别名，且列必须从以`<别名>.<列>`形式写，因为SQL无法从两个具有相同列名的相同表中区分你所想表达的要求。
 
+## 20.逻辑表（VIEW）
+
+与`TABLE`不同，`VIEW`也是一种表，但是`VIEW`不直接存储数据，而是通过某种逻辑从`TABLE`中获取数据，当`TABLE`中的数据变更时，`VIEW`中的数据也会同步变更。当然，在前述中能对`TABLE`进行的操作（修改除外）都能对`VIEW`执行。  
+
+如果将`TABLE`看作实际存储层，那么`VIEW`可以看作是逻辑层。  
+
+`VIEW`可以方便地实现与拓展api或完成其他功能。  
+
+`VIEW`的简单示例：  
+```sql
+CREATE VIEW <viewName> AS
+SELECT <colName>
+FROM <tabName>;
+```
+
+当然，可以进行更高级的应用，如`JOIN`、`CONCAT`等。
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
