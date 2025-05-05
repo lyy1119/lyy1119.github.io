@@ -607,6 +607,31 @@ FROM <tabName>;
 
 当然，可以进行更高级的应用，如`JOIN`、`CONCAT`等。
 
+## 21.索引（INDEX）
+
+索引会将列转化成一个二叉树，这样在搜索的时候会比其他列更快。不是索引的列相当于线性列表。当然，在索引加快搜索的同时，索引的插入会花更多的时间。  
+
+**查看表中有的索引** ：  
+```sql
+SHOW INDEXES FROM <tabName>;
+```
+
+会发现，`UNIQUE`和`PRIMARY KEY`也是索引。  
+
+**创建索引**：
+```sql
+CREATE INDEX <indexName>
+ON <tabName>(<colName>);
+```
+
+创建索引时还可以同时创建多列的索引，如：  
+```sql
+CREATE INDEX <indexName>
+ON <tabName>(<col1>, <col2>);
+```
+
+索引的搜索和正常的搜索、查看操作是一样的。  
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
