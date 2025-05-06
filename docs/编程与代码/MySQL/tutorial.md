@@ -632,6 +632,29 @@ ON <tabName>(<col1>, <col2>);
 
 索引的搜索和正常的搜索、查看操作是一样的。  
 
+## 22.嵌套查询（SUBQUEIRES）
+
+`SELECT`返回的结果可以嵌套在另一个`SELECT`中，称之为嵌套查询。`SELECT`返回的结果可以看作是一个集合，也可以看作是一个变量。这取决于具体的查询结果。  
+
+下面是几个嵌套查询的示例  
+```sql
+SELECT first_name, last_name, hourlyPaid, (SELECT AVG(hourlyPaid) FROM employees) AS avgPaid
+FROM employess;
+```
+
+```sql
+SELECT first_name, last_name, hourlyPaid
+FROM employees
+WHERE hourlyPaid > (SELECT AVG(hourlyPaid) FROM employess);
+```
+
+```sql
+SELECT first_name, last_name
+FROM customs
+WHERE cumstomId IN
+(SELECT customId FROM transactions WHERE customId IS NOT NULL);
+```
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
