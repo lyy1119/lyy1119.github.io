@@ -655,6 +655,35 @@ WHERE cumstomId IN
 (SELECT customId FROM transactions WHERE customId IS NOT NULL);
 ```
 
+## 23.数据聚合（GROUP BY）
+
+`GROUP BY`可以实现数据聚合功能，如同将相同发件人的邮件聚合在一起一样。  
+
+比如一个商店记录了若干天的顾客购买明细，现在想要查看每天一共收入是多少，就可以使用聚合功能。  
+
+示例如下:  
+```sql
+SELECT * FROM <tabName>
+GROUP BY <colName>;
+```
+
+!!! info
+    这里可以理解为`GROUP BY`处理表格数据，然后输出一个表格，但是`GROUP BY`在一个语句中只能出现一次，如果相应实现多次分组聚合，可以使用嵌套查询。
+
+不同于一般的`SELECT`查询语句，`GROUP BY`的结果只能用`HAVING`筛选，而不是`WHERE`。  
+
+`HAVING`语句只能处理聚合后的数据，而`WHERE`只能处理聚合前的数据。  
+
+下面是一个相对复杂的运用，既有`WHERE`又有`HAVING`。  
+```sql
+SELECT store, SUM(amount) AS total_sales
+FROM sales
+WHERE sale_date >= '2025-05-01'         -- 先筛选出5月后的记录
+GROUP BY store                          -- 按商店分组
+HAVING total_sales >= 200;             -- 再筛选销售总额>=200的商店
+
+```
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
