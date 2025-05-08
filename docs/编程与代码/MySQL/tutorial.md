@@ -181,6 +181,11 @@ WHERE <columnName2> = <value2>;
     -- 设置为主键
     ALTER TABLE employees ADD PRIMARY KEY (employee_id);
     ```
+    或者关闭安全模式：  
+    ```sql
+    SET SQL_SAFE_UPDATES = 0; -- 关闭安全模式
+    SET SQL_SAFE_UPDATES = 1; -- 修改完最好重新打开
+    ```
 
 如果要改变某特定行的多列值，可以这样写：
 ```sql
@@ -681,7 +686,15 @@ FROM sales
 WHERE sale_date >= '2025-05-01'         -- 先筛选出5月后的记录
 GROUP BY store                          -- 按商店分组
 HAVING total_sales >= 200;             -- 再筛选销售总额>=200的商店
+```
 
+`GROUP BY`还有一个拓展语法：`GROUP BY ... WITH ROLLUP;`。这条语句可以将非`GROUP BY`的行再次聚合（相加），可以用在如下场景：  
+
+比如某超市要计算一周中每天的销售额，同时又需要这一周总的销售额，这时可以这样写  
+```sql
+SELECT SUM(amount), order_date
+FROM transactions
+GROUP BY order_date WITH ROLLUP;
 ```
 
 ## 索引/键 总结
