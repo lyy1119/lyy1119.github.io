@@ -1,5 +1,10 @@
 [
   {
+    "title": "获取密码",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/obtainPassword/",
+    "date": "05/09"
+  },
+  {
     "title": "从本地上传文件",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/updateFromLocal/",
     "date": "05/09"
@@ -17,11 +22,6 @@
   {
     "title": "AppImage的介绍与使用",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/appImage/",
-    "date": "05/09"
-  },
-  {
-    "title": "add-apt-repository: command not found",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/apt%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/addAptRepositoryError/",
     "date": "05/09"
   }
 ]
