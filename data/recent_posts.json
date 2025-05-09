@@ -1,5 +1,10 @@
 [
   {
+    "title": "AppImage的介绍与使用",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/appImage/",
+    "date": "05/09"
+  },
+  {
     "title": "add-apt-repository: command not found",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/apt%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/addAptRepositoryError/",
     "date": "05/09"
@@ -18,10 +23,5 @@
     "title": "bing走直连",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/V2ray/bingDirect/",
     "date": "05/09"
-  },
-  {
-    "title": "MySQL笔记",
-    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/MySQL/tutorial/",
-    "date": "05/08"
   }
 ]
