@@ -1,5 +1,10 @@
 [
   {
+    "title": "nginx反向代理相关问题",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/httpsProxy/",
+    "date": "05/09"
+  },
+  {
     "title": "取消信任域设置",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/disableTrustDomain/",
     "date": "05/09"
@@ -17,11 +22,6 @@
   {
     "title": "rdesktop连接Windows远程桌面",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/rdesktop/",
-    "date": "05/09"
-  },
-  {
-    "title": "tty下字体调整",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/ttyFontset/",
     "date": "05/09"
   }
 ]
