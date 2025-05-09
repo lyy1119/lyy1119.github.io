@@ -1,5 +1,10 @@
 [
   {
+    "title": "tty下字体调整",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/ttyFontset/",
+    "date": "05/09"
+  },
+  {
     "title": "AppImage的介绍与使用",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/appImage/",
     "date": "05/09"
@@ -17,11 +22,6 @@
   {
     "title": "ibus输入法配置",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/ibusInput/",
-    "date": "05/09"
-  },
-  {
-    "title": "bing走直连",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/V2ray/bingDirect/",
     "date": "05/09"
   }
 ]
