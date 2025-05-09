@@ -1,7 +1,12 @@
 [
   {
-    "title": "机器人的概念",
+    "title": "1.1 机器人的概念",
     "url": "/%E6%9C%BA%E6%A2%B0/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC1%E7%AB%A0%20%E7%BB%AA%E8%AE%BA/1.1/",
+    "date": "05/09"
+  },
+  {
+    "title": "1.2 分类",
+    "url": "/%E6%9C%BA%E6%A2%B0/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC1%E7%AB%A0%20%E7%BB%AA%E8%AE%BA/classification/",
     "date": "05/09"
   },
   {
@@ -17,11 +22,6 @@
   {
     "title": "nginx反向代理相关问题",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/httpsProxy/",
-    "date": "05/09"
-  },
-  {
-    "title": "取消信任域设置",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nextcloud/disableTrustDomain/",
     "date": "05/09"
   }
 ]
