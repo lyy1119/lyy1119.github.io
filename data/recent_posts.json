@@ -1,5 +1,10 @@
 [
   {
+    "title": "Vim使用教程",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/vim/",
+    "date": "05/09"
+  },
+  {
     "title": "aptitude替代apt",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/aptSubstitute/",
     "date": "05/09"
@@ -18,10 +23,5 @@
     "title": "MySQL笔记",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/MySQL/tutorial/",
     "date": "05/08"
-  },
-  {
-    "title": "简介",
-    "url": "/%E6%9C%BA%E6%A2%B0/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/introductions/",
-    "date": "04/30"
   }
 ]
