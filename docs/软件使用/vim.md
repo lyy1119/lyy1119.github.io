@@ -31,7 +31,7 @@ Vim的模式： `NORMAL`、`INSERT`、`REPALCE`、`VISUAL`
 - 剪切整行（vim内）： `xx`
 - 逐个字符删除：`x`
 - 逐个字符delete： `<delete>` (也就是delete键)
-- 复制到系统剪切板： `"+y`
+- 复制到系统剪切板： `"+y` （需要安装clipboard拓展，下同）
 - 从系统剪切板粘贴： `"+p`
 - 查找特定值（如查找print）： `/print`
 - 在查找模式下向下或者向上查找下一个： `n`或`N`
@@ -43,3 +43,9 @@ Vim的模式： `NORMAL`、`INSERT`、`REPALCE`、`VISUAL`
 - 选中行整体缩进： `>`
 - 选中行整体取消缩进： `<`
 - 将a行到b行都缩进或取消缩进： `:a,b>` `:a,b<`
+
+## Vim 拓展功能安装
+
+```bash
+sudo apt install vim-gtk3
+```
