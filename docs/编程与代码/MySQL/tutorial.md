@@ -442,6 +442,11 @@ FOREIGN KEY (<columnIntabName>) REFERENCES <anotherTable>(<anotherColumn>);
 
 **`FOREIGN KEY`是一种跨表约束**
 
+**删除** ：  
+```sql
+ALTER TABLE <tabName> DROP FOREIGN KEY <foreignkey_constraint_name>;
+```
+
 ## 13.JOIN
 
 `JOIN`功能可以通过`FOREIGN KEY`以某种关系展示两个表的内容。分为`LEFT JOIN`、`INNER JOIN`、`RIGHT JOIN`。具体使用可以看作如下Venn图。  
@@ -695,6 +700,39 @@ HAVING total_sales >= 200;             -- 再筛选销售总额>=200的商店
 SELECT SUM(amount), order_date
 FROM transactions
 GROUP BY order_date WITH ROLLUP;
+```
+
+## 24.ON DELETE
+
+前文可知，当删除`FOREIGN KEY`时，会报错。但是我们可以在创建时使用`ON DELETE`功能实现删除某个`FOREIGN KEY`对应外表数据时对含有`FOREIGN KEY`的数据做一些处理。  
+
+### ON DELETE SET NULL
+
+当删除`FOEIGN KEY`的对应数据时，会将表中含有这个`FOREIGN KEY`的行的`FOREIGN KEY`设置为`NULL`。  
+
+### ON DELETE CASCADE
+
+在删除`FOREIGN KEY`对应数据时，删除使用这个`FOREIGN KEY`的整行数据。  
+
+### ON DELETE的创建
+
+只能在创建表的时候创建，如：  
+```sql
+CREATE TABEL <tabName> (
+    col1 <dataType>，
+    FOREIGN KEY(col1) REFERENCES <anotherTable>(col2)
+    ON DELETE SET NULL
+);
+```
+
+如果相对现有表添加`ON DELETE`功能，则需要先删除`FOREIGN KEY`的`CONSTRAINT`。  
+
+现有表添加`ON DELETE`  
+```sql
+ALTER TABLE <tabName>
+ADD CONSTRAINT <constraint_name>
+FOREIGN KEY(col1) REFERENCES <anotherTable>(col2)
+ON DELETE SET NULL;
 ```
 
 ## 索引/键 总结
