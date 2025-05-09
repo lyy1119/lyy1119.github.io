@@ -34,3 +34,6 @@ sudo vim /etc/default/console-setup
 
 修改其中的`CODESET`、`FONTFACE`、`FONTSIZE`。  
 `CODESET`、`FONTFACE`、`FONTSIZE`来自字体名，一般字体名写作`<CODESET>-<FONTFACE><FONTSIZE>`。
+
+## Reference
+1. [linux命令行界面字体调整-Worklite](https://worktile.com/kb/ask/459382.html)
