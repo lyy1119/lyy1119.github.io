@@ -7,9 +7,11 @@
     <div style="width: 50%;">			<!--块级封装-->
         <center>	<!--将图片和文字居中-->
         <img src="图片链接"
-            alt="无法显示图片时显示的文字"/>
+            alt="图片无法加载，请检查网络连接"/>
         <br>		<!--换行-->
-        <div style="font-size: 12px;font-style:italic;">图片标题</div>	<!--标题-->
+        <div style="font-size: 12px;font-style:italic;">
+            图片标题
+        </div>	<!--标题-->
         </center>
     </div>
 </div>
