@@ -863,6 +863,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="机器人的子系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.运动子系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.辨识子系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.控制子系统
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4902,6 +4935,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="机器人的子系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.运动子系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.辨识子系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.控制子系统
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4935,9 +5001,84 @@
 <li>辨识子系统：recognition subsystem</li>
 <li>控制子系统：control subsystem</li>
 </ul>
+<div align=center>  <!--使整体居中-->
+    <div style="width: 50%;">           <!--块级封装-->
+        <center>    <!--将图片和文字居中-->
+        <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250509141430.png"/>
+        <br>        <!--换行-->
+        </center>
+    </div>
+</div>
+
 <p><strong>运动子系统</strong>：用于实现期望运动的执行机构  </p>
 <p><strong>辨识子系统</strong>：使用一系列传感器来获取机器人本身、操作对象和环境的信息  </p>
 <p><strong>控制子系统</strong>：根据辨识子系统的信息来控制机器人的运动，以完成既定动作任务  </p>
+<h3 id="1">1.运动子系统<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>包含：<strong>操作臂</strong>、<strong>末端执行器</strong>、<strong>驱动器</strong> 以及 <strong>传动装置</strong> 这四个部件。  </p>
+<p><strong>操作臂 Manipulator</strong>：<br />
+操作臂是机器人可运动的机械结构，通常又连杆（身体）和运动副（关节）串联而成。  </p>
+<p>关节的运动形式又旋转和平移，分别成为旋转关节和平移关节。  </p>
+<div align=center>  <!--使整体居中-->
+    <div style="width: 50%;">           <!--块级封装-->
+        <center>    <!--将图片和文字居中-->
+        <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250509142546.png"/>
+        <br>        <!--换行-->
+        <div style="font-size: 12px;font-style:italic;">
+        机器人操作臂
+        </div>  <!--标题-->
+        </center>
+    </div>
+</div>
+
+<p><strong>末端执行器 End-effector</strong>：<br />
+末端执行器，顾名思义，就是固定在操作臂末端的装置，相当于人类的手。  </p>
+<p>末端执行器通常是一个机械夹手，用来操作或者移动工件。  </p>
+<p><strong>驱动器 Actuator</strong>：<br />
+驱动器用来驱动操作臂和末端执行器运动，根据其驱动原理，又分为：<br />
+- 气动驱动器 Pneumatic Actuator
+- 液压驱动器 Hydraulic Actuator
+- 电动驱动器 Electric Actuator</p>
+<p>一个驱动器的基本结构如下：  </p>
+<div align=center>  <!--使整体居中-->
+    <div style="width: 80%;">           <!--块级封装-->
+        <center>    <!--将图片和文字居中-->
+        <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250509143329.png"/>
+        <br>        <!--换行-->
+        <div style="font-size: 12px;font-style:italic;">
+        驱动器系统结构
+        </div>  <!--标题-->
+        </center>
+    </div>
+</div>
+
+<p><strong>传动装置 Transmission</strong>：  </p>
+<p>典型的传动单元有：  </p>
+<ul>
+<li>带传动  </li>
+<li>链传动  </li>
+<li>齿轮传动  </li>
+<li>连杆传动  </li>
+</ul>
+<h3 id="2">2.辨识子系统<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>辨识子系统通常由 <strong>传感器</strong> 和 <strong>模数转换器</strong> 组成。  </p>
+<p><strong>传感器 Sensor</strong>：略  </p>
+<p><strong>模数转换器 Analog-to-Digital-Converter</strong>：略  </p>
+<h3 id="3">3.控制子系统<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>控制子系统结构及其工作流程大致如下图所示：  </p>
+<div align=center>  <!--使整体居中-->
+    <div style="width: 50%;">           <!--块级封装-->
+        <center>    <!--将图片和文字居中-->
+        <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250509144225.png"
+            alt="图片无法加载，请检查网络连接"/>
+        <br>        <!--换行-->
+        <div style="font-size: 12px;font-style:italic;">
+            控制子系统的结构
+        </div>  <!--标题-->
+        </center>
+    </div>
+</div>
+
+<p>控制子系统一般由： <strong>数字控制器 Controller</strong>、<strong>数模转换器 Digital-to-Analog-Converter</strong>、<strong>放大器 Amplifier</strong> 组成。</p>
 
 
 
