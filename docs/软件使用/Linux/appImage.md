@@ -8,4 +8,8 @@ AppImage不同于一般的软件，整个软件在运行过程中的所有依赖
 
 ## 如何使用
 
-通过上述描述，不难猜到，AppImage本身就是一个可执行程序，只需要给可执行权限就可以直接运行。
+通过上述描述，不难猜到，AppImage本身就是一个可执行程序，只需要给可执行权限就可以直接运行。  
+
+## Reference
+
+1. [如何在 Linux 中使用 AppImage-博客园](https://www.cnblogs.com/pipci/p/16109756.html)
