@@ -49,3 +49,5 @@ Vim的模式： `NORMAL`、`INSERT`、`REPALCE`、`VISUAL`
 ```bash
 sudo apt install vim-gtk3
 ```
+
+可通过`vim --version`查看安装了那些拓展。
