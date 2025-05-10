@@ -735,6 +735,26 @@ FOREIGN KEY(col1) REFERENCES <anotherTable>(col2)
 ON DELETE SET NULL;
 ```
 
+## 25.函数（PROCEDURE）
+
+MySQL中可以将一段或几段sql语句保存成一个函数（或者叫过程）。  
+
+`PROCEDURE`的创建：  
+```sql
+DELIMITER $$ -- 更改语句结束符号为 $$ 这是为了防止创建时将内部语句的分号识别为结束，最后还要改回来
+CREATE PROCEDURE <function_name>(IN <para1> <dataType>, IN <para2> <dataType>, ...)
+BEGIN
+    <sql_sentence> -- 这里的语句要以;分号结束
+END $$
+DEMINITER ;
+```
+
+调用：  
+```sql
+CALL <fun_name>(<parameter>);
+-- 和编程语言的调用类似，没有参数就不用写，但是必需要有括号
+```
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
