@@ -755,6 +755,47 @@ CALL <fun_name>(<parameter>);
 -- 和编程语言的调用类似，没有参数就不用写，但是必需要有括号
 ```
 
+## 26.触发器 TRIGGER
+
+`TRIGGER`可以在执行`UPDATE`、`INSERT`、`DELETE`执行前后做一些自动化处理。  
+
+具体写法：  
+```sql
+DELIMITER $$
+CREATE TRIGGER <name>
+BEFORE UPDATE ON <tabName>
+FOR EACH ROW
+BEGIN
+    ...
+END $$
+DELIMITER ;
+```
+
+!!! info
+    创建语句中的`BEFORE`关键词还可以是`AFTER`，用来表示在操作前或者操作后，这十分重要。  
+    
+    在`TRIGGER`语句中还有两个特殊变量：`NEW`和`OLD`，`NEW`表示操作后的值，比如插入时要插入的值，`OLD`表示操作前的值。注意，在`AFTER`中，是无法修改`NEW`数据的。  
+
+    此外，如果`TRIGGER`中仅有一条MySQL语句，可以不用写`BEGIN ... END`。在写`BEGIN ... END`的时候，要注意修改终止符。
+
+几个视频课程中的示例：  
+
+```sql
+CREATE TRIGGER before_hourly_pay_update
+BEFORE UPDATE ON employees
+FOR EACH ROW
+SET NEW.salary = (NEW.hourly_pay * 2080);
+```
+
+```sql
+CREATE TRIGGER after_salary_delete
+AFTER DELETE ON employees
+FOR EARH ROW
+UPDATE expenses
+SET expense_total = expense_total - OLD.salary
+WHERE expense_name = "salaries";
+```
+
 ## 索引/键 总结
 
 MySQL中的`KEY`其实就是索引。  
