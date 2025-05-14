@@ -2,26 +2,26 @@
   {
     "title": "附录1.fmt包",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/fmt/",
-    "date": "05/13"
+    "date": "05/14"
   },
   {
     "title": "1.简介",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/introduction/",
-    "date": "05/13"
+    "date": "05/14"
+  },
+  {
+    "title": "4.循环和分支",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/loopAndBranch/",
+    "date": "05/14"
   },
   {
     "title": "附录2.math包",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/math/",
-    "date": "05/13"
+    "date": "05/14"
   },
   {
-    "title": "3.类型",
-    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/type/",
-    "date": "05/13"
-  },
-  {
-    "title": "2.变量、常量、运算符和指针",
-    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/var/",
-    "date": "05/13"
+    "title": "附录：strings包",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/string/",
+    "date": "05/14"
   }
 ]
