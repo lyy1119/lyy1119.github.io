@@ -1,0 +1,57 @@
+# 4.循环和分支
+
+## 4.1 if
+
+go中的if结合了C语言和Python，其基本形式如下：  
+```go
+if <condition> {
+    ...
+} else if <condition> {
+    ...
+} else {
+    ...
+}
+```
+
+即，不需要写括号，但是要用花括号包括。  
+
+若要同时判断多个条件或者调整优先级，也可以使用小括号包围。  
+
+## 4.2 switch
+
+go语言中有和C相似的`switch`分支。其基本格式如下：  
+```go
+switch <var> {
+    case <value1>, <value2>, ..., <valueN>:
+        ...
+    case ...:
+        ...
+        fallthrough // 继续执行下一个case
+    default:
+        ...
+}
+```
+
+可以看到，其基本形式与C语言相同，但有一点要注意，对多个相同`case`，go语言使用逗号并排列写多个值。  
+
+!!! info
+    在C或者Java语言中，需要在`case`下写`break`才能跳出，否则会继续执行下一个`case`中的语句。但go不同，go默认break，如果需要像C或者Java在执行当前`case`后，继续执行下一个`case`，则要使用`fallthrough`关键字。
+
+## 4.3 for
+
+在go语言中，`for`关键词用于实现类似C、Python等的 **`for`和`while`** 。  
+
+其基本格式如下：  
+```go
+for <condition> {
+    if <condition> {
+        break // 可以使用break退出for
+    }
+}
+```
+
+!!! info
+    当for的`<condition>`为空时，相当于`while true`。
+
+`<condition>`可以写成单个条件，也可以写成C语言的for形式，如：`i := 1; i < 10; i++`。  
+
