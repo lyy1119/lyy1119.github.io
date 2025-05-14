@@ -1742,11 +1742,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../loopAndBranch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.循环和分支
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     附录2.math包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录：strings包
   </span>
   
 
@@ -1901,6 +1943,33 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      比较运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       元组赋值
     </span>
@@ -5392,6 +5461,33 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
+      数学运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      比较运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
       元组赋值
     </span>
   </a>
@@ -5466,8 +5562,69 @@
 <div class="language-go highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">变量名</span><span class="w"> </span><span class="nx">类型</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">表达式</span>
 </span></code></pre></div>
 <h2 id="23">2.3运算符<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
+<h3 id="_4">数学运算符<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>go语言中的运算符号结合了C和python的特性，即除了标准的<code>+-*/</code>外，还有python的<code>+= -= *= /=</code>和C语言的<code>++ --</code>，但是要注意，go语言中，<code>++ --</code>运算符号只能用于变量后。  </p>
-<h3 id="_4">元组赋值<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_5">比较运算符<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>相等</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>不等</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>大于</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>小于</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>小于等于</td>
+</tr>
+</tbody>
+</table>
+<p>关于字符串的比较，go在这一点上与python类似。即，可以直接使用比较运算符比较两个字符串是否相等。如：<code>"string1" == "string2"</code>。  </p>
+<h3 id="_6">逻辑运算符<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>与</td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>或</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>非</td>
+</tr>
+</tbody>
+</table>
+<p>go语言中也有逻辑短路。即，当与的第一个条件是假，则不判断第二个条件；或的第一个条件是真，则不判断第二个条件。  </p>
+<h3 id="_7">元组赋值<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>与Python相同，go语言具有元组赋值的特性，这对于交换变量的值十分方便。  </p>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span>
 </span></code></pre></div>

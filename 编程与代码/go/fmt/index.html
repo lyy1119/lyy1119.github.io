@@ -1709,6 +1709,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    附录1.fmt包
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1718,6 +1729,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fmtprintln" class="md-nav__link">
+    <span class="md-ellipsis">
+      fmt.Println
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fmtprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      fmt.Print
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1752,11 +1800,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../loopAndBranch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.循环和分支
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     附录2.math包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录：strings包
   </span>
   
 
@@ -5190,6 +5280,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fmtprintln" class="md-nav__link">
+    <span class="md-ellipsis">
+      fmt.Println
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fmtprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      fmt.Print
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
               </div>
             </div>
@@ -5204,6 +5320,17 @@
 
 
 <h1 id="1fmt">附录1.fmt包<a class="headerlink" href="#1fmt" title="Permanent link">&para;</a></h1>
+<h2 id="fmtprintln">fmt.Println<a class="headerlink" href="#fmtprintln" title="Permanent link">&para;</a></h2>
+<p>打印一行，然后再打印一个回车符。  </p>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(&lt;</span><span class="nx">var1</span><span class="p">&gt;,</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">var2</span><span class="p">&gt;,</span><span class="w"> </span><span class="o">...</span><span class="p">)</span><span class="w"> </span><span class="c1">// 和Python一样，可以传递多个变量，每个变量间自动加上空格</span>
+</span></code></pre></div>
+<h2 id="fmtprint">fmt.Print<a class="headerlink" href="#fmtprint" title="Permanent link">&para;</a></h2>
+<p>和<code>fmt.Println</code>相似，只不过不会自动加上回车符。  </p>
+<h1 id="fmtprintf">fmt.Printf<a class="headerlink" href="#fmtprintf" title="Permanent link">&para;</a></h1>
+<p>格式化打印，和C语言相似，可以使用格式化动词，如<code>%d %f</code>等。第一个参数必须是字符串，然后接多个参数。字符串后的参数数目必须和字符串参数的格式化动词数相等。  </p>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d, %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i1</span><span class="p">,</span><span class="w"> </span><span class="nx">i2</span><span class="p">)</span><span class="w"> </span><span class="c1">// i1, i2 为 int</span>
+</span></code></pre></div>
+<p>go语言中的格式化动词也有对齐功能。  </p>
 
 
 
