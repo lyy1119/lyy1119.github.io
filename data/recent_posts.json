@@ -1,5 +1,10 @@
 [
   {
+    "title": "5.作用域",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/scope/",
+    "date": "05/15"
+  },
+  {
     "title": "附录1.fmt包",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/fmt/",
     "date": "05/14"
@@ -17,11 +22,6 @@
   {
     "title": "附录2.math包",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/math/",
-    "date": "05/14"
-  },
-  {
-    "title": "附录：strings包",
-    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/string/",
     "date": "05/14"
   }
 ]
