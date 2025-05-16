@@ -1700,11 +1700,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../big/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录：big
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../fmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     附录1.fmt包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../innerFunction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录：内置函数
   </span>
   
 
@@ -1881,9 +1923,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String的原始字符串
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串不可更改
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
     <span class="md-ellipsis">
-      type
+      type 类型别名
     </span>
   </a>
   
@@ -5317,9 +5377,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String的原始字符串
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串不可更改
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
     <span class="md-ellipsis">
-      type
+      type 类型别名
     </span>
   </a>
   
@@ -5486,9 +5564,19 @@
 </tr>
 </tbody>
 </table>
-<h2 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h2>
+<p>对于没有指定类型的科学计数法，如<code>2e10</code>、<code>3.3e2</code>、<code>2e2</code>，go默认其为<code>float64</code>类型。  </p>
+<h2 id="string">String的原始字符串<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<p>若需要获取原始字符串，即不转义（如python中的<code>r"..."</code>），可以使用<code>``</code>包围字符串。  </p>
+<p>go的原始字符串还允许多行，即可以写成这样：
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">` line1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s">write somethings here...</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">line3`</span>
+</span></code></pre></div></p>
+<h2 id="_1">字符串不可更改<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>和C语言一样，字符串类型可以赋予不同的值，但是字符串本身不可更改。  </p>
+<h2 id="type">type 类型别名<a class="headerlink" href="#type" title="Permanent link">&para;</a></h2>
 <p>这个关键词的作用和C语言中的<code>typedef</code>相似，可以给变量一个新的名称，或者定义一个新的类型。  </p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">类型名称</span><span class="w"> </span><span class="nx">底层类型</span>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">类型名称</span><span class="w"> </span><span class="nx">底层类型</span>
 </span></code></pre></div>
 
 
