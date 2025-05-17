@@ -100,10 +100,11 @@ try = [
 
 ### 配置插件
 
-将插件下载放入`Velocity`的`plugins`文件夹下即可，这里推荐两个mod：  
+将插件下载放入`Velocity`的`plugins`文件夹下即可，这里推荐几个mod：  
 
 1. 离线登陆支持：[MultiLogin-Velocity](https://github.com/CaaMoe/MultiLogin)
 2. forge服务端支持：[Ambassador](https://modrinth.com/plugin/ambassador) （forge服务端需要安装[Proxy Compatible Forge](https://www.mcmod.cn/class/13564.html)）  
+3. 跨版本支持：[ViaVersion](https://www.mcmod.cn/class/5760.html)，*“既是`Velocity`插件，又是`paper`插件，又是`sponge`插件，还是`bc`、`waterfall`，还是`fabric`模组”*
 
 #### MutiLogin配置
 
