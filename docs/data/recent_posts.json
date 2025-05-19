@@ -1,5 +1,10 @@
 [
   {
+    "title": "创建FIFO实现向容器主进程控制台发送命令",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/fifoInput/",
+    "date": "05/19"
+  },
+  {
     "title": "反向代理实现Github加速",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nginx/proxyGithub/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "从网站下载并保存文件",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/wget/downloadAndSave/",
-    "date": "05/19"
-  },
-  {
-    "title": "docker-compose.yml模板",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/dockerComposeTemplate/",
     "date": "05/19"
   }
 ]
