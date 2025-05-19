@@ -1,5 +1,10 @@
 [
   {
+    "title": "安装nvm",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/installNvm/",
+    "date": "05/19"
+  },
+  {
     "title": "chown更改文件所有者",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/changeFileOwner/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "将文件重置到最后一次提交",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/git/restoreFile/",
-    "date": "05/19"
-  },
-  {
-    "title": "Dockerfile在打包时编译",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/buildInDockerfile/",
     "date": "05/19"
   }
 ]
