@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../../qbittorrent/webuiFAQ/">
+  <link rel="prev" href="../../git/git%E5%91%BD%E4%BB%A4/">
   
   
-  <link rel="next" href="../../zerotier/useZerotierInDocker/">
+  <link rel="next" href="../../makefile/templetOfMakefile/">
   
   
   <link rel="icon" href="../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="ufw对docker服务端口无效 - lyy19's Wiki">
-  <meta name="twitter:title" content="ufw对docker服务端口无效 - lyy19's Wiki" />
+  <meta property="og:title" content="Pull Request - lyy19's Wiki">
+  <meta name="twitter:title" content="Pull Request - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>ufw对docker服务端口无效 - lyy19's Wiki</title>
+  <title>Pull Request - lyy19's Wiki</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#ufwdocker" class="md-skip">
+      <a href="#pull-request" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ufw对docker服务端口无效
+              Pull Request
             
           </span>
         </div>
@@ -4856,17 +4856,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_15" checked>
         
           
           <label class="md-nav__link" for="__nav_12_15" id="__nav_12_15_label" tabindex="0">
@@ -4880,7 +4882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_15_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_15_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_15">
             <span class="md-nav__icon md-icon"></span>
             Github
@@ -4891,10 +4893,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../github/howToPullRequest/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pull Request
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4903,6 +4925,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 什么是 Pull Request？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 PR 的作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Pull Request 这个词是怎么来的？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 Pull Request 这个词是怎么来的？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Git 的语义中：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 过程图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      在Github中的操作及注意事项
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在Github中的操作及注意事项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.fork分支
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.修改代码并Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.PR之后
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.PR后发现问题？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5366,19 +5510,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_21" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_21" >
         
           
           <label class="md-nav__link" for="__nav_12_21" id="__nav_12_21_label" tabindex="0">
@@ -5392,7 +5534,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_21_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_21_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_21">
             <span class="md-nav__icon md-icon"></span>
             Ufw
@@ -5403,30 +5545,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ufw对docker服务端口无效
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ufw/ufwFailOnDockerService/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5435,44 +5557,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      原因
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      解决方法
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5605,20 +5689,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#pull-request_1" class="md-nav__link">
     <span class="md-ellipsis">
-      原因
+      🔍 什么是 Pull Request？
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#pr" class="md-nav__link">
     <span class="md-ellipsis">
-      解决方法
+      🧠 PR 的作用
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Pull Request 这个词是怎么来的？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 Pull Request 这个词是怎么来的？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Git 的语义中：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 过程图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      在Github中的操作及注意事项
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在Github中的操作及注意事项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.fork分支
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.修改代码并Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.PR之后
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.PR后发现问题？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5637,23 +5805,66 @@
               
 
 
-<h1 id="ufwdocker">ufw对docker服务端口无效<a class="headerlink" href="#ufwdocker" title="Permanent link">&para;</a></h1>
-<h2 id="_1">原因<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>docker自动在防火墙列表中添加了开放端口的规则. 所以根本就没走到ufw端口就被放行了。  </p>
-<h2 id="_2">解决方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>一下有删除线的是错误做法（指单纯关闭<code>iptables</code>），设置<code>"iptables": false</code><a href="https://jueee.github.io/docker-doc/about-docker-iptables-false.html">会中断 docker-compose 的 DNS 发现</a>。  </p>
-<p>从而导致docker内程序无法访问其他同网络的docker服务 <strong>甚至不能访问外部主机连接的互联网</strong> 。  </p>
-<p><del>修改docker的配置文件<code>/etc/docker/daemon.json</code>(若没有就新建一个), 添加如下内容:</del>  </p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="s2">&quot;iptables&quot;</span>:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">}</span>
+<h1 id="pull-request">Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h1>
+<h2 id="pull-request_1">🔍 什么是 Pull Request？<a class="headerlink" href="#pull-request_1" title="Permanent link">&para;</a></h2>
+<p><strong>Pull Request（简称 PR）是开源协作中最常用的代码贡献方式。</strong></p>
+<p>它的本质是：</p>
+<p>!!!
+    “我在自己的分支或 Fork 仓库中做了一些更改，现在请求你把这些更改合并（pull）到主项目中去。”</p>
+<p>你向原项目提交一个“<strong>合并请求</strong>”，项目维护者可以：</p>
+<ul>
+<li>查看你做了什么改动（diff）</li>
+<li>对你的代码进行评论、审查（code review）</li>
+<li>要求你修改</li>
+<li>决定是否接受这些更改并合并进主分支</li>
+</ul>
+<hr />
+<h2 id="pr">🧠 PR 的作用<a class="headerlink" href="#pr" title="Permanent link">&para;</a></h2>
+<ul>
+<li>💬 <strong>促进协作</strong>：团队成员可对代码进行讨论和审查</li>
+<li>✅ <strong>提高质量</strong>：代码提交前能被 review、测试</li>
+<li>📜 <strong>留下记录</strong>：PR 保留完整的开发历史与讨论</li>
+<li>🧪 <strong>CI/CD 集成</strong>：可以配合自动测试、构建流程</li>
+</ul>
+<h2 id="pull-request_2">🧾 Pull Request 这个词是怎么来的？<a class="headerlink" href="#pull-request_2" title="Permanent link">&para;</a></h2>
+<p>它来自 Git 的工作原理：</p>
+<h3 id="git">在 Git 的语义中：<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
+<p>你做出修改后，并 <strong>不是直接 push 到主项目</strong> ，而是：</p>
+<blockquote>
+<p>“请求维护者把你的代码 pull 过去。”</p>
+</blockquote>
+<p>也就是说：</p>
+<ul>
+<li>不是你主动把代码“推（push）给对方”，</li>
+<li>而是请求对方“拉（pull）你的更改”。</li>
+</ul>
+<p>因此叫做 <strong>Pull Request</strong> —— “请求拉取我的改动”。</p>
+<h2 id="_1">🔁 过程图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>你 fork 了一个项目 → 创建新分支 → 做出更改 → 发起 Pull Request → 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>维护者审核 → 合并到主分支（或拒绝）
 </span></code></pre></div>
-<p><del>重启docker</del>  </p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
-</span></code></pre></div>
-<p><strong>正确的解决方法</strong> 是：对于内部服务container，去掉docker-compose.yml端口映射即可，去掉后只是外网无法访问这个服务，但是同一docker网络下的别的容器依然能访问。<br />
-实测下面的方法也不行。<br />
-<del>或者参照<a href="https://jueee.github.io/docker-doc/about-docker-iptables-false.html">这个解决方法</a>.</del></p>
+<h2 id="github">在Github中的操作及注意事项<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<h3 id="1fork">1.fork分支<a class="headerlink" href="#1fork" title="Permanent link">&para;</a></h3>
+<p>要修改别人的项目，首先你需要fork他的项目。  </p>
+<p>fork会在你的repo中创建一个fork repo，你的所有修改都是直接作用于这个fork，至于最终修改是否会合并到他人的项目，需要看repo拥有者是否同意merge。  </p>
+<h3 id="2pull-request">2.修改代码并<code>Pull Request</code><a class="headerlink" href="#2pull-request" title="Permanent link">&para;</a></h3>
+<p>在你做了修改之后，提交到GitHub，在你的fork repo和作者的repo界面，你将会看到一个<code>Pull Request</code>的按钮，一旦你认为自己的修改已经完成，就可以点击进行<code>Pull Request</code>了。  </p>
+<p>点击按钮后，你需要填写这次PR的信息，包括标题和内容，你需要向repo所有者解释你的修改和原因等。不需要太冗长，也不能过于概括，解释清楚事情就好。  </p>
+<p>对于PR，我们可以将其分为以下几种：  </p>
+<ul>
+<li>fix，修复问题</li>
+<li>feature，新功能</li>
+<li>perf，优化</li>
+<li>refactor，重构</li>
+</ul>
+<p>等。  </p>
+<p>开发者在提交PR时需要写清楚自己提交PR的种类、内容等。  </p>
+<p>对于新手，建议寻找Pull Request模板或者用AI生成模板来填写。  </p>
+<h3 id="3pr">3.PR之后<a class="headerlink" href="#3pr" title="Permanent link">&para;</a></h3>
+<p>如果是长期参与的项目等，你可以选择保留fork分支以方便未来继续修改。一般来说，在作者同意Merge后，你就可以选择删除自己的fork repo。因为Merge后，源repo已经有了你的修改记录。  </p>
+<h3 id="4pr">4.PR后发现问题？<a class="headerlink" href="#4pr" title="Permanent link">&para;</a></h3>
+<p>PR后发现自己代码出现问题？不用担心，如果作者还没有Merge，你可以继续修改。所有对于你的fork repo的修改会同步到这个PR。  </p>
+<p>如果作者已经Merge了呢？那可以继续修改，然后提出一个新PR。  </p>
 
 
 
