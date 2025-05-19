@@ -1,5 +1,15 @@
 [
   {
+    "title": "我的Dockerfile模板",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/dockerTemplate/",
+    "date": "05/19"
+  },
+  {
+    "title": "docker-compose.yml中build image部署",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/serviceBuild/",
+    "date": "05/19"
+  },
+  {
     "title": "修改过去的commit",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/git/modifyCommit/",
     "date": "05/19"
@@ -13,15 +23,5 @@
     "title": "判断是否存在某个镜像",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/bash/environmentVarExist/",
     "date": "05/19"
-  },
-  {
-    "title": "Docker清理",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/clean/",
-    "date": "05/19"
-  },
-  {
-    "title": "使用Velocity搭建群组服务器",
-    "url": "/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/groupServer/",
-    "date": "05/17"
   }
 ]
