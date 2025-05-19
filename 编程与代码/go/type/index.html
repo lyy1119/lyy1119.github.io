@@ -2097,6 +2097,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型转化
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5953,6 +5962,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型转化
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6128,6 +6146,11 @@
 <p>这个关键词的作用和C语言中的<code>typedef</code>相似，可以给变量一个新的名称，或者定义一个新的类型。  </p>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">类型名称</span><span class="w"> </span><span class="nx">底层类型</span>
 </span></code></pre></div>
+<h2 id="_2">类型转化<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Go的类型转换和Python一样，写成如下形式：  </p>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="kd">type</span><span class="p">&gt;(</span><span class="nx">变量</span><span class="p">)</span>
+</span></code></pre></div>
+<p>要注意，数值如果要转换成对应的字符，比如65转换成<code>'65'</code>而不是<code>A</code>，需要使用<code>strconv.Itoa()</code>函数，而不是直接<code>String(变量)</code>，<code>String(变量)</code>的结果是对应utf-8的编码值的字符</p>
 
 
 
