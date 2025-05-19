@@ -1,5 +1,10 @@
 [
   {
+    "title": "内置复制指令",
+    "url": "/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/copyCmd/",
+    "date": "05/19"
+  },
+  {
     "title": "创建FIFO实现向容器主进程控制台发送命令",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/fifoInput/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "chown更改文件所有者",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/changeFileOwner/",
-    "date": "05/19"
-  },
-  {
-    "title": "从网站下载并保存文件",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/wget/downloadAndSave/",
     "date": "05/19"
   }
 ]
