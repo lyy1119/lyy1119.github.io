@@ -228,11 +228,7 @@ document.querySelector('.profile-card').addEventListener('click', function() {
 
 ## 关于这个网站
 
-创建这个网站的主要目的不是去像博客那样分享。主要目的是记录自己的经验。为什么不用虚拟内网建站？主要考虑到在一些未并网设备上查阅的方便，并且，经验也没有必要像文件和资料那样具有安全性的要求。  
-
 本网站使用github repository作为图床，如果图片加载失败，可能你的网络连接存在问题。  
-
-本网站 **部分内容使用ai生成** 并经过审核，对于ai生成的文字内容，将在标题打上形如 ![Static Badge](https://img.shields.io/badge/Generated_By-OpenAI-red) 的徽章。  
 
 本网站还在建设中，难免有不足和错误之处，欢迎指正并在issue中提出。  
 
