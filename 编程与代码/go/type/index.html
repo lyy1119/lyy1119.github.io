@@ -6150,7 +6150,8 @@
 <p>Go的类型转换和Python一样，写成如下形式：  </p>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="kd">type</span><span class="p">&gt;(</span><span class="nx">变量</span><span class="p">)</span>
 </span></code></pre></div>
-<p>要注意，数值如果要转换成对应的字符，比如65转换成<code>'65'</code>而不是<code>A</code>，需要使用<code>strconv.Itoa()</code>函数，而不是直接<code>String(变量)</code>，<code>String(变量)</code>的结果是对应utf-8的编码值的字符</p>
+<p>要注意，数值如果要转换成对应的字符，比如65转换成<code>'65'</code>而不是<code>A</code>，需要使用<code>strconv.Itoa()</code>函数，而不是直接<code>String(变量)</code>，<code>String(变量)</code>的结果是对应utf-8的编码值的字符。  </p>
+<p>Go对于转换成String还提供了一种C语言的方式，即<code>Sprintf()</code>。  </p>
 
 
 
