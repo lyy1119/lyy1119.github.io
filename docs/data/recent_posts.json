@@ -1,5 +1,10 @@
 [
   {
+    "title": "清除掉落物",
+    "url": "/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/cleanDrops/",
+    "date": "05/19"
+  },
+  {
     "title": "内置复制指令",
     "url": "/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/copyCmd/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "安装nvm",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/installNvm/",
-    "date": "05/19"
-  },
-  {
-    "title": "chown更改文件所有者",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/changeFileOwner/",
     "date": "05/19"
   }
 ]
