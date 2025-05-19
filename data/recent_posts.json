@@ -1,5 +1,10 @@
 [
   {
+    "title": "chown更改文件所有者",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/changeFileOwner/",
+    "date": "05/19"
+  },
+  {
     "title": "从网站下载并保存文件",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/wget/downloadAndSave/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "Dockerfile在打包时编译",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/buildInDockerfile/",
-    "date": "05/19"
-  },
-  {
-    "title": "我的Dockerfile模板",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/dockerTemplate/",
     "date": "05/19"
   }
 ]
