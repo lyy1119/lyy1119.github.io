@@ -4,7 +4,7 @@
 # 基础镜像
 FROM <image>:<tag>
 # 设置时区 上海
-RUN ln ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
 # 工作目录
 WORKDIR <workdir>
 # 复制文件
