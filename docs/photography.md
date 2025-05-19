@@ -18,6 +18,17 @@ description: "欢迎来看我的摄影照片，如果你喜欢它，请给我一
 
 <div class="gallery" id="2025011"></div>
 
+
+## 2025-5
+
+### 北京·中国矿业大学（北京）
+
+<div class="gallery" id="2025051"></div>
+
+### 北京·紫竹院
+
+<div class="gallery" id="2025052"></div>
+
 <!-- real image div, style and js-->
 <!-- 模态框：点击缩略图显示原图 -->
 <div class="modal" id="modal">
@@ -135,6 +146,24 @@ description: "欢迎来看我的摄影照片，如果你喜欢它，请给我一
                 { thumb: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/明孝陵-5.webp", full: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/明孝陵-5.jpg", title: "红墙腊梅 1"},
                 { thumb: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/thumb4.jpg.webp", full: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/明孝陵-7.jpg", title: "红墙腊梅 2"},
                 { thumb: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/明孝陵-9.webp", full: "https://raw.githubusercontent.com/lyy1119/Imgs/main/img/明孝陵-9.jpg", title: "梅花鹿"},
+            ]
+        },
+        // 北京中国矿业大学（北京）
+        {
+            pos: "2025051",
+            img: [
+                { thumb: "https://cloudstorage.lyy19.cn/images/2025/05/19/9fca12a9f3fcb360bc14c6de669d323a.md.jpg", full: "https://cloudstorage.lyy19.cn/images/2025/05/19/9fca12a9f3fcb360bc14c6de669d323a.jpg", title: "操场-月季花" },
+                { thumb: "https://cloudstorage.lyy19.cn/images/2025/05/19/cfbfd542f94c70cdfbdbb7f9e7319753.md.jpg", full: "https://cloudstorage.lyy19.cn/images/2025/05/19/cfbfd542f94c70cdfbdbb7f9e7319753.jpg", title: "民族楼下" },
+                { thumb: "https://cloudstorage.lyy19.cn/images/2025/05/19/2db061b182e892d5e22df9020f93da48.md.jpg", full: "https://cloudstorage.lyy19.cn/images/2025/05/19/2db061b182e892d5e22df9020f93da48.jpg", title: "民族楼一角" }
+            ]
+        },
+        // 北京紫竹院
+        {
+            pos: "2025052",
+            img: [
+                { thumb: "https://cloudstorage.lyy19.cn/images/2025/05/19/40301a6739c6c8abadf5e49e6a63bf26.md.jpg", full: "https://cloudstorage.lyy19.cn/images/2025/05/19/40301a6739c6c8abadf5e49e6a63bf26.jpg", title: "木茼蒿" },
+                { thumb: "https://cloudstorage.lyy19.cn/images/2025/05/19/4bceaf3e20cbeae62853a4d1d91192c0.md.jpg", full: "https://cloudstorage.lyy19.cn/images/2025/05/19/4bceaf3e20cbeae62853a4d1d91192c0.jpg", title: "七姊妹" },
+                { thumb: "https://cloudstorage.lyy19.cn/images/2025/05/19/a6653a7cce4b917a6d7cbd0e37cc0f6c.md.jpg", full: "https://cloudstorage.lyy19.cn/images/2025/05/19/a6653a7cce4b917a6d7cbd0e37cc0f6c.jpg", title: "紫竹院" },
             ]
         },
         // template
