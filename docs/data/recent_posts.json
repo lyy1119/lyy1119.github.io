@@ -1,5 +1,10 @@
 [
   {
+    "title": "docker-compose.yml模板",
+    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/dockerComposeTemplate/",
+    "date": "05/19"
+  },
+  {
     "title": "将文件重置到最后一次提交",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/git/restoreFile/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "docker-compose.yml中build image部署",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/serviceBuild/",
-    "date": "05/19"
-  },
-  {
-    "title": "修改过去的commit",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/git/modifyCommit/",
     "date": "05/19"
   }
 ]
