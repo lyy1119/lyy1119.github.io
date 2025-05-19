@@ -1,5 +1,10 @@
 [
   {
+    "title": "摄影展",
+    "url": "/photography/",
+    "date": "05/19"
+  },
+  {
     "title": "3.类型",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/type/",
     "date": "05/19"
@@ -17,11 +22,6 @@
   {
     "title": "创建FIFO实现向容器主进程控制台发送命令",
     "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/docker/fifoInput/",
-    "date": "05/19"
-  },
-  {
-    "title": "反向代理实现Github加速",
-    "url": "/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/nginx/proxyGithub/",
     "date": "05/19"
   }
 ]
