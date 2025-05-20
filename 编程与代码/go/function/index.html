@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../../TypeScript/quickStart/">
+  <link rel="prev" href="../fmt/">
   
   
-  <link rel="next" href="../fmt/">
+  <link rel="next" href="../innerFunction/">
   
   
   <link rel="icon" href="../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="附录：big - lyy19's Wiki">
-  <meta name="twitter:title" content="附录：big - lyy19's Wiki" />
+  <meta property="og:title" content="6.函数 - lyy19's Wiki">
+  <meta name="twitter:title" content="6.函数 - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>附录：big - lyy19's Wiki</title>
+  <title>6.函数 - lyy19's Wiki</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#big" class="md-skip">
+      <a href="#6" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              附录：big
+              6.函数
             
           </span>
         </div>
@@ -1845,19 +1845,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../big/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1866,7 +1857,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1897,10 +1887,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../function/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6.函数
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1909,6 +1919,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数声明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5866,6 +5914,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数声明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
               </div>
             </div>
@@ -5879,14 +5953,30 @@
               
 
 
-<h1 id="big">附录：big<a class="headerlink" href="#big" title="Permanent link">&para;</a></h1>
-<p>big包可以用于表示比基础类型更大的数。  </p>
-<p>big包有以下类型：  </p>
-<ul>
-<li>big.Int</li>
-<li>big.Float</li>
-<li>big.Rat</li>
-</ul>
+<h1 id="6">6.函数<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<h2 id="_1">函数声明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">functionName</span><span class="p">&gt;(&lt;</span><span class="nx">varName</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="kd">type</span><span class="p">&gt;,</span><span class="w"> </span><span class="o">...</span><span class="p">)</span><span class="w"> </span><span class="p">&lt;</span><span class="k">return</span><span class="w"> </span><span class="nx">Type</span><span class="p">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="o">...</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>在go语言中，开头大写的变量、函数等会被“导出”，即对外部可见，可以调用</p>
+</div>
+<p>多个参数类型一样的时候，可以简写为：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int64</span><span class="p">)</span><span class="w"> </span><span class="kt">int64</span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="o">...</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>和Python一样，go语言可以有多个返回值。<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">f</span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">){</span><span class="w"> </span><span class="c1">// 也可以给返回值命名</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Go中的函数也可以接受可变数量的参数，即可变参数。这里就不过多介绍了。  </p>
+<h2 id="_2">函数调用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nx">packageName</span><span class="p">&gt;.&lt;</span><span class="nx">FunctionName</span><span class="p">&gt;(&lt;</span><span class="nx">argument</span><span class="p">&gt;)</span><span class="w"> </span><span class="c1">// 若是同一包，则不用写包名</span>
+</span></code></pre></div>
 
 
 
