@@ -1,5 +1,15 @@
 [
   {
+    "title": "7.方法",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/method/",
+    "date": "05/21"
+  },
+  {
+    "title": "3.类型",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/type/",
+    "date": "05/21"
+  },
+  {
     "title": "6.函数",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/function/",
     "date": "05/20"
@@ -10,18 +20,8 @@
     "date": "05/19"
   },
   {
-    "title": "3.类型",
-    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/type/",
-    "date": "05/19"
-  },
-  {
     "title": "清除掉落物",
     "url": "/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/cleanDrops/",
-    "date": "05/19"
-  },
-  {
-    "title": "内置复制指令",
-    "url": "/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/copyCmd/",
     "date": "05/19"
   }
 ]
