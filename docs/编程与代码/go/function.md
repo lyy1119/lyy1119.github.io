@@ -32,3 +32,23 @@ Go中的函数也可以接受可变数量的参数，即可变参数。这里就
 ```go
 <packageName>.<FunctionName>(<argument>) // 若是同一包，则不用写包名
 ```
+
+## 匿名函数
+
+go语言中的匿名函数写法如下：  
+```go
+var f = func(<argument>) (<returnType>){
+    ...
+}
+```
+
+go语言中还有类似Javascript的立即执行的函数，写法如下：  
+```go
+func() {
+    ...
+}()
+```
+
+## 闭包
+
+go语言中还有闭包特性，这里就不介绍了。  
