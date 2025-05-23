@@ -55,3 +55,9 @@ for <condition> {
 
 `<condition>`可以写成单个条件，也可以写成C语言的for形式，如：`i := 1; i < 10; i++`。  
 
+使用内置函数`range`可以同时获取可迭代对象的索引和值：  
+```go
+for index， value := range iterable {
+    ...
+}
+```
