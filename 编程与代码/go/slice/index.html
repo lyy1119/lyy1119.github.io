@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../loopAndBranch/">
+  <link rel="prev" href="../scope/">
   
   
-  <link rel="next" href="../method/">
+  <link rel="next" href="../string/">
   
   
   <link rel="icon" href="../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="附录2.math包 - lyy19's Wiki">
-  <meta name="twitter:title" content="附录2.math包 - lyy19's Wiki" />
+  <meta property="og:title" content="9.切片 - lyy19's Wiki">
+  <meta name="twitter:title" content="9.切片 - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>附录2.math包 - lyy19's Wiki</title>
+  <title>9.切片 - lyy19's Wiki</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#2math" class="md-skip">
+      <a href="#9" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              附录2.math包
+              9.切片
             
           </span>
         </div>
@@ -1992,30 +1992,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    附录2.math包
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2024,50 +2004,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mathrand" class="md-nav__link">
-    <span class="md-ellipsis">
-      math/rand
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="math/rand">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#randintn" class="md-nav__link">
-    <span class="md-ellipsis">
-      rand.Intn
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2119,10 +2055,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../slice/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9.切片
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2131,6 +2087,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      带有方法的切片
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5990,26 +5984,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mathrand" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      math/rand
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="math/rand">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#randintn" class="md-nav__link">
-    <span class="md-ellipsis">
-      rand.Intn
+      基本用法
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      带有方法的切片
+    </span>
+  </a>
   
 </li>
       
@@ -6028,13 +6016,32 @@
               
 
 
-<h1 id="2math">附录2.math包<a class="headerlink" href="#2math" title="Permanent link">&para;</a></h1>
-<h2 id="mathrand">math/rand<a class="headerlink" href="#mathrand" title="Permanent link">&para;</a></h2>
-<p>随机数包  </p>
-<h3 id="randintn">rand.Intn<a class="headerlink" href="#randintn" title="Permanent link">&para;</a></h3>
-<p>生成一个在<code>[0, n)</code>的整数。<br />
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<h1 id="9">9.切片<a class="headerlink" href="#9" title="Permanent link">&para;</a></h1>
+<h2 id="_1">基本用法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>go语言和Python一样，有切片操作：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">d</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">e</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[:]</span><span class="w"> </span><span class="c1">// equal e := a[0:len(a)] </span>
 </span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>go语言的切片操作不能是负数索引，区别于Python。  </p>
+<p>如果对字符串进行切片，改变字符串的值，切片的值不会改变（可以将看作切片是一种特殊的指针）。且切分字符串时，只能按照字节数进行切分。  </p>
+</div>
+<p><strong>切片的另一种声明方式</strong>：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;s1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s2&quot;</span><span class="p">}</span>
+</span></code></pre></div></p>
+<p>在声明函数时，也可以传入切片，其类型写作<code>[]&lt;type&gt;</code>，如<code>[]string</code>。  </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>将切片传入函数，再对切片中的元素做修改，可以影响到原值（将切片看作是指针）。  </p>
+<p>切片是没有长度的，所以对于函数，无论切片的长度如何，都能传入。</p>
+</div>
+<h2 id="_2">带有方法的切片<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>可以以切片类型为底层类型，使用<code>type</code>声明一个新类型，然后给予方法。<br />
+如<code>sort</code>库的<code>StringSlice</code>。  </p>
 
 
 
