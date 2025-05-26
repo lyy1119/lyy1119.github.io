@@ -1,5 +1,10 @@
 [
   {
+    "title": "更快的标准输入输出（stdio）",
+    "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/python/fasterStdio/",
+    "date": "05/26"
+  },
+  {
     "title": "D - Domino Covering XOR",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/AtCoder/AtCoder%20Beginner%20Contest%20407/d/",
     "date": "05/26"
@@ -18,10 +23,5 @@
     "title": "9.切片",
     "url": "/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/slice/",
     "date": "05/25"
-  },
-  {
-    "title": "2.液压驱动器",
-    "url": "/%E6%9C%BA%E6%A2%B0/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC2%E7%AB%A0%20%E9%A9%B1%E5%8A%A8%E5%99%A8/hydraulic/",
-    "date": "05/23"
   }
 ]
