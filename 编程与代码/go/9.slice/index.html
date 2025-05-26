@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../math/">
+  <link rel="prev" href="../8.array/">
   
   
-  <link rel="next" href="../scope/">
+  <link rel="next" href="../big/">
   
   
   <link rel="icon" href="../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="7.方法 - lyy19's Wiki">
-  <meta name="twitter:title" content="7.方法 - lyy19's Wiki" />
+  <meta property="og:title" content="9.切片 - lyy19's Wiki">
+  <meta name="twitter:title" content="9.切片 - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>7.方法 - lyy19's Wiki</title>
+  <title>9.切片 - lyy19's Wiki</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#7" class="md-skip">
+      <a href="#9" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7.方法
+              9.切片
             
           </span>
         </div>
@@ -1912,11 +1912,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../array/" class="md-nav__link">
+      <a href="../1.introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    8.数组
+    1.简介
   </span>
   
 
@@ -1933,11 +1933,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../big/" class="md-nav__link">
+      <a href="../10.mutableParamterFunction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    附录：big
+    10.可变参数函数
   </span>
   
 
@@ -1954,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fmt/" class="md-nav__link">
+      <a href="../1001.fmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,11 +1975,231 @@
   
   
     <li class="md-nav__item">
-      <a href="../function/" class="md-nav__link">
+      <a href="../4.loopAndBranch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.循环和分支
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.作用域
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     6.函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.array/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.数组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9.切片
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    9.切片
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      带有方法的切片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#append" class="md-nav__link">
+    <span class="md-ellipsis">
+      append函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      容量与大小
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      切片操作的第三个参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用make函数生成切片
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../big/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录：big
   </span>
   
 
@@ -2017,126 +2237,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1.简介
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../loopAndBranch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4.循环和分支
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     附录2.math包
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    7.方法
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scope/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    5.作用域
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../slice/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    9.切片
   </span>
   
 
@@ -6121,6 +6226,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      带有方法的切片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#append" class="md-nav__link">
+    <span class="md-ellipsis">
+      append函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      容量与大小
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      切片操作的第三个参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用make函数生成切片
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
               </div>
             </div>
@@ -6134,23 +6301,106 @@
               
 
 
-<h1 id="7">7.方法<a class="headerlink" href="#7" title="Permanent link">&para;</a></h1>
-<p>Go语言虽然没有提供<code>类 class</code>，但是提供了一种方法，可以使得使用<code>type</code>关键词自定义的类型关联一个方法（函数）。  </p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">celsius</span><span class="w"> </span><span class="kt">float64</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">type</span><span class="w"> </span><span class="nx">kelvin</span><span class="w"> </span><span class="kt">float64</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">k</span><span class="w"> </span><span class="nx">kelvin</span><span class="p">)</span><span class="w"> </span><span class="nx">celsius</span><span class="p">()</span><span class="w"> </span><span class="nx">celsius</span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">celsius</span><span class="p">(</span><span class="nx">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">273.15</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nx">kelvin</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nx">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">celsius</span><span class="p">()</span>
-</span></code></pre></div>
-<p>上面代码中的<code>(k kelvin)</code>表示 <strong>类型参数的接收者</strong> ，其中的<code>k</code>可以在函数中使用。  </p>
+<h1 id="9">9.切片<a class="headerlink" href="#9" title="Permanent link">&para;</a></h1>
+<h2 id="_1">基本用法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>go语言和Python一样，有切片操作：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">d</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">e</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[:]</span><span class="w"> </span><span class="c1">// equal e := a[0:len(a)] </span>
+</span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>go语言的切片操作不能是负数索引，区别于Python。  </p>
+<p>如果对字符串进行切片，改变字符串的值，切片的值不会改变（可以将看作切片是一种特殊的指针）。且切分字符串时，只能按照字节数进行切分。  </p>
+</div>
+<p><strong>切片的另一种声明方式</strong>：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;s1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s2&quot;</span><span class="p">}</span>
+</span></code></pre></div></p>
+<p>在声明函数时，也可以传入切片，其类型写作<code>[]&lt;type&gt;</code>，如<code>[]string</code>。  </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>一个函数最多只能有一个接收者且不能是go的预声明类型，如<code>int float</code>等。可以有多个参数。  </p>
+<p>将切片传入函数，再对切片中的元素做修改，可以影响到原值（将切片看作是指针）。  </p>
+<p>切片是没有长度的，所以对于函数，无论切片的长度如何，都能传入。</p>
 </div>
+<h2 id="_2">带有方法的切片<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>可以以切片类型为底层类型，使用<code>type</code>声明一个新类型，然后给予方法。<br />
+如<code>sort</code>库的<code>StringSlice</code>。  </p>
+<h2 id="append">append函数<a class="headerlink" href="#append" title="Permanent link">&para;</a></h2>
+<p>通过内置的append函数，可以实现在切片后增加元素（但是没有改变原数组），其使用方法如下：  </p>
+<div class="language-go highlight"><span class="filename">append</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">slice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">};</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">slice</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">slice</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;E&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">...</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>append</code>并不会修改切片对象，不是slice的一个方法，而是返回一个新的切片对象。这与Python中的list的<code>append</code>函数不同。</p>
+</div>
+<h2 id="_3">容量与大小<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>容量（Capacity）和大小（或者称为长度：Length）是切片类型的两个不同概念。  </p>
+<p>容量可以使用函数<code>cap()</code>查询，长度可以使用内置函数<code>len()</code>查询。  </p>
+<p>容量指的是切片类型的底层数组的大小，而长度指的是切片的长度。  </p>
+<p>可以使用下面这段代码来辨别容量和长度两个概念：<br />
+<div class="language-go highlight"><span class="filename">capacity and length of Slice in Golang, temp.go</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nx">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;array a is:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;slice b is:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;length of slice b is:\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;capacity of slice b is:\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;append element at the end of slice b&quot;</span><span class="p">)</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="nx">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Y&quot;</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Now, array a is:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;; Slice b is:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;length of slice b is:\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;capacity of slice b is:\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Go on, add more element,&quot;</span><span class="p">)</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="nx">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;U&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;V&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;W&quot;</span><span class="p">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Now, array a is:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;; Slice b is:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;length of slice b is:\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;capacity of slice b is:\t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="p">}</span>
+</span></code></pre></div>
+其输出如下：  </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>go<span class="w"> </span>run<span class="w"> </span>temp.go
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>array<span class="w"> </span>a<span class="w"> </span>is:<span class="w"> </span><span class="o">[</span>A<span class="w"> </span>B<span class="w"> </span>C<span class="w">  </span><span class="o">]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w"> </span><span class="o">[</span>A<span class="w"> </span>B<span class="o">]</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>length<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w">    </span><span class="m">2</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>capacity<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w">  </span><span class="m">5</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>append<span class="w"> </span>element<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Now,<span class="w"> </span>array<span class="w"> </span>a<span class="w"> </span>is:<span class="w"> </span><span class="o">[</span>A<span class="w"> </span>B<span class="w"> </span>X<span class="w"> </span>Y<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>Slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w"> </span><span class="o">[</span>A<span class="w"> </span>B<span class="w"> </span>X<span class="w"> </span>Y<span class="o">]</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>length<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w">    </span><span class="m">4</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>capacity<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w">  </span><span class="m">5</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Go<span class="w"> </span>on,<span class="w"> </span>add<span class="w"> </span>more<span class="w"> </span>element,
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>Now,<span class="w"> </span>array<span class="w"> </span>a<span class="w"> </span>is:<span class="w"> </span><span class="o">[</span>A<span class="w"> </span>B<span class="w"> </span>X<span class="w"> </span>Y<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>Slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w"> </span><span class="o">[</span>A<span class="w"> </span>B<span class="w"> </span>X<span class="w"> </span>Y<span class="w"> </span>U<span class="w"> </span>V<span class="w"> </span>W<span class="o">]</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>length<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w">    </span><span class="m">7</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>capacity<span class="w"> </span>of<span class="w"> </span>slice<span class="w"> </span>b<span class="w"> </span>is:<span class="w">  </span><span class="m">10</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>可以看出，当增加的元素总长度小于容量时，会覆盖底层数组，如果增加的元素总数多于数组时，容量会按照数组长度的倍数增加。  </p>
+<p>但是要注意，go会开一个新的数组，而不是在原数组上修改再追加数组。所以最好不要数组和切片混用。  </p>
+<p>如果必须从数组生成索引，且不希望修改原数组，则可以通过指定切片操作的第三个参数：容量，来生成一个新的数组。</p>
+</div>
+<h2 id="_4">切片操作的第三个参数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>从go 1.2开始，切片操作可以有第三个参数。  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>注意，这并非Python中的[start:stop:step]</p>
+</div>
+<p>Go语言中的三个参数用来指定切片的容量，当容量与底层数组长度不同时，就会新开一个数组。  </p>
+<h2 id="make">使用make函数生成切片<a class="headerlink" href="#make" title="Permanent link">&para;</a></h2>
+<p>使用make函数能指定生成一个空的切片。  </p>
+<p><code>go titl="make()"
+slice := make([]string, 0, 10)
+// make(sliceType, length, capacity)
+// 如果省略capacity，则容量和长度都是第二个参数</code></p>
 
 
 
