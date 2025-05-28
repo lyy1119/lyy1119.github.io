@@ -54,10 +54,6 @@ theme:
     repo: fontawesome/brands/github 
 
 extra_javascript:
-  # mathjax
-  # - javascripts/mathjax.js # 有问题，开了反而公式没了
-  # - https://polyfill.io/v3/polyfill.min.js?features=es6
-  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
   # katex
   - javascripts/katex.js
   - javascripts/link-check.js
