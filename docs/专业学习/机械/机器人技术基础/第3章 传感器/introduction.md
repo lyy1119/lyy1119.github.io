@@ -35,3 +35,28 @@
 - Piezoelectric Sensor 压电传感器
 
 ### 外置传感器 External Sensors
+
+#### 接触式传感器 Contact Type
+
+最主要的接触式传感器就是：限位开关 Limit Switch  
+
+其存在以下缺点：  
+
+1. 会因机械失效而失效
+2. 比非接触传感器更容易失效
+3. 比光电传感器响应时间长
+
+主要用于极限位置的检测。  
+
+#### 非接触式传感器 Non-contact Type
+
+**接近传感器 Proximity Sensor**：  
+
+- 电感式/电容式传感器
+
+**半导体位移传感器 Semiconductor Displacement Sensor**：  
+
+- 超声波传感器
+- 红外线传感器
+
+### 视觉系统
