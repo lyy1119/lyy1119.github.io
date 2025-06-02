@@ -1868,6 +1868,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      指针类型方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       其他
     </span>
   </a>
@@ -6826,6 +6835,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      指针类型方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       其他
     </span>
   </a>
@@ -6849,14 +6867,21 @@
 
 <h1 id="16">16.指针<a class="headerlink" href="#16" title="Permanent link">&para;</a></h1>
 <p>Go语言中也有指针类型，其用法和大多数语言一样，使用<code>&amp;</code>获取变量地址，<code>*</code>获取地址的值。  </p>
+<p><code>&amp;</code>操作符还可以获取实变量结构体的成员变量的地址，如<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">mystruct</span><span class="p">{</span><span class="nx">c</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nx">d</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&amp;</span><span class="nx">a</span><span class="p">.</span><span class="nx">c</span><span class="w"> </span><span class="c1">// 可以获取a中成员c的地址</span>
+</span></code></pre></div></p>
+<p>go语言中的map、slice其实都是指针。  </p>
 <h2 id="_1">指针类型的输出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>在使用格式化打印时，使用这个格式化动词来打印地址<code>%T</code>。  </p>
 <h2 id="_2">指针类型的声明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>指针类型的格式如下：<br />
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">variableName</span><span class="p">&gt;</span><span class="w"> </span><span class="o">*</span><span class="p">&lt;</span><span class="nx">typeName</span><span class="p">&gt;</span>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">variableName</span><span class="p">&gt;</span><span class="w"> </span><span class="o">*</span><span class="p">&lt;</span><span class="nx">typeName</span><span class="p">&gt;</span>
 </span></code></pre></div></p>
 <p>如<code>*string</code>、<code>*int</code>等。  </p>
-<h2 id="_3">其他<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">指针类型方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>当定义一个方法的接收者为指针类型时，可以使用一般类型，即实类型去使用这个方法，此时，go语言会自动处理成取地址，也可以声明一个指针类型去调用这个方法。  </p>
+<h2 id="_4">其他<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>当对结构体使用指针时，访问其成员变量，可以不适用<code>*</code>先取值，这一点和C或C++有所不同。  </p>
 <p>且不可对内置类型的字面值取地址。  </p>
 
