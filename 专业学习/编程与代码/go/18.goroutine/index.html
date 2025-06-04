@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../../go/string/">
+  <link rel="prev" href="../18.defer/">
   
   
-  <link rel="next" href="../emoji/">
+  <link rel="next" href="../2.var/">
   
   
   <link rel="icon" href="../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="使用pandoc转换md文件 - lyy19's Wiki">
-  <meta name="twitter:title" content="使用pandoc转换md文件 - lyy19's Wiki" />
+  <meta property="og:title" content="18.goroutine与channel - lyy19's Wiki">
+  <meta name="twitter:title" content="18.goroutine与channel - lyy19's Wiki" />
   
   
   <meta property="og:description" content="这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>使用pandoc转换md文件 - lyy19's Wiki</title>
+  <title>18.goroutine与channel - lyy19's Wiki</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#pandocmd" class="md-skip">
+      <a href="#18goroutinechannel" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用pandoc转换md文件
+              18.goroutine与channel
             
           </span>
         </div>
@@ -1594,17 +1594,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_6" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3_6" id="__nav_5_3_6_label" tabindex="0">
@@ -1618,7 +1620,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3_6">
             <span class="md-nav__icon md-icon"></span>
             Go
@@ -1632,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/1.introduction/" class="md-nav__link">
+      <a href="../1.introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1653,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/10.mutableParamterFunction/" class="md-nav__link">
+      <a href="../10.mutableParamterFunction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1674,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/1001.fmt/" class="md-nav__link">
+      <a href="../1001.fmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1695,7 +1697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/11.map/" class="md-nav__link">
+      <a href="../11.map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1716,7 +1718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/12.struct/" class="md-nav__link">
+      <a href="../12.struct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1737,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/13.class/" class="md-nav__link">
+      <a href="../13.class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1758,7 +1760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/14.compositionAndForwarding/" class="md-nav__link">
+      <a href="../14.compositionAndForwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1779,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/15.interface/" class="md-nav__link">
+      <a href="../15.interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1800,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/16.pointer/" class="md-nav__link">
+      <a href="../16.pointer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/17.error/" class="md-nav__link">
+      <a href="../17.error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1842,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/18.defer/" class="md-nav__link">
+      <a href="../18.defer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1860,10 +1862,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../go/18.goroutine/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    18.goroutine与channel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1872,6 +1894,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goroutine" class="md-nav__link">
+    <span class="md-ellipsis">
+      goroutine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      channel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建通道
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      通道中数据的发送与接受
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      等待接受，直到数秒后
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1884,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/2.var/" class="md-nav__link">
+      <a href="../2.var/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1905,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/3.type/" class="md-nav__link">
+      <a href="../3.type/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1926,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/4.loopAndBranch/" class="md-nav__link">
+      <a href="../4.loopAndBranch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1947,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/5.scope/" class="md-nav__link">
+      <a href="../5.scope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1968,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/6.function/" class="md-nav__link">
+      <a href="../6.function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1989,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/7.method/" class="md-nav__link">
+      <a href="../7.method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2010,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/8.array/" class="md-nav__link">
+      <a href="../8.array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2031,7 +2124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/9.slice/" class="md-nav__link">
+      <a href="../9.slice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +2145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/big/" class="md-nav__link">
+      <a href="../big/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2073,7 +2166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/innerFunction/" class="md-nav__link">
+      <a href="../innerFunction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2094,7 +2187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/math/" class="md-nav__link">
+      <a href="../math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2115,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/string/" class="md-nav__link">
+      <a href="../string/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2141,19 +2234,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_7" >
         
           
           <label class="md-nav__link" for="__nav_5_3_7" id="__nav_5_3_7_label" tabindex="0">
@@ -2167,7 +2258,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_3_7">
             <span class="md-nav__icon md-icon"></span>
             Markdown
@@ -2178,30 +2269,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    使用pandoc转换md文件
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../markdown/convertMdBypandoc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2210,62 +2281,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pandoc" class="md-nav__link">
-    <span class="md-ellipsis">
-      pandoc下载
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#markdowndocdocx" class="md-nav__link">
-    <span class="md-ellipsis">
-      markdown转化为doc/docx
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#markdownhtml5" class="md-nav__link">
-    <span class="md-ellipsis">
-      markdown转换HTML5
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wordmarkdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      Word转换为markdown
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2278,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../emoji/" class="md-nav__link">
+      <a href="../../markdown/emoji/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2299,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD%E5%8F%8A%E5%9B%BE%E7%89%87%E6%A0%87%E9%A2%98/" class="md-nav__link">
+      <a href="../../markdown/markdown%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD%E5%8F%8A%E5%9B%BE%E7%89%87%E6%A0%87%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2320,7 +2335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/" class="md-nav__link">
+      <a href="../../markdown/markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6899,38 +6914,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pandoc" class="md-nav__link">
+  <a href="#goroutine" class="md-nav__link">
     <span class="md-ellipsis">
-      pandoc下载
+      goroutine
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#markdowndocdocx" class="md-nav__link">
+  <a href="#channel" class="md-nav__link">
     <span class="md-ellipsis">
-      markdown转化为doc/docx
+      channel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建通道
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#markdownhtml5" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      markdown转换HTML5
+      通道中数据的发送与接受
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#wordmarkdown" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Word转换为markdown
+      等待接受，直到数秒后
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6949,26 +6979,50 @@
               
 
 
-<h1 id="pandocmd">使用pandoc转换md文件<a class="headerlink" href="#pandocmd" title="Permanent link">&para;</a></h1>
-<h2 id="pandoc">pandoc下载<a class="headerlink" href="#pandoc" title="Permanent link">&para;</a></h2>
-<p><a href="https://pandoc.org/">pandoc官网</a></p>
-<h2 id="markdowndocdocx">markdown转化为doc/docx<a class="headerlink" href="#markdowndocdocx" title="Permanent link">&para;</a></h2>
-<ul>
-<li>通用命令</li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pandoc<span class="w"> </span>markdown.md<span class="w"> </span>-o<span class="w"> </span>document.docx
+<h1 id="18goroutinechannel">18.goroutine与channel<a class="headerlink" href="#18goroutinechannel" title="Permanent link">&para;</a></h1>
+<h2 id="goroutine">goroutine<a class="headerlink" href="#goroutine" title="Permanent link">&para;</a></h2>
+<p>go语言中，有一个称为goroutine的概念，这个概念和其他编程语言中的协程、进程和线程又相似之处，但又有所不同。  </p>
+<p>goroutine主要用于并发操作。  </p>
+<p>go语言中并发操作很简单，在要执行的函数或代码前加<code>go</code>关键词就行，其他部分无需修改，这也是go语言的一大优势。例如<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">go</span><span class="w"> </span><span class="nx">f</span><span class="p">(&lt;</span><span class="nx">argument</span><span class="p">&gt;)</span>
+</span></code></pre></div></p>
+<p>要注意，如果main函数结束了，无论goroutine是否结束，都会立即停止程序。  </p>
+<p>和其他语言一样，go的并发不能保证其执行先后顺序，即使按照特定顺序先后启动goroutine。  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>只要goroutine没有返回，其就会一直占用内存等资源。</p>
+</div>
+<h2 id="channel">channel<a class="headerlink" href="#channel" title="Permanent link">&para;</a></h2>
+<p>既然goroutine不能保证这个并发操作在main函数退出时继续，go语言设计了另一个工具，chanel。  </p>
+<p>channel的概念来源于老式气动管道传输系统。在go语言中，channel用于多个并发操作之间的数据传输。  </p>
+<h3 id="_1">创建通道<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">channel</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">dataType</span><span class="p">&gt;)</span><span class="w"> </span><span class="c1">// datatype为要传输的数据类型</span>
 </span></code></pre></div>
-<ul>
-<li>指定模板文件（读取docx里的标题、正文格式）</li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pandoc<span class="w"> </span>-s<span class="w"> </span>m.md<span class="w"> </span>--reference-doc<span class="w"> </span>custom-reference.docx<span class="w"> </span>-o<span class="w"> </span>m.docx
+<p>如果不使用make创建通道，通道变量的默认值就是<code>nil</code>。  </p>
+<h3 id="_2">通道中数据的发送与接受<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">99</span><span class="w"> </span><span class="c1">// 向通道发送值</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="c1">// 从通道接受值</span>
 </span></code></pre></div>
-<h2 id="markdownhtml5">markdown转换HTML5<a class="headerlink" href="#markdownhtml5" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pandoc<span class="w"> </span>-f<span class="w"> </span>markdown<span class="w"> </span>-t<span class="w"> </span>html5<span class="w"> </span>input.md<span class="w"> </span>-o<span class="w"> </span>output.html
-</span></code></pre></div>
-<h2 id="wordmarkdown">Word转换为markdown<a class="headerlink" href="#wordmarkdown" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pandoc<span class="w"> </span>document.docx<span class="w"> </span>-o<span class="w"> </span>markdown.md
-</span></code></pre></div>
+<p>当一个goroutine执行了发送操作，其会阻塞，直到这个值被接受。相同，执行接受操作的goroutine也会被阻塞，直到接受到数据。  </p>
+<p>数据之间的传输与接受是通过同一个channel对象完成的，即这个对象必须传给goroutine，goroutine向其发送或接收，main或者其他goroutine接受或发送。可以看出，channel其实是一个指针变量。  </p>
+<h3 id="_3">等待接受，直到数秒后<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>对于网络程序，我们在等待数秒后没有接收到任何响应，就认为其链接超时并主动断开连接。  </p>
+<p>go语言的标准库提供了处理上述问题的代码。标准库<code>time</code>中的<code>time.After(&lt;time&gt;)</code>会返回一个channel，并在指定时间后，go语言的运行时会向这个channel发送数据。其中传入变量为<code>time</code>为time包内置相关时间变量，如<code>time.Second</code>。  </p>
+<p>光有上述工具还不够，go语言提供了一个名为<code>select</code>的语句。这个语句的写法类似<code>switch</code>，不过每个case上都是一个通道，如果任意一个通道接受到数据，则执行相应case。下面是<code>select</code>语句的示例：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">go</span><span class="w"> </span><span class="nx">routineFunction</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nx">timeout</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">After</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">select</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">c</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="p">&lt;</span><span class="nx">statement</span><span class="p">&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">timeout</span><span class="p">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">&lt;</span><span class="nx">statement</span><span class="p">&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>select</code>语句如果不包含任何<code>case</code>，其将永远等待下去。  </p>
+</div>
 
 
 

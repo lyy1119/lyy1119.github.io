@@ -1,5 +1,10 @@
 [
   {
+    "title": "18.goroutine与channel",
+    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/18.goroutine/",
+    "date": "06/04"
+  },
+  {
     "title": "17.错误处理",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/17.error/",
     "date": "06/03"
@@ -17,11 +22,6 @@
   {
     "title": "1.简介",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/1.introduction/",
-    "date": "06/02"
-  },
-  {
-    "title": "16.指针",
-    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%BB%A3%E7%A0%81/go/16.pointer/",
     "date": "06/02"
   }
 ]
