@@ -1956,6 +1956,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      关闭通道
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      range遍历通道变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      互斥锁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="互斥锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      上锁与解锁
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6959,6 +7001,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      关闭通道
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      range遍历通道变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      互斥锁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="互斥锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      上锁与解锁
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7023,6 +7107,28 @@
 <p class="admonition-title">Warning</p>
 <p><code>select</code>语句如果不包含任何<code>case</code>，其将永远等待下去。  </p>
 </div>
+<h3 id="_4">关闭通道<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>对<code>chan</code>对象，go提供了一个函数<code>close(&lt;chanVariable&gt;)</code>。对通道对象执行该函数后，会将通道关闭。对关闭的通道写入数据会引发<code>panic</code>，读取则会获得对应数据类型的零值。  </p>
+<p>那么如果检查通道是否关闭呢？可以使用如下代码：<br />
+<div class="language-go highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">c</span>
+</span></code></pre></div></p>
+<p>当<code>ok</code>为<code>False</code>则代表通道关闭了。  </p>
+<h3 id="range">range遍历通道变量<a class="headerlink" href="#range" title="Permanent link">&para;</a></h3>
+<p>通道变量还可以使用<code>range</code>变量，其结果是直到通道被关闭前的所有输入值。   </p>
+<h2 id="_5">互斥锁<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>为了保证各goroutine不会同时访问（主要是写入）某一个共享值而引发错误，go语言中有一个称为互斥锁的概念。  </p>
+<p>互斥锁的实现在<code>sync</code>包中，通过类型<code>sync.Mutex</code>实现。  </p>
+<h3 id="_6">上锁与解锁<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">mu</span><span class="w"> </span><span class="nx">sync</span><span class="p">.</span><span class="nx">Mute</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nx">mu</span><span class="p">.</span><span class="nx">Lock</span><span class="p">()</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">mu</span><span class="p">.</span><span class="nx">Unlock</span><span class="p">()</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>解锁一般使用<code>defer</code>来实现。互斥锁通常在同一包中声明并使用。  </p>
+<p>当一个goroutine尝试对互斥锁对象执行上锁操作时，如果这个变量已经被上锁，则当前goroutine会被阻塞，直到其解锁。依据这个原理，从而实现了共享资源的安全访问。  </p>
+<p>通常，将一个互斥锁对象放在结构体中，组成一个共享资源对象。  </p>
 
 
 
