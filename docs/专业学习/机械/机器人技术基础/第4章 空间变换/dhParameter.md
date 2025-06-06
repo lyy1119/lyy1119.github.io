@@ -50,3 +50,33 @@ DH参数全称为Denavit and Hartenberg Parameter，是指由Denavit和Hartenber
 对于旋转关节，关节变量(JV,Joint Variable)为$\theta_i$；对于移动关节，变量为$b_i$。  
 
 所讨论的关节`i`的变量都是对于连杆`#i`进行的，没有连杆`#i`，讨论变量就没有意义。  
+
+## DH坐标变换
+
+对上述讨论的DH参数，我们可以看作如下变换：  
+
+1. 先沿着当前坐标系z轴正方向平移$b_i$
+2. 再沿着当前坐标系z轴旋转$\theta_i$
+3. 再沿着当前坐标系x轴正方向平移$a_i$
+4. 最后，沿着当前坐标系x轴旋转$\alpha_i$
+
+上述过程中，由于1、2和3、4这两组中两个步骤的分别是关于同一个轴的平移和旋转，所以先后并没有区别，并且可以合并。故对于一个确定了DH参数的机器人的某部位，其坐标变换的齐次矩阵为  
+
+$$
+T_i = 
+\left(
+    \begin{matrix}
+    \cos \theta_i & - \sin \theta_i & 0 & 0 \\
+    \sin \theta_i & \cos \theta_i & 0 & 0 \\
+    0 & 0 & 1 & b_i \\
+    0 & 0 & 0 & 1
+    \end{matrix}
+\right) \left(\begin{matrix} 1 & 0 & 0 & a_i \\
+0 & \cos \alpha_i & - \sin \alpha_i & 0 \\
+0 & \sin \alpha_i & \cos \alpha_i & 0 \\ 
+0 & 0 & 0 & 1\end{matrix}\right)
+$$
+
+则，对于整个机械臂，其变换为  
+
+$$ T = T_1 T_2 T_3 ... T_n $$

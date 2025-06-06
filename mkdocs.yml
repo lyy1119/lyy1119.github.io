@@ -1,6 +1,6 @@
-site_name: lyy19's Wiki
-site_author: lyy119
-site_description: "这是lyy19的个人博客，欢迎访问并在留言板留言。本站使用GitHub作为图床。"
+site_name: lycarus Wiki
+site_author: lycarus
+site_description: "这是lycarus的个人博客，欢迎访问并在留言板留言。"
 
 plugins:
     - search
