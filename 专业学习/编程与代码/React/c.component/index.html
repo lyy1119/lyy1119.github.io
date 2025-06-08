@@ -17,7 +17,7 @@
   <link rel="prev" href="../b.newProject/">
   
   
-  <link rel="next" href="../../TypeScript/quickStart/">
+  <link rel="next" href="../d.componentArg/">
   
   
   <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -1621,6 +1621,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3.创建组件
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1631,6 +1642,64 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用css
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建module
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d.componentArg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.向组件传值
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -6953,6 +7022,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用css
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建module
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
               </div>
             </div>
@@ -6985,6 +7080,35 @@
 <p>在编写好函数后，我们使用下面的语句将组件函数以标签的形式导出：<br />
 <div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">functionName</span><span class="o">&gt;</span>
 </span></code></pre></div></p>
+<h2 id="css">使用css<a class="headerlink" href="#css" title="Permanent link">&para;</a></h2>
+<p>和<code>Html+css+js</code>一样，我们可以使用Css美化我们的网页。但是，需要注意，在jsx中，由于class是js的保留关键字，所以html中的<code>class</code>更改为<code>className</code>。  </p>
+<p>在React中，同样有从外部文件导入和内联等写法。  </p>
+<p>此外，还可以和jsx放在同一文件夹下，称为<code>module</code>式使用。  </p>
+<p>要注意，如果在jsx中使用内联css，则需要写成js字典形式，且将属性名换成小驼峰，值必须是字符串。  </p>
+<h2 id="module">创建module<a class="headerlink" href="#module" title="Permanent link">&para;</a></h2>
+<p>为了达到复用的目的，最好在<code>src</code>下创建一个文件夹，用于存放组件。最好以组件名命名，如  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>src\
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    Button\
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        Button.jsx
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        Button.module.css
+</span></code></pre></div>
+<p>对于上述这个结构，其将按钮组件的jsx和css放置在一起。在<code>Button.jsx</code>中，需要使用如下代码导入并使用：  </p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">styles</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./Button.module.css&#39;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Button</span><span class="p">(){</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">button</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">button</span><span class="p">}&gt;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">            </span><span class="nx">click</span><span class="w"> </span><span class="nx">me</span><span class="p">.</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>在css中，应该这样写：<br />
+<div class="language-css highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="nc">button</span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="err">...</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>如此以来，组件便具有强的复用性。同时，jsx使用<code>{styles.button}</code>的方式指定类名，会在生成静态文件的时候生成一个哈希值作为类名，保证了组件之间不会冲突。即使不同组件下的css中拥有相同的类名。  </p>
 
 
 
