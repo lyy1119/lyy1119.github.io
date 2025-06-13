@@ -17,15 +17,15 @@
   <link rel="prev" href="../../%E7%AC%AC3%E7%AB%A0%20%E4%BC%A0%E6%84%9F%E5%99%A8/introduction/">
   
   
-  <link rel="next" href="../dhParameter/">
+  <link rel="next" href="../b.architecture/">
   
   
   <link rel="icon" href="../../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="4.2 机器人的结构 - lycarus' Knowlog">
-  <meta name="twitter:title" content="4.2 机器人的结构 - lycarus' Knowlog" />
+  <meta property="og:title" content="4.1 简介 - lycarus' Knowlog">
+  <meta name="twitter:title" content="4.1 简介 - lycarus' Knowlog" />
   
   
   <meta property="og:description" content="这是lycarus的个人博客，欢迎访问并在留言板留言。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>4.2 机器人的结构 - lycarus' Knowlog</title>
+  <title>4.1 简介 - lycarus' Knowlog</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#42" class="md-skip">
+      <a href="#41" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.2 机器人的结构
+              4.1 简介
             
           </span>
         </div>
@@ -1045,7 +1045,7 @@
         
   
   <span class="md-ellipsis">
-    4.2 机器人的结构
+    4.1 简介
   </span>
   
 
@@ -1063,11 +1063,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../dhParameter/" class="md-nav__link">
+      <a href="../b.architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4.4DH参数
+    4.2 机器人的结构
   </span>
   
 
@@ -1084,32 +1084,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4.1 简介
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../position/" class="md-nav__link">
+      <a href="../c.position/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     4.3 刚体的位置与姿态与变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d.dhParameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4DH参数
   </span>
   
 
@@ -7432,55 +7432,9 @@
               
 
 
-<h1 id="42">4.2 机器人的结构<a class="headerlink" href="#42" title="Permanent link">&para;</a></h1>
-<p>我们认为机器人主要由关节（joint）和连杆（link）组成。  </p>
-<p>主要的机器人关节、符号以及自由度如下表所示。  </p>
-<table>
-<thead>
-<tr>
-<th>关节名称</th>
-<th>符号</th>
-<th>自由度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>旋转关节</td>
-<td>R</td>
-<td>1</td>
-</tr>
-<tr>
-<td>平移关节</td>
-<td>P</td>
-<td>1</td>
-</tr>
-<tr>
-<td>螺旋关节</td>
-<td>H</td>
-<td>1</td>
-</tr>
-<tr>
-<td>单轴关节（可沿轴移动的旋转关节）</td>
-<td>C</td>
-<td>2</td>
-</tr>
-<tr>
-<td>球关节</td>
-<td>S</td>
-<td>3</td>
-</tr>
-<tr>
-<td>平面关节</td>
-<td>L</td>
-<td>3</td>
-</tr>
-<tr>
-<td>万向（关）节</td>
-<td>U</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
+<h1 id="41">4.1 简介<a class="headerlink" href="#41" title="Permanent link">&para;</a></h1>
+<p>这一章主要介绍了如果使用矩阵这个数学工具描述机器人的位置及其姿态。  </p>
+<p>本章中许多变换运算原理等都是基于线性代数的，这里就不过多讨论线性代数中的细节了。</p>
 
 
 

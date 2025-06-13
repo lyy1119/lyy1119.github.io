@@ -1030,49 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/architecture/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4.2 机器人的结构
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/dhParameter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4.4DH参数
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/introduction/" class="md-nav__link">
+      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/a.introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1093,11 +1051,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/position/" class="md-nav__link">
+      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/b.architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 机器人的结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/c.position/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     4.3 刚体的位置与姿态与变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%AC4%E7%AB%A0%20%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2/d.dhParameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4DH参数
   </span>
   
 
@@ -7570,6 +7570,9 @@
 <div class="arithmatex">\[ \vec{t_e} = \textbf{J} \dot{\theta} \]</div>
 <p>其中，$ \textbf{J} $ 是一个六行 <span class="arithmatex">\(n\)</span> 列的的矩阵。这个矩阵是一个 <strong>雅可比矩阵</strong> 。  </p>
 <h2 id="_2">雅可比矩阵的求解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>现在，我们需要求解这个雅可比矩阵。  </p>
+<p>很显然，根据DH参数，对于一般的关节，我们可以得到该坐标系到下一个坐标系的位置与姿态关系  </p>
+<!-- $$ \textbf{o}_{i+1} = \textbf{o}_i + b_i + \mathbf{\omega}_i \times {a}_{i} $$ -->
 
 
 

@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../architecture/">
+  <link rel="prev" href="../a.introduction/">
   
   
-  <link rel="next" href="../introduction/">
+  <link rel="next" href="../c.position/">
   
   
   <link rel="icon" href="../../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="4.4DH参数 - lycarus' Knowlog">
-  <meta name="twitter:title" content="4.4DH参数 - lycarus' Knowlog" />
+  <meta property="og:title" content="4.2 机器人的结构 - lycarus' Knowlog">
+  <meta name="twitter:title" content="4.2 机器人的结构 - lycarus' Knowlog" />
   
   
   <meta property="og:description" content="这是lycarus的个人博客，欢迎访问并在留言板留言。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>4.4DH参数 - lycarus' Knowlog</title>
+  <title>4.2 机器人的结构 - lycarus' Knowlog</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#44dh" class="md-skip">
+      <a href="#42" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.4DH参数
+              4.2 机器人的结构
             
           </span>
         </div>
@@ -1032,11 +1032,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+      <a href="../a.introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4.2 机器人的结构
+    4.1 简介
   </span>
   
 
@@ -1062,72 +1062,15 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    4.4DH参数
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    4.4DH参数
+    4.2 机器人的结构
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      机械臂上各坐标系的定义
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dh" class="md-nav__link">
-    <span class="md-ellipsis">
-      DH参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dh_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      DH坐标变换
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1141,32 +1084,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4.1 简介
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../position/" class="md-nav__link">
+      <a href="../c.position/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     4.3 刚体的位置与姿态与变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d.dhParameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4DH参数
   </span>
   
 
@@ -7476,41 +7419,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      机械臂上各坐标系的定义
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dh" class="md-nav__link">
-    <span class="md-ellipsis">
-      DH参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dh_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      DH坐标变换
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
               </div>
             </div>
@@ -7524,98 +7432,55 @@
               
 
 
-<h1 id="44dh">4.4DH参数<a class="headerlink" href="#44dh" title="Permanent link">&para;</a></h1>
-<p>DH参数全称为Denavit and Hartenberg Parameter，是指由Denavit和Hartenberg提出的，用于描述机器人（特别是机械臂）的姿态的参数。  </p>
-<p>具体来说，这些参数描述了机械臂各连杆之间的关系。下面以典型的多连杆机构，来讲述DH参数是如何定义的。  </p>
-<div align=center>  <!--使整体居中-->
-    <div style="width: 70%;">           <!--块级封装-->
-        <center>    <!--将图片和文字居中-->
-        <img src="https://raw.githubusercontent.com/lyy1119/Imgs/main/img/20250601140707.png"
-            alt="图片无法加载，请检查网络连接"/>
-        <br>        <!--换行-->
-        <div style="font-size: 12px;font-style:italic;">
-            PPT
-        </div>  <!--标题-->
-        </center>
-    </div>
-</div>
-
-<p>规定固定基座为连杆<code>#0</code>，与基座相连接的关节记作关节<code>1</code>，与关节<code>1</code>相连的下一个连杆记作连杆<code>#2</code>，以此类推。  </p>
-<p>显然，若有一关节记号为<code>i</code>，则该关节连接了连杆<code>#i-1</code>和连杆<code>#i</code>。  </p>
-<p>当机械臂中某部分绕着关节<code>i</code>旋转时，为了能使用数学语言描述其旋转前后的姿态，显然，我们需要一个矩阵，这个变换矩阵是一个关于关节<code>i</code>的旋转矩阵（假设其为旋转关节。对于其他类型关节，这样的描述也是相通的），那么，我们就需要一个坐标系，在这里例子中，这个坐标系的某一个轴显然通过该关节的轴。  </p>
-<h2 id="_1">机械臂上各坐标系的定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>对于任意一种关节，我们采用如下的定义来描述关于这个关节运动过程中的坐标系：  </p>
-<ol>
-<li>坐标系的<span class="arithmatex">\(Z\)</span>轴通过关节的轴</li>
-<li>坐标系的<span class="arithmatex">\(X\)</span>轴在上一个关节<span class="arithmatex">\(Z_{i-1}\)</span>与当前关节坐标系<span class="arithmatex">\(Z_i\)</span>的公法线上，且由<span class="arithmatex">\(Z_{i-1}\)</span>指向<span class="arithmatex">\(Z_{i}\)</span>，<span class="arithmatex">\(X\)</span>轴和<span class="arithmatex">\(Z\)</span>轴确定后，原点即确定</li>
-<li>坐标系的<span class="arithmatex">\(Y\)</span>轴由右手坐标系法则确定</li>
-</ol>
-<p>此外，还有下列特殊情况：  </p>
-<ol>
-<li>对于关节<code>1</code>，由于不存在关节<code>0</code>，故其坐标系只有<span class="arithmatex">\(Z\)</span>轴是确定的，原点和<span class="arithmatex">\(X\)</span>轴可以任意选取</li>
-<li>当两个相邻坐标系的<span class="arithmatex">\(Z\)</span>轴是平行的，其公法线不是唯一的</li>
-<li>当两个相邻坐标系的<span class="arithmatex">\(Z\)</span>轴相交，后者的<span class="arithmatex">\(X\)</span>轴也是不唯一的</li>
-</ol>
-<h2 id="dh">DH参数<a class="headerlink" href="#dh" title="Permanent link">&para;</a></h2>
-<p>对于任意一种关节，Denavit and Hartenberg认为有以下四种参数。对于特定的关节，某几个参数是固定的，称其为连杆参数：  </p>
+<h1 id="42">4.2 机器人的结构<a class="headerlink" href="#42" title="Permanent link">&para;</a></h1>
+<p>我们认为机器人主要由关节（joint）和连杆（link）组成。  </p>
+<p>主要的机器人关节、符号以及自由度如下表所示。  </p>
 <table>
 <thead>
 <tr>
+<th>关节名称</th>
 <th>符号</th>
-<th>名称</th>
-<th>定义</th>
+<th>自由度</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="arithmatex">\(b_i\)</span></td>
-<td>关节偏移</td>
-<td><span class="arithmatex">\(X_i\)</span>与<span class="arithmatex">\(X_{i+1}\)</span>在<span class="arithmatex">\(Z_i\)</span>上的距离</td>
+<td>旋转关节</td>
+<td>R</td>
+<td>1</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\theta_i\)</span></td>
-<td>关节角</td>
-<td>轴<span class="arithmatex">\(X_i\)</span>与<span class="arithmatex">\(X_{i+1}\)</span>的夹角</td>
+<td>平移关节</td>
+<td>P</td>
+<td>1</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(a_i\)</span></td>
-<td>连杆长度</td>
-<td>轴<span class="arithmatex">\(Z_i\)</span>与轴<span class="arithmatex">\(Z_{i+1}\)</span>在<span class="arithmatex">\(X_{i+1}\)</span>上的距离</td>
+<td>螺旋关节</td>
+<td>H</td>
+<td>1</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\alpha_i\)</span></td>
-<td>转角</td>
-<td>两<span class="arithmatex">\(Z\)</span>轴之间的转角，<span class="arithmatex">\(Z_i\)</span>和<span class="arithmatex">\(Z_{i+1}\)</span>轴在垂直于<span class="arithmatex">\(X_{i+1}\)</span>轴平面上的夹角</td>
+<td>单轴关节（可沿轴移动的旋转关节）</td>
+<td>C</td>
+<td>2</td>
+</tr>
+<tr>
+<td>球关节</td>
+<td>S</td>
+<td>3</td>
+</tr>
+<tr>
+<td>平面关节</td>
+<td>L</td>
+<td>3</td>
+</tr>
+<tr>
+<td>万向（关）节</td>
+<td>U</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
-<p>对于旋转关节，关节变量(JV,Joint Variable)为<span class="arithmatex">\(\theta_i\)</span>；对于移动关节，变量为<span class="arithmatex">\(b_i\)</span>。  </p>
-<p>所讨论的关节<code>i</code>的变量都是对于连杆<code>#i</code>进行的，没有连杆<code>#i</code>，讨论变量就没有意义。  </p>
-<h2 id="dh_1">DH坐标变换<a class="headerlink" href="#dh_1" title="Permanent link">&para;</a></h2>
-<p>对上述讨论的DH参数，我们可以看作如下变换：  </p>
-<ol>
-<li>先沿着当前坐标系z轴正方向平移<span class="arithmatex">\(b_i\)</span></li>
-<li>再沿着当前坐标系z轴旋转<span class="arithmatex">\(\theta_i\)</span></li>
-<li>再沿着当前坐标系x轴正方向平移<span class="arithmatex">\(a_i\)</span></li>
-<li>最后，沿着当前坐标系x轴旋转<span class="arithmatex">\(\alpha_i\)</span></li>
-</ol>
-<p>上述过程中，由于1、2和3、4这两组中两个步骤的分别是关于同一个轴的平移和旋转，所以先后并没有区别，并且可以合并。故对于一个确定了DH参数的机器人的某部位，其坐标变换的齐次矩阵为  </p>
-<div class="arithmatex">\[
-T_i = 
-\left(
-    \begin{matrix}
-    \cos \theta_i &amp; - \sin \theta_i &amp; 0 &amp; 0 \\
-    \sin \theta_i &amp; \cos \theta_i &amp; 0 &amp; 0 \\
-    0 &amp; 0 &amp; 1 &amp; b_i \\
-    0 &amp; 0 &amp; 0 &amp; 1
-    \end{matrix}
-\right) \left(\begin{matrix} 1 &amp; 0 &amp; 0 &amp; a_i \\
-0 &amp; \cos \alpha_i &amp; - \sin \alpha_i &amp; 0 \\
-0 &amp; \sin \alpha_i &amp; \cos \alpha_i &amp; 0 \\ 
-0 &amp; 0 &amp; 0 &amp; 1\end{matrix}\right)
-\]</div>
-<p>则，对于整个机械臂，其变换为  </p>
-<div class="arithmatex">\[ T = T_1 T_2 T_3 ... T_n \]</div>
 
 
 
