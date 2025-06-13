@@ -17,3 +17,5 @@ setVariable("value")
 当然，`variable`和`setVariable`可以是其他任何名字。不过习惯上，将其命名为`变量名`和`set变量名`这种形式，方便记忆和使用。  
 
 同时，`useState()`也可以传入值，传入的值会作为`variable`的初始值。  
+
+**可以结合Onchange实现一些表单的实时显示功能等**
