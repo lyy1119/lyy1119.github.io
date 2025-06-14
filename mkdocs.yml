@@ -42,7 +42,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/lyy1119
     - icon: fontawesome/solid/envelope
-      link: mailto:lyy2286301015@126.com
+      link: mailto:me@lycarus.cn
 
 theme:
   name: material
