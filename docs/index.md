@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <i class="fab fa-github"></i>
                 GitHub
             </a>
-            <a href="mailto:lyy2286301015@126.com" class="profile-link">
+            <a href="mailto:me@lycarus.cn" class="profile-link">
                 <i class="fas fa-envelope"></i>
                 Email
             </a>
