@@ -1,5 +1,10 @@
 [
   {
+    "title": "2.矩阵基础——行列式",
+    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/b.determinant/",
+    "date": "06/17"
+  },
+  {
     "title": "11.VPN技术",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/k.vpn/",
     "date": "06/17"
@@ -17,11 +22,6 @@
   {
     "title": "6.4速度分析",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E6%A2%B0/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC6%E7%AB%A0%20%E8%BF%90%E5%8A%A8%E5%AD%A6/d.velocity/",
-    "date": "06/13"
-  },
-  {
-    "title": "9.防火墙技术",
-    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/i.firewall/",
     "date": "06/13"
   }
 ]
