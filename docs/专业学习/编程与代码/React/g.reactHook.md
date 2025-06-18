@@ -19,3 +19,20 @@ setVariable("value")
 同时，`useState()`也可以传入值，传入的值会作为`variable`的初始值。  
 
 **可以结合Onchange实现一些表单的实时显示功能等**
+
+### 更改Object
+
+如果使用`useState`创建了一个Objetc的hook，在使用set函数时需要这样做：
+
+```js
+const [obj, setObj] = useState({a:1, b:2});
+
+setObj({...obj, b:3}); // 更改b
+setObj({...obj, a:3}); // 更改a
+setObj({a:4, b:5});   // 同时更改a和b
+```
+
+!!! note
+    上述代码中的`...obj`表示将obj展开。因为后面又出现了一个重复的属性，js在处理时会将后者拿来覆盖原属性，故实现了更改Object中的某个属性的功能。  
+
+    若不加`...obj`，则最终修改结果只是`setObj`中写明的属性。  
