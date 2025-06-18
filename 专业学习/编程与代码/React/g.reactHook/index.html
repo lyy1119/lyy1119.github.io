@@ -1981,6 +1981,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="useState()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      更改Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4168,6 +4183,27 @@
   
   <span class="md-ellipsis">
     11.VPN技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/l.ACL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12.ACL技术
   </span>
   
 
@@ -7532,6 +7568,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="useState()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      更改Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -7560,6 +7611,19 @@
 <p>当然，<code>variable</code>和<code>setVariable</code>可以是其他任何名字。不过习惯上，将其命名为<code>变量名</code>和<code>set变量名</code>这种形式，方便记忆和使用。  </p>
 <p>同时，<code>useState()</code>也可以传入值，传入的值会作为<code>variable</code>的初始值。  </p>
 <p><strong>可以结合Onchange实现一些表单的实时显示功能等</strong></p>
+<h3 id="object">更改Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h3>
+<p>如果使用<code>useState</code>创建了一个Objetc的hook，在使用set函数时需要这样做：</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">setObj</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">({</span><span class="nx">a</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="mf">2</span><span class="p">});</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">setObj</span><span class="p">({...</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="mf">3</span><span class="p">});</span><span class="w"> </span><span class="c1">// 更改b</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nx">setObj</span><span class="p">({...</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="mf">3</span><span class="p">});</span><span class="w"> </span><span class="c1">// 更改a</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">setObj</span><span class="p">({</span><span class="nx">a</span><span class="o">:</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="mf">5</span><span class="p">});</span><span class="w">   </span><span class="c1">// 同时更改a和b</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>上述代码中的<code>...obj</code>表示将obj展开。因为后面又出现了一个重复的属性，js在处理时会将后者拿来覆盖原属性，故实现了更改Object中的某个属性的功能。  </p>
+<p>若不加<code>...obj</code>，则最终修改结果只是<code>setObj</code>中写明的属性。  </p>
+</div>
 
 
 
