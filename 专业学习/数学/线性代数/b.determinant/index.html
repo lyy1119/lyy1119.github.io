@@ -615,6 +615,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      代数余子式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       计算
     </span>
   </a>
@@ -7585,6 +7594,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      代数余子式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       计算
     </span>
   </a>
@@ -7607,7 +7625,7 @@
 
 
 <h1 id="2">2.矩阵基础——行列式<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
-<p>行列式是一个由 <span class="arithmatex">\(n\)</span> 行 <span class="arithmatex">\(n\)</span> 列个数组成的数阵。习惯上记作 <span class="arithmatex">\(\mathbf{A}\)</span> 。  </p>
+<p>行列式是一个由 <span class="arithmatex">\(n\)</span> 行 <span class="arithmatex">\(n\)</span> 列个数组成的数阵。习惯上记作 <span class="arithmatex">\(\mathbf{D}\)</span> 。  </p>
 <p>以下是一个简单的行列式的写法  </p>
 <div class="arithmatex">\[
 \left|
@@ -7633,9 +7651,21 @@
 <h2 id="_1">本质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>行列式的本质其实是一个数，行列式只不过是记录了如何计算这个数。  </p>
 <h2 id="_2">行列式的重要概念——余子式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>当我们讨论一个行列式的 <strong>余子式</strong> 时，我们是对这个行列式的某行某列的具体元素讨论的。  </p>
-<p>习惯上，将余子式记作 </p>
-<h2 id="_3">计算<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>当我们讨论一个行列式的 <strong>余子式</strong> 时，我们是对这个行列式的某行某列的具体元素讨论的。即只有当我们指定某行某列元素（<span class="arithmatex">\(a_{ij}\)</span>）时，才有余子式这个概念。  </p>
+<p>习惯上，对于行列式 <span class="arithmatex">\(\mathbf{D}\)</span> 的 <span class="arithmatex">\(a_{ij}\)</span> ，将其余子式记作 <span class="arithmatex">\(\mathbf{M_{ij}}\)</span> 。对于上述的行列式，其余子式 <span class="arithmatex">\(\mathbf{M_{ij}}\)</span> 是这样的，将 <span class="arithmatex">\(\mathbf{D}\)</span> 中与 <span class="arithmatex">\(a_{ij}\)</span> 同行或同列的元素删去，剩余的元素组成的行列式即 <span class="arithmatex">\(\mathbf{M_{ij}}\)</span> 。  </p>
+<p>即  </p>
+<div class="arithmatex">\[ \mathbf{M_{ij}} = \left|\begin{matrix}
+    a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 \, j-1} &amp; a_{1 \, j+1} \cdots &amp; a_{1n} \\
+    a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 \, j-1} &amp; a_{2 \, j+1} \cdots &amp; a_{2n} \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+    a_{i-1 \, 1} &amp; a_{i-1 \, 2} &amp; \cdots &amp; a_{i-1 \, j-1} &amp; a_{i-1 \, j+1} \cdots &amp; a_{i-1 \, n} \\
+    a_{i+1 \, 1} &amp; a_{i+1 \, 2} &amp; \cdots &amp; a_{i+1 \, j-1} &amp; a_{i+1 \, j+1} \cdots &amp; a_{i+1 \, n} \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+    a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{n \, j-1} &amp; a_{n \, j+1} \cdots &amp; a_{nn} \\
+\end{matrix}\right| \]</div>
+<h2 id="_3">代数余子式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>代数余子式是用于展开和计算行列式的重要概念，</p>
+<h2 id="_4">计算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>行列式的计算如下：  </p>
 <div class="arithmatex">\[  \]</div>
 
