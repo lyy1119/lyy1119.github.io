@@ -1998,6 +1998,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      useEffect()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7585,6 +7594,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      useEffect()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7624,6 +7642,14 @@
 <p>上述代码中的<code>...obj</code>表示将obj展开。因为后面又出现了一个重复的属性，js在处理时会将后者拿来覆盖原属性，故实现了更改Object中的某个属性的功能。  </p>
 <p>若不加<code>...obj</code>，则最终修改结果只是<code>setObj</code>中写明的属性。  </p>
 </div>
+<h2 id="useeffect">useEffect()<a class="headerlink" href="#useeffect" title="Permanent link">&para;</a></h2>
+<p>useEffect()可以实现监控组件中的某个或某些元素并在元素修改时执行某个函数。  </p>
+<p><code>useEffect()</code>的用法大致如下：  </p>
+<ol>
+<li>useEffect(() =&gt; {}) 当前组件重新渲染时执行（箭头）函数</li>
+<li>useEffect(() =&gt; {}, []) 当前组件被加载时执行函数</li>
+<li>useEffect(() =&gt; {}, [value]) 当value被改变，以及当前组件加载时执行函数</li>
+</ol>
 
 
 
