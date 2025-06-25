@@ -2007,6 +2007,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      useContext()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="useContext()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provider-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider-Consumer模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7603,6 +7627,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      useContext()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="useContext()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provider-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider-Consumer模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7650,6 +7698,34 @@
 <li>useEffect(() =&gt; {}, []) 当前组件被加载时执行函数</li>
 <li>useEffect(() =&gt; {}, [value]) 当value被改变，以及当前组件加载时执行函数</li>
 </ol>
+<h2 id="usecontext">useContext()<a class="headerlink" href="#usecontext" title="Permanent link">&para;</a></h2>
+<p><code>useContext()</code>可以在不传递参数的情况下，让某个组件中的子组件，或者子组件的子组件使用当前组件的某个变量。  </p>
+<h3 id="provider-consumer">Provider-Consumer模型<a class="headerlink" href="#provider-consumer" title="Permanent link">&para;</a></h3>
+<p><code>useContext()</code>的功能通过Provider和Consumer实现。  </p>
+<p>提供变量及其值得组件称为<code>Provider</code>，而接收和使用值的组件称为<code>Consumer</code>。且使用时，子组件必须在<code>&lt;MyContext/Provider value=&gt;</code>  </p>
+<p>若当前组件需要提供一个名为<code>user</code>的变量，则在这个组件中，你应该这样写：  </p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">createContext</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">UserContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">creaftContext</span><span class="p">();</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">xxx</span><span class="p">(){</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="nx">setUser</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">();</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(&lt;&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">UserContext</span><span class="p">.</span><span class="na">Provider</span><span class="w"> </span><span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">user</span><span class="p">}&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Child</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">UserContext</span><span class="p">.</span><span class="na">Provider</span><span class="p">&gt;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">&lt;/&gt;);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>这样，在子组件中，便可以使用这个变量，无论嵌套多少层。  </p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">useContext</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w">  </span><span class="nx">UserContext</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;Provider.jsx&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 即上个文件的路径名</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">xxx</span><span class="p">(){</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useCOntext</span><span class="p">(</span><span class="nx">UserConetxt</span><span class="p">);</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(...);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
