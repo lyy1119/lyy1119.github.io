@@ -74,7 +74,7 @@ export default function xxx(){
 }
 ```
 
-这样，在子组件中，便可以使用这个变量，无论嵌套多少层。  
+这样，在子组件中，便可以使用这个变量，无论嵌套多少层。也可以传入值，也可以有多个`Consumer`。     
 
 ```jsx
 import React, {useContext} from 'react';
