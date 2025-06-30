@@ -85,3 +85,17 @@ export default function xxx(){
     return (...);
 }
 ```
+
+## useRef()
+
+`useRef()`是用于改变某个值而不渲染画面的需求的。  
+
+`useState()`在每次调用set函数后会重新渲染整个画面，但有时候我们并不像这样做。我们可以使用`useRef()`。`useRef()`会返回一个obj，且只有一个名为`current`的属性。若向`useRef()`传递参数，则会存储在`current`中。  
+
+`useRef()`通常用做引用html元素，如`input`、`audio`等。  
+
+```html
+<input ref={inputRef} />
+```
+
+使用如上html之后，便可以在js中使用`inputRef`去访问这个html元素。  
