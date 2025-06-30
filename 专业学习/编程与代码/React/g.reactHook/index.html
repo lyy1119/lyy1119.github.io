@@ -2031,6 +2031,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useref" class="md-nav__link">
+    <span class="md-ellipsis">
+      useRef()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7651,6 +7660,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useref" class="md-nav__link">
+    <span class="md-ellipsis">
+      useRef()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7726,6 +7744,13 @@
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(...);</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
 </span></code></pre></div>
+<h2 id="useref">useRef()<a class="headerlink" href="#useref" title="Permanent link">&para;</a></h2>
+<p><code>useRef()</code>是用于改变某个值而不渲染画面的需求的。  </p>
+<p><code>useState()</code>在每次调用set函数后会重新渲染整个画面，但有时候我们并不像这样做。我们可以使用<code>useRef()</code>。<code>useRef()</code>会返回一个obj，且只有一个名为<code>current</code>的属性。若向<code>useRef()</code>传递参数，则会存储在<code>current</code>中。  </p>
+<p><code>useRef()</code>通常用做引用html元素，如<code>input</code>、<code>audio</code>等。  </p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">ref</span><span class="o">=</span><span class="s">{inputRef}</span> <span class="p">/&gt;</span>
+</span></code></pre></div>
+<p>使用如上html之后，便可以在js中使用<code>inputRef</code>去访问这个html元素。  </p>
 
 
 
