@@ -14,7 +14,7 @@
   
   
   
-  <link rel="prev" href="../certbotFAQ/">
+  <link rel="prev" href="../../Windows/windows_11DoesNotHaveASandboxFeature/">
   
   
   <link rel="next" href="../../chrome/preventHttpAutoHttps/">
@@ -24,8 +24,8 @@
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="Challenge模式申请证书 - lycarus' Knowlog">
-  <meta name="twitter:title" content="Challenge模式申请证书 - lycarus' Knowlog" />
+  <meta property="og:title" content="certbot简易手册（Nginx） - lycarus' Knowlog">
+  <meta name="twitter:title" content="certbot简易手册（Nginx） - lycarus' Knowlog" />
   
   
   <meta property="og:description" content="这是lycarus的个人博客，欢迎访问并在留言板留言。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>Challenge模式申请证书 - lycarus' Knowlog</title>
+  <title>certbot简易手册（Nginx） - lycarus' Knowlog</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#challenge" class="md-skip">
+      <a href="#certbotnginx" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Challenge模式申请证书
+              certbot简易手册（Nginx）
             
           </span>
         </div>
@@ -5628,27 +5628,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../certbotFAQ/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    certbot使用中的常见问题
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -5665,7 +5644,7 @@
           
   
   <span class="md-ellipsis">
-    Challenge模式申请证书
+    certbot简易手册（Nginx）
   </span>
   
 
@@ -5676,7 +5655,7 @@
         
   
   <span class="md-ellipsis">
-    Challenge模式申请证书
+    certbot简易手册（Nginx）
   </span>
   
 
@@ -5698,27 +5677,141 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      指定challenge模式申请证书
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#txt-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      创建TXT DNS记录
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      其他
+      一、安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 更新系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-certbot-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 安装 Certbot 与 Nginx 插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、申请证书
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、申请证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      方式一：HTTP-01 验证（自动配置，需公网可访问）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方式一：HTTP-01 验证（自动配置，需公网可访问）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      多域名示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      方式二：DNS-01 验证（手动模式，可用于内网或通配符）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方式二：DNS-01 验证（手动模式，可用于内网或通配符）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      检查 DNS 是否生效
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、常用命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、证书路径
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、Nginx 配置示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、自动续期
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、常见问题
     </span>
   </a>
   
@@ -7671,27 +7764,141 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      指定challenge模式申请证书
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#txt-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      创建TXT DNS记录
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      其他
+      一、安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 更新系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-certbot-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 安装 Certbot 与 Nginx 插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、申请证书
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、申请证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      方式一：HTTP-01 验证（自动配置，需公网可访问）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方式一：HTTP-01 验证（自动配置，需公网可访问）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      多域名示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      方式二：DNS-01 验证（手动模式，可用于内网或通配符）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方式二：DNS-01 验证（手动模式，可用于内网或通配符）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      检查 DNS 是否生效
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、常用命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、证书路径
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、Nginx 配置示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、自动续期
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、常见问题
     </span>
   </a>
   
@@ -7712,23 +7919,136 @@
               
 
 
-<h1 id="challenge">Challenge模式申请证书<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h1>
-<p>challenge模式申请证书能避开防火墙限制，也就是无论是否能访问通，都可以申请证书。不够也有缺点：只能手动刷新证书。  </p>
-<p>| <a href="https://blog.csdn.net/davenian/article/details/146078319">原文连接</a> |  </p>
-<h2 id="challenge_1">指定challenge模式申请证书<a class="headerlink" href="#challenge_1" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--manual<span class="w"> </span>--preferred-challenges<span class="w"> </span>dns<span class="w"> </span>-d<span class="w"> </span>&lt;you.domain&gt;
+<h1 id="certbotnginx">certbot简易手册（Nginx）<a class="headerlink" href="#certbotnginx" title="Permanent link">&para;</a></h1>
+<h2 id="_1">一、安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 更新系统<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
 </span></code></pre></div>
-<p>或者不指定域名，让certbot自动检测<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--manual<span class="w"> </span>--preferred-challenges
-</span></code></pre></div></p>
-<h2 id="txt-dns">创建TXT DNS记录<a class="headerlink" href="#txt-dns" title="Permanent link">&para;</a></h2>
-<p>执行<code>preferred-challenges</code>后，会看到提示，让你创建一个指定域名的TXT DNS记录，在DNS解析中创建即可，不过和其他域名解析一样，需要等待生效。在生效前，不要继续certbot。  </p>
-<p>你可以使用以下bash语句来检测：<br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>dig<span class="w"> </span>&lt;domain.specific&gt;<span class="w"> </span>TXT<span class="w"> </span>+short<span class="p">;</span><span class="w"> </span>date<span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
-</span></code></pre></div></p>
-<p>直到看到返回指定txt内容。就可以继续了。  </p>
-<h2 id="_1">其他<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>证书3月一换，需要手动重复上述操作。  </p>
+<h3 id="2-certbot-nginx">2. 安装 Certbot 与 Nginx 插件<a class="headerlink" href="#2-certbot-nginx" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-nginx<span class="w"> </span>-y
+</span></code></pre></div>
+<h2 id="_2">二、申请证书<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="http-01">方式一：HTTP-01 验证（自动配置，需公网可访问）<a class="headerlink" href="#http-01" title="Permanent link">&para;</a></h3>
+<p>适用场景：公网可访问 80/443 端口的服务器</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx
+</span></code></pre></div>
+<p>执行后：</p>
+<ul>
+<li>Certbot 会检测 Nginx 配置中的域名</li>
+<li>自动与 Let’s Encrypt 交互，申请证书</li>
+<li>自动修改 Nginx 配置并启用 HTTPS</li>
+</ul>
+<h4 id="_3">多域名示例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx<span class="w"> </span>-d<span class="w"> </span>example.com<span class="w"> </span>-d<span class="w"> </span>www.example.com
+</span></code></pre></div>
+<h3 id="dns-01">方式二：DNS-01 验证（手动模式，可用于内网或通配符）<a class="headerlink" href="#dns-01" title="Permanent link">&para;</a></h3>
+<p>适用场景：</p>
+<ul>
+<li>服务器无法公网访问</li>
+<li>需要申请通配符证书（<code>*.example.com</code>）</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--manual<span class="w"> </span>--preferred-challenges<span class="w"> </span>dns<span class="w"> </span>-d<span class="w"> </span>example.com<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;*.example.com&#39;</span>
+</span></code></pre></div>
+<p>执行后，Certbot 会提示你添加 DNS TXT 记录，例如：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>_acme-challenge.example.com   TXT   abcd1234efgh5678ijkl
+</span></code></pre></div>
+<h4 id="dns">检查 DNS 是否生效<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>dig<span class="w"> </span>-t<span class="w"> </span>txt<span class="w"> </span>_acme-challenge.example.com
+</span></code></pre></div>
+<p>确认 TXT 记录正确解析后，回到 Certbot 界面按 <strong>Enter</strong> 继续，生成证书。</p>
+<h2 id="_4">三、常用命令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>查看证书</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certificates
+</span></code></pre></div>
+<ul>
+<li><strong>手动续期</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>renew
+</span></code></pre></div>
+<ul>
+<li><strong>测试续期</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>renew<span class="w"> </span>--dry-run
+</span></code></pre></div>
+<ul>
+<li><strong>仅申请证书，不改 Nginx 配置</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--nginx
+</span></code></pre></div>
+<h2 id="_5">四、证书路径<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>证书默认存放在：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>/etc/letsencrypt/live/你的域名/
+</span></code></pre></div>
+<p>常用文件：</p>
+<ul>
+<li><code>fullchain.pem</code> —— 公钥证书</li>
+<li><code>privkey.pem</code> —— 私钥</li>
+</ul>
+<h2 id="nginx">五、Nginx 配置示例<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
+<p>Certbot 自动配置后，Nginx 配置类似：</p>
+<div class="language-nginx highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">example.com</span><span class="w"> </span><span class="s">www.example.com</span><span class="p">;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="kn">return</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="p">;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">example.com</span><span class="w"> </span><span class="s">www.example.com</span><span class="p">;</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="kn">ssl_certificate</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/example.com/fullchain.pem</span><span class="p">;</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="kn">ssl_certificate_key</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/example.com/privkey.pem</span><span class="p">;</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">        </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/html</span><span class="p">;</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">        </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="_6">六、自动续期<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>Certbot 安装时会自动添加定时任务或 systemd timer 来续期证书。
+手动检查：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>systemctl<span class="w"> </span>list-timers<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>certbot
+</span></code></pre></div>
+<h2 id="_7">七、常见问题<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>80/443 端口不可访问，申请失败</strong></p>
+</li>
+<li>
+<p>检查防火墙/安全组规则</p>
+</li>
+<li>
+<p>确认 Nginx 监听 80 端口</p>
+</li>
+<li>
+<p><strong>申请通配符证书</strong></p>
+</li>
+<li>
+<p>只能用 DNS-01 验证</p>
+</li>
+<li>
+<p>示例：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--manual<span class="w"> </span>--preferred-challenges<span class="w"> </span>dns<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;*.example.com&#39;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>内网环境申请</strong></p>
+</li>
+<li>
+<p>使用 DNS-01 验证</p>
+</li>
+<li>不依赖公网访问，只需能修改 DNS</li>
+</ol>
+<p>📌 <strong>总结：</strong></p>
+<ul>
+<li><strong>公网可访问</strong> → <code>sudo certbot --nginx</code>（自动配置）</li>
+<li><strong>内网 / 通配符</strong> → <code>sudo certbot certonly --manual --preferred-challenges dns</code>（手动模式）</li>
+<li><strong>续期</strong> → <code>sudo certbot renew</code></li>
+</ul>
 
 
 
