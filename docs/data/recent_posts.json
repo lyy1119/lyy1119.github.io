@@ -1,5 +1,10 @@
 [
   {
+    "title": "Arch安装VSCode",
+    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/VSCode/arch/",
+    "date": "08/18"
+  },
+  {
     "title": "Chrome在Wayland下输入法无法使用",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/chrome/wayland%E8%BE%93%E5%85%A5%E6%B3%95%E9%97%AE%E9%A2%98/",
     "date": "08/18"
@@ -17,11 +22,6 @@
   {
     "title": "certbot简易手册（Nginx）",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/certbot/certbot%E7%AE%80%E6%98%93%E6%89%8B%E5%86%8C/",
-    "date": "08/16"
-  },
-  {
-    "title": "tail命令常用指南",
-    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/linux%E5%91%BD%E4%BB%A4tail/",
     "date": "08/16"
   }
 ]
