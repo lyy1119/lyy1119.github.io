@@ -14,18 +14,18 @@
   
   
   
-  <link rel="prev" href="../installNvm/">
+  <link rel="prev" href="../cursesDisapper/">
   
   
-  <link rel="next" href="../locationOfSudoer/">
+  <link rel="next" href="../ibusInput/">
   
   
   <link rel="icon" href="../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
   <!-- 自定义 -->
   
-  <meta property="og:title" content="tail命令常用指南 - lycarus' Knowlog">
-  <meta name="twitter:title" content="tail命令常用指南 - lycarus' Knowlog" />
+  <meta property="og:title" content="修改Linux使用的Dns服务器 - lycarus' Knowlog">
+  <meta name="twitter:title" content="修改Linux使用的Dns服务器 - lycarus' Knowlog" />
   
   
   <meta property="og:description" content="这是lycarus的个人博客，欢迎访问并在留言板留言。">
@@ -42,7 +42,7 @@
   
   
   
-  <title>tail命令常用指南 - lycarus' Knowlog</title>
+  <title>修改Linux使用的Dns服务器 - lycarus' Knowlog</title>
   
   
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#tail" class="md-skip">
+      <a href="#linuxdns" class="md-skip">
         跳转至
       </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              tail命令常用指南
+              修改Linux使用的Dns服务器
             
           </span>
         </div>
@@ -4907,10 +4907,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../editNameserver/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    修改Linux使用的Dns服务器
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4919,6 +4939,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.临时修改
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.修改网卡的dns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      来源&amp;参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4970,30 +5037,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    tail命令常用指南
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../linux%E5%91%BD%E4%BB%A4tail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5002,173 +5049,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 基本功能
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 常用选项
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 常用选项">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      -n 指定行数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-n-n-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      -n +N 从第 N 行开始
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-f" class="md-nav__link">
-    <span class="md-ellipsis">
-      -f 实时跟踪
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-n-num-f" class="md-nav__link">
-    <span class="md-ellipsis">
-      -n NUM -f 结合使用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-f_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      -F 智能跟踪
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 常见应用场景
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 常见应用场景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      (1) 查看日志文件末尾
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      (2) 实时监控日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-grep" class="md-nav__link">
-    <span class="md-ellipsis">
-      (3) 结合 grep 过滤
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      (4) 实时统计
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      (5) 程序输入管道
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 使用技巧
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 小结
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -8219,145 +8099,25 @@
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 基本功能
+      1.临时修改
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2dns" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 常用选项
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 常用选项">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      -n 指定行数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-n-n-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      -n +N 从第 N 行开始
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-f" class="md-nav__link">
-    <span class="md-ellipsis">
-      -f 实时跟踪
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-n-num-f" class="md-nav__link">
-    <span class="md-ellipsis">
-      -n NUM -f 结合使用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-f_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      -F 智能跟踪
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 常见应用场景
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 常见应用场景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      (1) 查看日志文件末尾
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      (2) 实时监控日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-grep" class="md-nav__link">
-    <span class="md-ellipsis">
-      (3) 结合 grep 过滤
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      (4) 实时统计
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      (5) 程序输入管道
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 使用技巧
+      2.修改网卡的dns
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5_1" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 小结
+      来源&amp;参考
     </span>
   </a>
   
@@ -8378,79 +8138,19 @@
               
 
 
-<h1 id="tail">tail命令常用指南<a class="headerlink" href="#tail" title="Permanent link">&para;</a></h1>
-<h2 id="1">1. 基本功能<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><code>tail</code> 用于**查看文件的末尾部分**。默认显示文件最后 <strong>10 行</strong>。</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>tail<span class="w"> </span>filename
+<h1 id="linuxdns">修改Linux使用的Dns服务器<a class="headerlink" href="#linuxdns" title="Permanent link">&para;</a></h1>
+<h2 id="1">1.临时修改<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>直接编辑<code>/etc/resolv.conf</code>  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nameserver 8.8.8.8 #修改成你的主DNS地址
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>nameserver 8.8.4.4 #修改成你的备用DNS地址
 </span></code></pre></div>
-<h2 id="2">2. 常用选项<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<h3 id="-n"><strong><code>-n</code></strong> 指定行数<a class="headerlink" href="#-n" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">20</span><span class="w"> </span>filename
-</span></code></pre></div>
-<p>显示文件最后 <strong>20 行</strong>。</p>
-<h3 id="-n-n-n"><strong><code>-n +N</code></strong> 从第 N 行开始<a class="headerlink" href="#-n-n-n" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tail<span class="w"> </span>-n<span class="w"> </span>+100<span class="w"> </span>filename
-</span></code></pre></div>
-<p>从第 **100 行**开始，显示到文件结尾。</p>
-<h3 id="-f"><strong><code>-f</code></strong> 实时跟踪<a class="headerlink" href="#-f" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>filename
-</span></code></pre></div>
-<p>显示文件末尾，并持续输出新内容。常用于**实时监控日志**。</p>
-<h3 id="-n-num-f"><strong><code>-n NUM -f</code></strong> 结合使用<a class="headerlink" href="#-n-num-f" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">50</span><span class="w"> </span>-f<span class="w"> </span>filename
-</span></code></pre></div>
-<p>先显示最后 <strong>50 行</strong>，再继续跟踪新增内容。</p>
-<h3 id="-f_1"><strong><code>-F</code></strong> 智能跟踪<a class="headerlink" href="#-f_1" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tail<span class="w"> </span>-F<span class="w"> </span>filename
-</span></code></pre></div>
-<p>类似 <code>-f</code>，但能自动处理**日志轮转**（文件重命名或替换时仍会继续跟踪）。</p>
-<h2 id="3">3. 常见应用场景<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<h3 id="1_1"><strong>(1) 查看日志文件末尾</strong><a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">100</span><span class="w"> </span>/var/log/syslog
-</span></code></pre></div>
-<p>查看系统日志最后 100 行。</p>
-<h3 id="2_1"><strong>(2) 实时监控日志</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/nginx/access.log
-</span></code></pre></div>
-<p>实时查看 Nginx 访问日志。</p>
-<h3 id="3-grep"><strong>(3) 结合 <code>grep</code> 过滤</strong><a class="headerlink" href="#3-grep" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>app.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span>
-</span></code></pre></div>
-<p>只输出日志中包含 <strong>ERROR</strong> 的行。</p>
-<h3 id="4"><strong>(4) 实时统计</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">1000</span><span class="w"> </span>access.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
-</span></code></pre></div>
-<p>统计日志最后 1000 行的行数。</p>
-<h3 id="5"><strong>(5) 程序输入管道</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>/tmp/input<span class="w"> </span><span class="p">|</span><span class="w"> </span>java<span class="w"> </span>MyProgram
-</span></code></pre></div>
-<p>将文件内容实时传递给 Java 程序。</p>
-<h2 id="4_1">4. 使用技巧<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>只看最新写入</strong></li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">0</span><span class="w"> </span>-f<span class="w"> </span>file.log
-</span></code></pre></div>
-<p>不显示历史内容，只从新写入的行开始看。</p>
-<ul>
-<li><strong>多个文件</strong></li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>file1.log<span class="w"> </span>file2.log
-</span></code></pre></div>
-<p>同时监控多个文件。</p>
-<ul>
-<li><strong>和 <code>less</code> 结合</strong></li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">1000</span><span class="w"> </span>file.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</span></code></pre></div>
-<p>分页查看文件最后 1000 行。</p>
-<h2 id="5_1">5. 小结<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>tail</code> 默认显示文件末尾 10 行。</li>
-<li><code>-n</code> 控制行数，<code>+N</code> 表示从第 N 行开始。</li>
-<li><code>-f</code> 用于实时跟踪文件变化，<code>-F</code> 更智能，适合日志轮转。</li>
-<li>常与 <code>grep</code>、<code>wc</code>、<code>awk</code>、管道结合，用于日志分析、实时监控和数据处理。</li>
-</ul>
+<p>注意，上述修改会在重启后失效</p>
+<h2 id="2dns">2.修改网卡的dns<a class="headerlink" href="#2dns" title="Permanent link">&para;</a></h2>
+<p>需要重启网络服务以生效</p>
+<h2 id="_1">来源&amp;参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="https://www.itbulu.com/change-linux-dns.html">几个修改Linux服务器DNS地址的方法汇总</a></li>
+</ol>
 
 
 
