@@ -65,4 +65,4 @@ $$
 
 行列式的计算如下：  
 
-$$ \mathbf{D} = \sum_{m=1, n=1}^{i,j}{a_{mn} A_{mn}}$$
+$$ \mathbf{D} = \sum_{i=1, j=1}^{n,n}{a_{ij} A_{ij}}$$
