@@ -1,5 +1,10 @@
 [
   {
+    "title": "2.矩阵基础——行列式",
+    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/b.determinant/",
+    "date": "08/20"
+  },
+  {
     "title": "利用Cloudflare搭建Xray（V2ray）节点",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/V2ray/xraySiteViaCloudflare/",
     "date": "08/20"
@@ -17,11 +22,6 @@
   {
     "title": "修改Linux使用的Dns服务器",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/editNameserver/",
-    "date": "08/19"
-  },
-  {
-    "title": "Word出现某两行无法调整行间距",
-    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Office%E4%B8%89%E4%BB%B6%E5%A5%97/Word/%E6%97%A0%E6%B3%95%E8%B0%83%E6%95%B4%E8%A1%8C%E9%97%B4%E8%B7%9D/",
     "date": "08/19"
   }
 ]
