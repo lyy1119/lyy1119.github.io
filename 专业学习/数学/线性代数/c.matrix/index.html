@@ -8262,7 +8262,80 @@
 \]</div>
 <h2 id="_1">关于矩阵<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><strong>矩阵的本质</strong> ： 线性变换  </p>
-<p><strong>矩阵的运算</strong> ： 加法、数乘、矩阵相乘</p>
+<p><strong>矩阵的运算</strong> ： 加法、数乘、矩阵相乘  </p>
+<p>1.<strong>矩阵的加法</strong>：加法的前提是两矩阵行列各相等，矩阵的加法运算即对应行列上的数字相加。如：  </p>
+<div class="arithmatex">\[
+\left(
+    \begin{matrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{matrix}
+\right) + \left(
+    \begin{matrix}
+    1 &amp; 0 &amp; 1 \\
+    0 &amp; 1 &amp; 0
+    \end{matrix}
+\right) = \left(
+    \begin{matrix}
+        2 &amp; 2 &amp; 4 \\
+        4 &amp; 6 &amp; 6
+    \end{matrix}
+\right)
+\]</div>
+<p>2.<strong>矩阵的数乘</strong>：所谓数乘，即一个数乘以一个矩阵。运算时将矩阵所有元素都乘以相同的数，如：  </p>
+<div class="arithmatex">\[
+2 \times \left(
+    \begin{matrix}
+        1 &amp; 0 \\
+        0 &amp; 1
+    \end{matrix}
+\right) = \left(
+    \begin{matrix}
+    2 &amp; 0 \\
+    0 &amp; 2
+    \end{matrix}
+\right)
+\]</div>
+<p>3.<strong>矩阵相乘</strong>：即两个矩阵的乘法。矩阵相乘在线性代数中是一个重要的运算，定义大致如下：  </p>
+<blockquote>
+<p>若有两个矩阵，分别记为 <span class="arithmatex">\(\mathbf{A}\)</span> 和 <span class="arithmatex">\(\mathbf{B}\)</span> ，若矩阵 <span class="arithmatex">\(\mathbf{A}\)</span> 有 <span class="arithmatex">\(n\)</span> 行 <span class="arithmatex">\(m\)</span> 列，矩阵 <span class="arithmatex">\(\mathbf{B}\)</span> 有 <span class="arithmatex">\(m\)</span> 行 <span class="arithmatex">\(n\)</span> 列，则两矩阵可相乘，<strong>且仅能</strong> 以 <span class="arithmatex">\(\mathbf{AB}\)</span> 形式相乘，即 <span class="arithmatex">\(\mathbf{A}\)</span> 左乘 <span class="arithmatex">\(\mathbf{B}\)</span>。  </p>
+<p>记运算结果为 <span class="arithmatex">\(\mathbf{C}\)</span> ，即 <span class="arithmatex">\(\mathbf{AB} = \mathbf{C}\)</span> 。 矩阵 <span class="arithmatex">\(\mathbf{C}\)</span> 的各元素结果如下：<br />
+若记矩阵 <span class="arithmatex">\(\mathbf{A}\)</span> <span class="arithmatex">\(\mathbf{B}\)</span> <span class="arithmatex">\(\mathbf{C}\)</span> 的第 <span class="arithmatex">\(i\)</span> 行 <span class="arithmatex">\(j\)</span> 列元素分别为 <span class="arithmatex">\(a_{ij}\)</span> <span class="arithmatex">\(b_{ij}\)</span> <span class="arithmatex">\(c_{ij}\)</span> ，则 $c_{ij} = \sum^{m}<em>{p=1}{a</em>{ip} b_{pj}} $</p>
+</blockquote>
+<p>例：  </p>
+<div class="arithmatex">\[
+\left(
+    \begin{matrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{matrix}
+\right)\left(
+    \begin{matrix}
+        1 &amp; 0 \\
+        0 &amp; 1 \\
+        1 &amp; 0
+    \end{matrix}
+\right) = \left(
+    \begin{matrix}
+        4 &amp; 2 \\
+        10 &amp; 5
+    \end{matrix}
+\right)
+\]</div>
+<p>4.<strong>矩阵的转置</strong>：矩阵转置的定义为矩阵元素的行列位置互换，记 原来的 <span class="arithmatex">\(a_{ij}\)</span> 在矩阵转置后变成 <span class="arithmatex">\(a_{ji}\)</span> 。在矩阵右上角写一个 <span class="arithmatex">\(\text{T}\)</span> 来表示转置操作  </p>
+<div class="arithmatex">\[
+\left(
+    \begin{matrix}
+    1 &amp; 2 &amp; 3
+    \end{matrix}
+\right)^T = \left(
+    \begin{matrix}
+    1 \\
+    2 \\
+    3
+    \end{matrix}
+\right)
+\]</div>
 
 
 

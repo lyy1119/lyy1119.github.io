@@ -651,6 +651,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      行列式的转置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8289,6 +8307,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      行列式的转置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8329,7 +8365,7 @@
 \]</div>
 <p>其中，第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列的数记作 <span class="arithmatex">\(a_{ij}\)</span> 。  </p>
 <h2 id="_1">本质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>行列式的本质其实是一个数，行列式只不过是记录了如何计算这个数。  </p>
+<p>行列式的本质其实是一个数或者叫运算式，行列式记录了如何计算这个数。  </p>
 <h2 id="_2">行列式的重要概念——余子式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>当我们讨论一个行列式的 <strong>余子式</strong> 时，我们是对这个行列式的某行某列的具体元素讨论的。即只有当我们指定某行某列元素（<span class="arithmatex">\(a_{ij}\)</span>）时，才有余子式这个概念。  </p>
 <p>习惯上，对于行列式 <span class="arithmatex">\(\mathbf{D}\)</span> 的 <span class="arithmatex">\(a_{ij}\)</span> ，将其余子式记作 <span class="arithmatex">\(\mathbf{M_{ij}}\)</span> 。对于上述的行列式，其余子式 <span class="arithmatex">\(\mathbf{M_{ij}}\)</span> 是这样的，将 <span class="arithmatex">\(\mathbf{D}\)</span> 中与 <span class="arithmatex">\(a_{ij}\)</span> 同行或同列的元素删去，剩余的元素组成的行列式即 <span class="arithmatex">\(\mathbf{M_{ij}}\)</span> 。  </p>
@@ -8352,6 +8388,17 @@
 <h2 id="_4">计算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>行列式的计算如下：  </p>
 <div class="arithmatex">\[ \mathbf{D} = \sum_{i=1, j=1}^{n,n}{a_{ij} A_{ij}}\]</div>
+<h2 id="_5">行列式的转置<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>转置的定义为将行列式元素的位置行列颠倒，也就是第 <span class="arithmatex">\(n\)</span> 行 <span class="arithmatex">\(m\)</span> 列的元素在行列式转置后会在第 <span class="arithmatex">\(m\)</span> 行 <span class="arithmatex">\(n\)</span> 列。  </p>
+<p>在行列式右上角写上一个 <span class="arithmatex">\(\text{T}\)</span> 用来表示转置操作。  </p>
+<h2 id="_6">性质<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>行列式有许多性质。  </p>
+<ol>
+<li><span class="arithmatex">\(\mathbf{D} = \mathbf{D}^{T}\)</span></li>
+<li>行列式的某两行或某两列交换，行列式的结果变（正负）号</li>
+<li>行列式 <span class="arithmatex">\(\mathbf{D}\)</span> 某行整体乘以一个数 <span class="arithmatex">\(k\)</span>，结果等于 <span class="arithmatex">\(k\mathbf{D}\)</span></li>
+<li>根据 <strong>性质3</strong> ，行列式具有可拆性。即可以将一个行列式拆成两个相加。</li>
+</ol>
 
 
 
