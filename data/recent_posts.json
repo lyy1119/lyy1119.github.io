@@ -1,5 +1,10 @@
 [
   {
+    "title": "3.矩阵",
+    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/c.matrix/",
+    "date": "08/28"
+  },
+  {
     "title": "更改时区和设置NTP同步",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Linux/%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%E4%B8%8Entp%E5%90%8C%E6%AD%A5/",
     "date": "08/27"
@@ -12,11 +17,6 @@
   {
     "title": "2.矩阵基础——行列式",
     "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/b.determinant/",
-    "date": "08/22"
-  },
-  {
-    "title": "3.矩阵",
-    "url": "/%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/c.matrix/",
     "date": "08/22"
   },
   {
